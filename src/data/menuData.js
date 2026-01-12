@@ -554,8 +554,8 @@ export const foodData = [
         subtitle_zh: "菜单",
         subtitle_ar: "قائمة طعام",
         subtitle_fr: "Menu",
-        headerImage: "/images/nav_asian_corner.png",
-        navImage: "/images/nav_asian_corner.png",
+        headerImage: "/images/header_asian.png",
+        navImage: "/images/header_asian.png",
         items: [
             {
                 name: "Vegetable Bowl", name_am: "የአትክልት ቦውል", name_zh: "蔬菜碗", name_ar: "وعاء الخضار", name_fr: "Bol de légumes",

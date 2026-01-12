@@ -21,10 +21,10 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
     const currentLang = languages.find(l => l.code === language) || languages[0];
 
     const t = {
-        title: language === 'am' ? 'ኔክሰስ ሆቴል ሜኑ' :
-            language === 'zh' ? '纽克色斯酒店菜单' :
-                language === 'ar' ? 'منيو فندق نكسس' :
-                    language === 'fr' ? 'Menu de l\'Hôtel Nexus' : 'Nexus Hotel Menu',
+        title: language === 'am' ? 'ስዊዝ ኢን ኔክሰስ ሆቴል ሜኑ' :
+            language === 'zh' ? '瑞士酒店 纽克色斯菜单' :
+                language === 'ar' ? 'منيو فندق سويس إن نكسوس' :
+                    language === 'fr' ? 'Menu de l\'Hôtel Swiss Inn Nexus' : 'SWISS INN Nexus Hotel Menu',
         categories: language === 'am' ? 'ምድቦች' :
             language === 'zh' ? '类别' :
                 language === 'ar' ? 'الفئات' :

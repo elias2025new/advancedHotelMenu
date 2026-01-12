@@ -111,7 +111,7 @@ function App() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '-20% 0px -70% 0px', // Adjusted to trigger earlier/better
+      rootMargin: '-240px 0px -40% 0px', // Perfectly aligned with our scroll offset
       threshold: 0
     };
 
