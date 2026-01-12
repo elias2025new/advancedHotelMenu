@@ -97,18 +97,14 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
     }, []);
 
     return (
-        <div className={`fixed top-0 left-0 right-0 z-50 border-b max-w-[430px] mx-auto shadow-sm ${menuType === 'cocktails' ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100'
-            }`}>
+        <div className="fixed top-0 left-0 right-0 z-50 border-b max-w-[430px] mx-auto shadow-sm bg-white border-gray-100">
             {/* Title Bar */}
-            <div className={`px-6 py-2 relative flex items-center border-b min-h-[48px] ${menuType === 'cocktails' ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-50'
-                }`}>
-                <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
-                    <span className={`font-black uppercase tracking-[0.15em] text-[11px] whitespace-nowrap ${menuType === 'cocktails' ? 'text-cyan-400' : 'text-hotel-dark'
-                        }`}>
+            <div className="px-6 py-2 relative flex items-center border-b min-h-[48px] bg-slate-100 border-gray-50">
+                <div className="absolute left-[42%] -translate-x-1/2 flex flex-col items-center pointer-events-none">
+                    <span className="font-black uppercase tracking-[0.15em] text-[13px] whitespace-nowrap text-hotel-dark">
                         {t.title}
                     </span>
-                    <div className={`w-6 h-0.5 mt-0.5 rounded-full opacity-80 ${menuType === 'cocktails' ? 'bg-cyan-500' : 'bg-hotel-gold'
-                        }`}></div>
+                    <div className="w-6 h-0.5 mt-0.5 rounded-full opacity-80 bg-hotel-gold"></div>
                 </div>
                 <div className="ml-auto relative">
                     <button
@@ -161,32 +157,53 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
                 </div>
             </div>
 
-            <div className={`relative pt-4 pb-0 ${menuType === 'cocktails' ? 'bg-slate-800' : ''}`}>
-                {/* Conditional rendering: simplified layout for cocktails, scrollable for others */}
+            <div className="relative pt-4 pb-0">
                 {menuType === 'cocktails' ? (
-                    // Simplified 2-button layout for cocktails
-                    <div className="flex justify-center gap-4 px-6 pb-4">
+                    <div className="flex justify-between px-6 gap-6 w-full pb-4">
                         {categories.map((category) => (
                             <button
                                 key={category.id}
                                 onClick={() => onCategoryClick(category.id)}
                                 className={`
-                                    flex-1 py-6 px-4 rounded-2xl transition-all duration-300 font-black uppercase tracking-wider text-sm
+                                    flex-1 flex flex-col items-center gap-3 pb-2 transition-all duration-300
                                     ${activeCategory === category.id
-                                        ? 'bg-cyan-500 text-slate-900 shadow-lg shadow-cyan-500/50 scale-105'
-                                        : 'bg-slate-700 text-cyan-300 hover:bg-slate-600'
+                                        ? 'opacity-100 scale-105'
+                                        : 'opacity-80 hover:opacity-100'
                                     }
                                 `}
                             >
-                                {(() => {
-                                    const langField = `title_${language}`;
-                                    return (category[langField]) ? category[langField] : category.title;
-                                })()}
+                                <div className={`
+                                    w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden transition-all duration-500 p-1.5
+                                    ${activeCategory === category.id
+                                        ? 'shadow-[0_20px_40px_-12px_rgba(0,0,0,0.15)] -translate-y-2'
+                                        : 'bg-white shadow-sm'
+                                    }
+                                `}>
+                                    <div className="w-full h-full rounded-[2.2rem] overflow-hidden bg-gray-100">
+                                        <img
+                                            src={category.navImage || category.headerImage || category.items[0]?.image || '/images/default_category.jpg'}
+                                            alt={category.title}
+                                            className="w-full h-full object-cover"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                </div>
+                                <span className={`
+                                    text-sm font-black text-center leading-tight transition-colors duration-300 px-1 uppercase tracking-wide
+                                    ${activeCategory === category.id
+                                        ? 'text-hotel-gold'
+                                        : 'text-hotel-dark'
+                                    }
+                                `}>
+                                    {(() => {
+                                        const langField = `title_${language}`;
+                                        return (category[langField]) ? category[langField] : category.title;
+                                    })()}
+                                </span>
                             </button>
                         ))}
                     </div>
                 ) : (
-                    // Original scrollable layout for food and drinks
                     <>
                         {/* Left scroll indicator */}
                         <AnimatePresence>
@@ -246,20 +263,20 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
                                     ref={(el) => (buttonRefs.current[category.id] = el)}
                                     onClick={() => onCategoryClick(category.id)}
                                     className={`
-                                        flex-shrink-0 w-28 flex flex-col items-center gap-2 pb-2 transition-all duration-300
-                                        ${activeCategory === category.id
+                                            flex-shrink-0 w-28 flex flex-col items-center gap-2 pb-2 transition-all duration-300
+                                            ${activeCategory === category.id
                                             ? 'opacity-100'
                                             : 'opacity-80'
                                         }
-                                    `}
+                                        `}
                                 >
                                     <div className={`
-                                        w-24 h-24 rounded-[2.2rem] overflow-hidden transition-all duration-500 p-1.5
-                                        ${activeCategory === category.id
+                                            w-24 h-24 rounded-[2.2rem] overflow-hidden transition-all duration-500 p-1.5
+                                            ${activeCategory === category.id
                                             ? 'shadow-[0_15px_30px_-8px_rgba(0,0,0,0.1)] scale-110 -translate-y-2'
                                             : 'bg-white shadow-sm opacity-90'
                                         }
-                                    `}>
+                                        `}>
                                         <div className="w-full h-full rounded-[1.8rem] overflow-hidden bg-gray-100">
                                             <img
                                                 src={category.navImage || category.headerImage || category.items[0]?.image || '/images/default_category.jpg'}
@@ -270,12 +287,12 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
                                         </div>
                                     </div>
                                     <span className={`
-                                        text-[11px] font-extrabold text-center leading-tight transition-colors duration-300 px-1 uppercase tracking-tight
-                                        ${activeCategory === category.id
+                                            text-[11px] font-extrabold text-center leading-tight transition-colors duration-300 px-1 uppercase tracking-tight
+                                            ${activeCategory === category.id
                                             ? 'text-hotel-gold font-black'
                                             : 'text-hotel-dark'
                                         }
-                            `}>
+                                `}>
                                         {(() => {
                                             const langField = `title_${language}`;
                                             return (category[langField]) ? category[langField] : category.title;
