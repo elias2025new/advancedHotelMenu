@@ -1,5 +1,5 @@
 import React from 'react';
-import { Send, Globe, Phone, MapPin } from 'lucide-react';
+import { Send, Globe, Phone, MapPin, Instagram } from 'lucide-react';
 
 const Footer = ({ language }) => {
     const t = {
@@ -63,28 +63,35 @@ const Footer = ({ language }) => {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-3 gap-4">
-                            <a href="https://t.me/swissinn" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
+                        <div className="grid grid-cols-4 gap-2 sm:gap-4">
+                            <a href="https://t.me/swissinn" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-3 sm:p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
                                 <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
-                                    <Send size={24} strokeWidth={2} />
+                                    <Send size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
                                 </div>
-                                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Telegram</span>
+                                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">Telegram</span>
                             </a>
 
-                            <a href="#" className="flex flex-col items-center justify-center gap-2 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
+                            <a href="https://www.instagram.com/swissinnnexus/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-3 sm:p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
                                 <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <Instagram size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
+                                </div>
+                                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">Instagram</span>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@swiss_inn_nexus_hotel" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-3 sm:p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
+                                <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
+                                    <svg width="20" height="20" className="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
                                     </svg>
                                 </div>
-                                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">TikTok</span>
+                                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">TikTok</span>
                             </a>
 
-                            <a href="https://www.nexusaddis.net/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
+                            <a href="https://www.nexusaddis.net/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-3 sm:p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
                                 <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
-                                    <Globe size={24} strokeWidth={2} />
+                                    <Globe size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
                                 </div>
-                                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Website</span>
+                                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">Website</span>
                             </a>
                         </div>
                     </div>
