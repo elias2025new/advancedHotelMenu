@@ -1,21 +1,37 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Globe, Check } from 'lucide-react';
 
 const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, setLanguage }) => {
+    const [isLangOpen, setIsLangOpen] = useState(false);
     const scrollRef = useRef(null);
-    const buttonRefs = useRef({});
+    const buttonRefs = useRef({}); // Keep buttonRefs as it's used in auto-scroll useEffect
     const [showLeftIndicator, setShowLeftIndicator] = useState(false);
     const [showRightIndicator, setShowRightIndicator] = useState(true);
     const [showScrollHint, setShowScrollHint] = useState(false);
 
+    const languages = [
+        { code: 'en', label: 'English', flag: '🇬🇧' },
+        { code: 'am', label: 'አማርኛ', flag: '🇪🇹' },
+        { code: 'zh', label: '中文', flag: '🇨🇳' },
+        { code: 'ar', label: 'العربية', flag: '🇦🇪' },
+        { code: 'fr', label: 'Français', flag: '🇫🇷' }
+    ];
+
+    const currentLang = languages.find(l => l.code === language) || languages[0];
+
     const t = {
-        title: language === 'en' ? 'Nexus Hotel Menu' : 'የኔክሰስ ሆቴል ዝርዝር',
-        swipe: language === 'en' ? '← Swipe for more →' : '← ለተጨማሪ ያንሸራትቱ →'
+        title: language === 'am' ? 'ኔክሰስ ሆቴል ሜኑ' :
+            language === 'zh' ? '纽克色斯酒店菜单' :
+                language === 'ar' ? 'منيو فندق نكسس' :
+                    language === 'fr' ? 'Menu de l\'Hôtel Nexus' : 'Nexus Hotel Menu',
+        categories: language === 'am' ? 'ምድቦች' :
+            language === 'zh' ? '类别' :
+                language === 'ar' ? 'الفئات' :
+                    language === 'fr' ? 'Catégories' : 'Categories'
     };
 
     useEffect(() => {
-        // ... (rest of the component)
         // Show hint after header animation finishes (wait 2.5s)
         const showTimer = setTimeout(() => {
             setShowScrollHint(true);
@@ -83,26 +99,65 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
     return (
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 max-w-[430px] mx-auto shadow-sm">
             {/* New Title Bar */}
-            <div className="bg-white px-6 py-2.5 relative flex items-center border-b border-gray-50 min-h-[44px]">
-                <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <div className="bg-white px-6 py-2 relative flex items-center border-b border-gray-50 min-h-[48px]">
+                <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
                     <span className="text-hotel-dark font-black uppercase tracking-[0.15em] text-[11px] whitespace-nowrap">
                         {t.title}
                     </span>
                     <div className="w-6 h-0.5 bg-hotel-gold mt-0.5 rounded-full opacity-80"></div>
                 </div>
-                <div className="ml-auto relative z-10">
-                    <select
-                        value={language}
-                        onChange={(e) => setLanguage(e.target.value)}
-                        className="bg-slate-50 text-hotel-dark text-[10px] font-bold uppercase py-1.5 px-2 rounded border border-slate-200 focus:outline-none transition-all cursor-pointer shadow-sm"
+                <div className="ml-auto relative">
+                    <button
+                        onClick={() => setIsLangOpen(!isLangOpen)}
+                        className="flex items-center gap-1.5 bg-slate-50 text-hotel-dark text-[10px] font-black uppercase py-1.5 px-2.5 rounded-full border border-slate-200 hover:bg-slate-100 transition-all cursor-pointer shadow-sm active:scale-95 z-20"
                     >
-                        <option value="en" className="text-black">EN</option>
-                        <option value="am" className="text-black">AMH</option>
-                    </select>
+                        <span className="text-sm leading-none">{currentLang.flag}</span>
+                        <span>{currentLang.code}</span>
+                    </button>
+
+                    <AnimatePresence>
+                        {isLangOpen && (
+                            <>
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    onClick={() => setIsLangOpen(false)}
+                                    className="fixed inset-0 z-30"
+                                />
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                    className="absolute right-0 mt-2 w-36 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden z-40 p-1.5"
+                                >
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() => {
+                                                setLanguage(lang.code);
+                                                setIsLangOpen(false);
+                                            }}
+                                            className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl transition-all ${language === lang.code
+                                                ? 'bg-hotel-gold/10 text-hotel-gold'
+                                                : 'text-slate-600 hover:bg-slate-50 hover:text-hotel-dark'
+                                                }`}
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-lg leading-none">{lang.flag}</span>
+                                                <span className="text-[11px] font-bold uppercase tracking-wider">{lang.label}</span>
+                                            </div>
+                                            {language === lang.code && <Check size={14} strokeWidth={3} />}
+                                        </button>
+                                    ))}
+                                </motion.div>
+                            </>
+                        )}
+                    </AnimatePresence>
                 </div>
             </div>
 
-            <div className="relative pt-6 pb-4">
+            <div className="relative pt-4 pb-0">
                 {/* Left scroll indicator */}
                 <AnimatePresence>
                     {showLeftIndicator && (
@@ -144,7 +199,7 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
                                 color: '#ffffff',
                                 zIndex: 100
                             }}
-                            className="absolute top-2 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full shadow-lg whitespace-nowrap uppercase font-bold text-[10px] tracking-widest text-center"
+                            className="absolute top-2 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full shadow-lg whitespace-nowrap uppercase font-bold text-[10px] tracking-widest text-center pointer-events-none"
                         >
                             ← Swipe for more →
                         </motion.div>
@@ -153,7 +208,7 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
 
                 <div
                     ref={scrollRef}
-                    className="flex overflow-x-auto no-scrollbar px-6 space-x-4 scroll-smooth"
+                    className="flex overflow-x-auto no-scrollbar px-6 space-x-4 scroll-smooth relative z-20"
                 >
                     {categories.map((category) => (
                         <button
@@ -191,7 +246,10 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
                                     : 'text-hotel-dark'
                                 }
                             `}>
-                                {language === 'am' && category.title_am ? category.title_am : category.title}
+                                {(() => {
+                                    const langField = `title_${language}`;
+                                    return (category[langField]) ? category[langField] : category.title;
+                                })()}
                             </span>
                         </button>
                     ))}

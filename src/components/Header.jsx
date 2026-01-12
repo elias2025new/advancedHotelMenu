@@ -2,8 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Header = ({ language }) => {
-    const text = language === 'en' ? "Welcome" : "እንኳን ደህና መጡ";
-    const subtext = language === 'en' ? "SWISS INN NEXUS HOTEL ADDIS ABABA" : "ስዊዝ ኢን ኔክሰስ ሆቴል አዲስ አበባ";
+    const text = {
+        en: "Welcome",
+        am: "እንኳን ደህና መጡ",
+        zh: "欢迎光临",
+        ar: "أهلاً بك",
+        fr: "Bienvenue"
+    }[language] || "Welcome";
+
+    const subtext = {
+        en: "SWISS INN NEXUS HOTEL ADDIS ABABA",
+        am: "ስዊዝ ኢን ኔክሰስ ሆቴል አዲስ አበባ",
+        zh: "亚的斯亚贝巴瑞斯酒店",
+        ar: "فندق سويس إن نكسوس أديس أبابا",
+        fr: "HÔTEL SWISS INN NEXUS ADDIS-ABEBA"
+    }[language] || "SWISS INN NEXUS HOTEL ADDIS ABABA";
 
     const container = {
         hidden: { opacity: 0 },
@@ -29,7 +42,7 @@ const Header = ({ language }) => {
     };
 
     return (
-        <header className="px-6 pt-12 pb-6">
+        <header className="px-6 pt-6 pb-6">
             <motion.h1
                 key={language}
                 className="text-3xl font-bold text-hotel-dark tracking-tight flex"

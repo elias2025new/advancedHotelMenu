@@ -25,8 +25,14 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const t = {
-    food: language === 'en' ? 'Food Menu' : 'የምግብ ዝርዝር',
-    drinks: language === 'en' ? 'Drinks Bar' : 'የመጠጥ ባር'
+    food: language === 'am' ? 'ምግብ' :
+      language === 'zh' ? '食物' :
+        language === 'ar' ? 'طعام' :
+          language === 'fr' ? 'Nourriture' : 'Food Menu',
+    drinks: language === 'am' ? 'መጠጥ' :
+      language === 'zh' ? '饮料' :
+        language === 'ar' ? 'مشروبات' :
+          language === 'fr' ? 'Boissons' : 'Drinks Bar'
   };
 
   // Update current menu data and active category when menu type changes
@@ -88,7 +94,7 @@ function App() {
     setActiveCategory(id);
     const element = document.getElementById(id);
     if (element) {
-      const offset = 180; // Offset for taller card-style sticky nav
+      const offset = 240; // Increased offset to land titles perfectly below sticky toggle
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -153,7 +159,7 @@ function App() {
   }, [currentMenuData]);
 
   return (
-    <>
+    <div className={`min-h-screen bg-slate-50 font-sans text-hotel-dark overflow-x-hidden selection:bg-hotel-gold/30`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <Layout>
         <CategoryNav
           categories={currentMenuData}
@@ -163,7 +169,7 @@ function App() {
           setLanguage={setLanguage}
         />
 
-        <div className="pt-[172px]">
+        <div className="pt-[184px]">
           <Header language={language} />
         </div>
 
@@ -171,7 +177,7 @@ function App() {
 
         <main className="px-4 py-4 flex-grow">
           {/* Menu Type Toggle */}
-          <div className="flex justify-center mb-10 sticky top-[172px] z-30 py-2 gap-4">
+          <div className="flex justify-center mb-10 sticky top-[184px] z-30 py-2 gap-4">
             <button
               onClick={() => setMenuType('food')}
               className={`px-8 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg ${menuType === 'food'
@@ -202,14 +208,17 @@ function App() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               {currentMenuData.map((category) => (
-                <section key={category.id} id={category.id} className="mb-14 text-center scroll-mt-48">
+                <section key={category.id} id={category.id} className="mb-14 text-center scroll-mt-[240px]">
                   <div className="inline-flex flex-col items-center mb-8">
                     {/* Top Red Line */}
                     <div className="w-16 h-1 bg-red-600 mb-1"></div>
 
                     {/* Main Title */}
                     <h2 className="text-3xl font-black text-black uppercase tracking-widest leading-none">
-                      {language === 'am' && category.title_am ? category.title_am : category.title}
+                      {(() => {
+                        const langField = `title_${language}`;
+                        return (category[langField]) ? category[langField] : category.title;
+                      })()}
                     </h2>
 
                     {/* Subtitle */}
@@ -221,7 +230,10 @@ function App() {
                           style={category.subtitleColor ? { color: category.subtitleColor, backgroundColor: 'transparent', fontSize: '1.25rem', fontWeight: 900 } : {}}
                         >
                           <span className="block transform skew-x-12">
-                            {language === 'am' && category.subtitle_am ? category.subtitle_am : category.subtitle}
+                            {(() => {
+                              const langField = `subtitle_${language}`;
+                              return (category[langField]) ? category[langField] : category.subtitle;
+                            })()}
                           </span>
                         </div>
                         {/* Red line under subtitle connecting to main - Hide if custom color (Sandwiches) */}
@@ -238,7 +250,10 @@ function App() {
                   </div>
                   {category.description && (
                     <p className="text-sm text-slate-600 mb-6 italic opacity-90 max-w-[85%] mx-auto leading-relaxed">
-                      {category.description}
+                      {(() => {
+                        const langField = `description_${language}`;
+                        return (category[langField]) ? category[langField] : category.description;
+                      })()}
                     </p>
                   )}
 
@@ -262,7 +277,7 @@ function App() {
           </AnimatePresence>
         </main>
 
-        <Footer />
+        <Footer language={language} />
 
         <FoodModal
           item={selectedItem}
@@ -281,6 +296,7 @@ function App() {
         <CartButton
           itemCount={cartItems.reduce((acc, item) => acc + item.quantity, 0)}
           onClick={() => setIsCartOpen(true)}
+          language={language}
         />
         <CartModal
           isOpen={isCartOpen}
@@ -296,7 +312,7 @@ function App() {
           onToggle={() => setMenuType(prev => prev === 'food' ? 'drinks' : 'food')}
         />
       </Layout>
-    </>
+    </div>
   );
 }
 

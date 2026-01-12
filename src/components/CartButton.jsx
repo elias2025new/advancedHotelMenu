@@ -2,7 +2,15 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingBag } from 'lucide-react';
 
-const CartButton = ({ itemCount, onClick }) => {
+const CartButton = ({ itemCount, onClick, language }) => {
+    const t = {
+        en: "My Order",
+        am: "የእኔ ትዕዛዝ",
+        zh: "我的订单",
+        ar: "طلبي",
+        fr: "Ma Commande"
+    }[language] || "My Order";
+
     return (
         <motion.button
             whileHover={{ scale: 1.05 }}
@@ -26,7 +34,7 @@ const CartButton = ({ itemCount, onClick }) => {
                 </AnimatePresence>
             </div>
             <span className="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 font-bold uppercase tracking-widest text-xs">
-                My Order
+                {t}
             </span>
         </motion.button>
     );

@@ -3,15 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Plus, Minus, Trash2, ShoppingBag } from 'lucide-react';
 
 const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart, language }) => {
-    const t = {
-        title: language === 'am' ? 'የእኔ ትዕዛዝ' : 'My Order',
-        empty: language === 'am' ? 'ቅርጫትዎ ባዶ ነው' : 'Your order is empty',
-        total: language === 'am' ? 'ጠቅላላ ዋጋ' : 'Total Amount',
-        clear: language === 'am' ? 'ሰርዝ' : 'Clear',
-        orderMore: language === 'am' ? 'ተጨማሪ እዘዝ' : 'Order More',
-        itemsSelected: language === 'am' ? 'የተመረጡ' : 'Items Selected',
-        itemSelected: language === 'am' ? 'የተመረጠ' : 'Item Selected'
+    const translations = {
+        en: { title: 'My Order', empty: 'Your order is empty', total: 'Total Amount', clear: 'Clear', orderMore: 'Order More', items: 'Items Selected', item: 'Item Selected' },
+        am: { title: 'የእኔ ትዕዛዝ', empty: 'ቅርጫትዎ ባዶ ነው', total: 'ጠቅላላ ዋጋ', clear: 'ሰርዝ', orderMore: 'ተጨማሪ እዘዝ', items: 'የተመረጡ', item: 'የተመረጠ' },
+        zh: { title: '我的订单', empty: '您的购物车是空的', total: '总金额', clear: '清空', orderMore: '继续点餐', items: '已选项目', item: '已选项目' },
+        ar: { title: 'طلبي', empty: 'سلتك فارغة', total: 'المبلغ الإجمالي', clear: 'مسح', orderMore: 'اطلب المزيد', items: 'العناصر المختارة', item: 'العنصر المختار' },
+        fr: { title: 'Ma Commande', empty: 'Votre panier est vide', total: 'Montant Total', clear: 'Effacer', orderMore: 'Commander Plus', items: 'Articles Sélectionnés', item: 'Article Sélectionné' }
     };
+
+    const t = translations[language] || translations.en;
     useEffect(() => {
         if (isOpen) document.body.style.overflow = 'hidden';
         else document.body.style.overflow = 'unset';
@@ -46,7 +46,7 @@ const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart, lang
                         <div>
                             <h2 className="text-2xl font-black text-hotel-dark uppercase tracking-wide">{t.title}</h2>
                             <p className="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">
-                                {items.length} {items.length === 1 ? t.itemSelected : t.itemsSelected}
+                                {items.length} {items.length === 1 ? t.item : t.items}
                             </p>
                         </div>
                         <button onClick={onClose} className="p-2 bg-slate-50 rounded-full text-hotel-dark">
@@ -69,7 +69,10 @@ const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart, lang
                                     <div key={index} className="flex gap-4 items-center">
                                         <div className="flex-grow">
                                             <h3 className="text-sm font-black text-hotel-dark uppercase leading-tight">
-                                                {language === 'am' && item.name_am ? item.name_am : item.name}
+                                                {(() => {
+                                                    const langField = `name_${language}`;
+                                                    return (item[langField]) ? item[langField] : item.name;
+                                                })()}
                                             </h3>
                                             <p className="text-hotel-dark text-xs font-bold mt-1">{item.price} ETB</p>
                                         </div>

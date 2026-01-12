@@ -5,10 +5,22 @@ import { X, Wine, GlassWater } from 'lucide-react'; // Using Wine for Bottle, Gl
 const DrinkOptionModal = ({ item, onClose, onConfirm, language }) => {
     if (!item) return null;
 
-    const itemName = language === 'am' && item.name_am ? item.name_am : item.name;
-    const bottleLabel = language === 'am' ? "ጠርሙስ" : "Bottle";
-    const shotLabel = language === 'am' ? "ሾት" : "Shot";
-    const selectOptionLabel = language === 'am' ? "እባክዎን አማራጭ ይምረጡ" : "Please select an option";
+    const getItemField = (field) => {
+        const langField = `${field}_${language}`;
+        return (item[langField]) ? item[langField] : item[field];
+    };
+
+    const itemName = getItemField('name');
+
+    const labels = {
+        en: { bottle: "Bottle", shot: "Shot", select: "Please select an option" },
+        am: { bottle: "ጠርሙስ", shot: "ሾት", select: "እባክዎን አማራጭ ይምረጡ" },
+        zh: { bottle: "瓶", shot: "杯子", select: "请选择一个选项" },
+        ar: { bottle: "زجاجة", shot: "جرعة", select: "يرجى اختيار خيار" },
+        fr: { bottle: "Bouteille", shot: "Shot", select: "Veuillez choisir une option" }
+    };
+
+    const t = labels[language] || labels.en;
 
     const [bottlePrice, shotPrice] = item.price.split(' / ').map(p => p.trim());
 
@@ -39,32 +51,32 @@ const DrinkOptionModal = ({ item, onClose, onConfirm, language }) => {
                         {itemName}
                     </h3>
                     <p className="text-center text-slate-500 text-sm mb-6">
-                        {selectOptionLabel}
+                        {t.select}
                     </p>
 
                     <div className="grid grid-cols-2 gap-4">
                         {/* Bottle Option */}
                         <button
-                            onClick={() => onConfirm('Bottle', bottlePrice)}
+                            onClick={() => onConfirm(t.bottle, bottlePrice)}
                             className="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-slate-100 hover:border-slate-300 hover:bg-slate-50 transition-all group"
                         >
                             <div className="w-12 h-12 rounded-full bg-slate-50 text-slate-400 group-hover:bg-hotel-dark group-hover:text-white flex items-center justify-center mb-3 transition-colors">
                                 <Wine size={24} />
                             </div>
-                            <span className="font-bold text-hotel-dark mb-1">{bottleLabel}</span>
-                            <span className="text-hotel-dark text-sm font-bold">{bottlePrice} ETB</span>
+                            <span className="font-bold text-hotel-dark mb-1">{t.bottle}</span>
+                            <span className="text-hotel-dark text-sm font-bold">{bottlePrice} {language === 'am' ? 'ብር' : 'ETB'}</span>
                         </button>
 
                         {/* Shot Option */}
                         <button
-                            onClick={() => onConfirm('Shot', shotPrice)}
+                            onClick={() => onConfirm(t.shot, shotPrice)}
                             className="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-slate-100 hover:border-slate-300 hover:bg-slate-50 transition-all group"
                         >
                             <div className="w-12 h-12 rounded-full bg-slate-50 text-slate-400 group-hover:bg-hotel-dark group-hover:text-white flex items-center justify-center mb-3 transition-colors">
                                 <GlassWater size={24} />
                             </div>
-                            <span className="font-bold text-hotel-dark mb-1">{shotLabel}</span>
-                            <span className="text-hotel-dark text-sm font-bold">{shotPrice} ETB</span>
+                            <span className="font-bold text-hotel-dark mb-1">{t.shot}</span>
+                            <span className="text-hotel-dark text-sm font-bold">{shotPrice} {language === 'am' ? 'ብር' : 'ETB'}</span>
                         </button>
                     </div>
                 </motion.div>

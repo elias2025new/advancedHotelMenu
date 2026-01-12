@@ -12,6 +12,7 @@
   body {
     @apply bg-hotel-light text-hotel-dark antialiased;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
 }
 

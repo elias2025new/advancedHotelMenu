@@ -3,10 +3,25 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Info, Plus, Check } from 'lucide-react';
 
 const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
-    const itemName = language === 'am' && item.name_am ? item.name_am : item.name;
-    const itemDescription = language === 'am' && item.description_am ? item.description_am : item.description;
-    const addLabel = language === 'am' ? "ጨምር" : "Add";
-    const addedLabel = language === 'am' ? "ተጨምሯል" : "Added";
+    const getItemField = (field) => {
+        const langField = `${field}_${language}`;
+        return (item[langField]) ? item[langField] : item[field];
+    };
+
+    const itemName = getItemField('name');
+    const itemDescription = getItemField('description');
+
+    const addLabels = {
+        en: { add: "Add", added: "Added" },
+        am: { add: "ጨምር", added: "ተጨምሯል" },
+        zh: { add: "添加", added: "已添加" },
+        ar: { add: "إضافة", added: "تمت الإضافة" },
+        fr: { add: "Ajouter", added: "Ajouté" }
+    };
+
+    const labels = addLabels[language] || addLabels.en;
+    const addLabel = labels.add;
+    const addedLabel = labels.added;
 
     const [isAdded, setIsAdded] = useState(false);
 
@@ -46,10 +61,10 @@ const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
                         <span className="text-hotel-dark text-sm font-bold border-b-2 border-red-600 pb-0.5">
                             {item.price.includes('/') ? (
                                 <>
-                                    {item.price.split('/')[0]} <span className="text-xs text-slate-400 font-normal">Bottle</span> / {item.price.split('/')[1]} <span className="text-xs text-hotel-dark font-bold">SHOT</span>
+                                    {item.price.split('/')[0]} <span className="text-xs text-slate-400 font-normal">{language === 'am' ? 'ጠርሙስ' : language === 'zh' ? '瓶' : language === 'ar' ? 'زجاجة' : language === 'fr' ? 'Bouteille' : 'Bottle'}</span> / {item.price.split('/')[1]} <span className="text-xs text-hotel-dark font-bold">{language === 'am' ? 'ሾት' : language === 'zh' ? '杯' : language === 'ar' ? 'جرعة' : language === 'fr' ? 'Shot' : 'SHOT'}</span>
                                 </>
                             ) : (
-                                <>{item.price} ETB</>
+                                <>{item.price} {language === 'am' ? 'ብር' : 'ETB'}</>
                             )}
                         </span>
                     </div>
@@ -74,7 +89,13 @@ const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
                 <div className="mt-2 flex justify-between items-end">
                     {item.description && item.description.split(' ').length > 10 ? (
                         <div className="text-hotel-gold font-bold text-xs uppercase tracking-wide">
-                            See more
+                            {{
+                                en: "See more",
+                                am: "ተጨማሪ ይመልከቱ",
+                                zh: "查看更多",
+                                ar: "مشاهدة المزيد",
+                                fr: "Voir plus"
+                            }[language] || "See more"}
                         </div>
                     ) : (
                         <div></div>
@@ -101,7 +122,7 @@ const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
                                     className="flex items-center gap-1"
                                 >
                                     <Check size={12} strokeWidth={3} />
-                                    <span className="text-[10px] font-black uppercase leading-none">Added</span>
+                                    <span className="text-[10px] font-black uppercase leading-none">{addedLabel}</span>
                                 </motion.div>
                             ) : (
                                 <motion.div
@@ -113,7 +134,7 @@ const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
                                     className="flex items-center gap-1"
                                 >
                                     <Plus size={12} />
-                                    <span className="text-[10px] font-black uppercase leading-none">Add</span>
+                                    <span className="text-[10px] font-black uppercase leading-none">{addLabel}</span>
                                 </motion.div>
                             )}
                         </AnimatePresence>

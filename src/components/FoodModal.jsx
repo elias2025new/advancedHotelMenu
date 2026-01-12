@@ -16,9 +16,37 @@ const FoodModal = ({ item, onClose, language }) => {
 
     if (!item) return null;
 
-    const itemName = language === 'am' && item.name_am ? item.name_am : item.name;
-    const itemDescription = language === 'am' && item.description_am ? item.description_am : item.description;
-    const addLabel = language === 'am' ? "ወደ ቅርጫት ጨምር" : "Add to Cart";
+    const getItemField = (field) => {
+        const langField = `${field}_${language}`;
+        return (item[langField]) ? item[langField] : item[field];
+    };
+
+    const itemName = getItemField('name');
+    const itemDescription = getItemField('description');
+
+    const addLabels = {
+        en: "Add to Cart",
+        am: "ወደ ቅርጫት ጨምር",
+        zh: "添加到购物车",
+        ar: "أضف إلى السلة",
+        fr: "Ajouter au Panier"
+    };
+
+    const priceLabel = {
+        en: "Price",
+        am: "ዋጋ",
+        zh: "价格",
+        ar: "السعر",
+        fr: "Prix"
+    }[language] || "Price";
+
+    const taxesLabel = {
+        en: "Prices include taxes and service charge",
+        am: "ዋጋው ታክስ እና የአገልግሎት ክፍያን ያካትታል",
+        zh: "价格包含税费和服务费",
+        ar: "الأسعار تشمل الضرائب ورسوم الخدمة",
+        fr: "Les prix incluent les taxes et les frais de service"
+    }[language] || "Prices include taxes and service charge";
 
     return (
         <AnimatePresence>
@@ -74,14 +102,14 @@ const FoodModal = ({ item, onClose, language }) => {
 
                         <div className="mt-auto space-y-4">
                             <div className="flex justify-between items-center pt-4 border-t border-slate-100">
-                                <span className="text-slate-400 text-[11px] font-medium uppercase tracking-wider">Price</span>
+                                <span className="text-slate-400 text-[11px] font-medium uppercase tracking-wider">{priceLabel}</span>
                                 <span className="text-hotel-dark text-2xl font-black border-b-2 border-red-600 pb-1">
-                                    {item.price} <span className="text-sm">ETB</span>
+                                    {item.price} <span className="text-sm">{language === 'am' ? 'ብር' : 'ETB'}</span>
                                 </span>
                             </div>
 
                             <p className="text-center italic text-[11px] text-slate-400">
-                                Prices include taxes and service charge
+                                {taxesLabel}
                             </p>
                         </div>
                     </div>
