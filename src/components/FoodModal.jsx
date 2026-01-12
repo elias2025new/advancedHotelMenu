@@ -75,7 +75,7 @@ const FoodModal = ({ item, onClose, language }) => {
                         <div className="mt-auto space-y-4">
                             <div className="flex justify-between items-center pt-4 border-t border-slate-100">
                                 <span className="text-slate-400 text-[11px] font-medium uppercase tracking-wider">Price</span>
-                                <span className="text-hotel-gold text-2xl font-black border-b-2 border-red-600 pb-1">
+                                <span className="text-hotel-dark text-2xl font-black border-b-2 border-red-600 pb-1">
                                     {item.price} <span className="text-sm">ETB</span>
                                 </span>
                             </div>

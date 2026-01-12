@@ -43,10 +43,10 @@ const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
                     </h3>
 
                     <div className="mb-2">
-                        <span className="text-hotel-gold text-sm font-bold border-b-2 border-red-600 pb-0.5">
+                        <span className="text-hotel-dark text-sm font-bold border-b-2 border-red-600 pb-0.5">
                             {item.price.includes('/') ? (
                                 <>
-                                    {item.price.split('/')[0]} <span className="text-xs text-slate-400 font-normal">Bottle</span> / {item.price.split('/')[1]} <span className="text-xs text-hotel-gold font-bold">SHOT</span>
+                                    {item.price.split('/')[0]} <span className="text-xs text-slate-400 font-normal">Bottle</span> / {item.price.split('/')[1]} <span className="text-xs text-hotel-dark font-bold">SHOT</span>
                                 </>
                             ) : (
                                 <>{item.price} ETB</>

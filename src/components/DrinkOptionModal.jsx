@@ -52,7 +52,7 @@ const DrinkOptionModal = ({ item, onClose, onConfirm, language }) => {
                                 <Wine size={24} />
                             </div>
                             <span className="font-bold text-hotel-dark mb-1">{bottleLabel}</span>
-                            <span className="text-hotel-gold text-sm font-bold">{bottlePrice} ETB</span>
+                            <span className="text-hotel-dark text-sm font-bold">{bottlePrice} ETB</span>
                         </button>
 
                         {/* Shot Option */}
@@ -64,7 +64,7 @@ const DrinkOptionModal = ({ item, onClose, onConfirm, language }) => {
                                 <GlassWater size={24} />
                             </div>
                             <span className="font-bold text-hotel-dark mb-1">{shotLabel}</span>
-                            <span className="text-hotel-gold text-sm font-bold">{shotPrice} ETB</span>
+                            <span className="text-hotel-dark text-sm font-bold">{shotPrice} ETB</span>
                         </button>
                     </div>
                 </motion.div>

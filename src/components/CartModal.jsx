@@ -71,7 +71,7 @@ const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart, lang
                                             <h3 className="text-sm font-black text-hotel-dark uppercase leading-tight">
                                                 {language === 'am' && item.name_am ? item.name_am : item.name}
                                             </h3>
-                                            <p className="text-hotel-gold text-xs font-bold mt-1">{item.price} ETB</p>
+                                            <p className="text-hotel-dark text-xs font-bold mt-1">{item.price} ETB</p>
                                         </div>
                                         <div className="flex items-center bg-slate-50 rounded-full p-1 border border-slate-100">
                                             <button
@@ -102,7 +102,7 @@ const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart, lang
                             <div className="flex justify-between items-end mb-6">
                                 <span className="text-xs text-slate-400 font-black uppercase tracking-widest">{t.total}</span>
                                 <div className="text-right">
-                                    <span className="text-2xl font-black text-hotel-gold">
+                                    <span className="text-2xl font-black text-hotel-dark">
                                         {total.toLocaleString()}
                                         <span className="text-sm ml-1">ETB</span>
                                     </span>
