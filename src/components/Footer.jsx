@@ -50,9 +50,8 @@ const Footer = ({ language }) => {
                             </div>
                         </div>
 
-                        {/* Social Icons Row */}
                         <div className="grid grid-cols-3 gap-4">
-                            <a href="#" className="flex flex-col items-center justify-center gap-2 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
+                            <a href="https://t.me/swissinn" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
                                 <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
                                     <Send size={24} strokeWidth={2} />
                                 </div>
