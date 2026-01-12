@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Globe, Check } from 'lucide-react';
 
-const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, setLanguage }) => {
+const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, setLanguage, menuType }) => {
     const [isLangOpen, setIsLangOpen] = useState(false);
     const scrollRef = useRef(null);
     const buttonRefs = useRef({}); // Keep buttonRefs as it's used in auto-scroll useEffect
@@ -97,14 +97,18 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
     }, []);
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 max-w-[430px] mx-auto shadow-sm">
-            {/* New Title Bar */}
-            <div className="bg-white px-6 py-2 relative flex items-center border-b border-gray-50 min-h-[48px]">
+        <div className={`fixed top-0 left-0 right-0 z-50 border-b max-w-[430px] mx-auto shadow-sm ${menuType === 'cocktails' ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100'
+            }`}>
+            {/* Title Bar */}
+            <div className={`px-6 py-2 relative flex items-center border-b min-h-[48px] ${menuType === 'cocktails' ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-50'
+                }`}>
                 <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
-                    <span className="text-hotel-dark font-black uppercase tracking-[0.15em] text-[11px] whitespace-nowrap">
+                    <span className={`font-black uppercase tracking-[0.15em] text-[11px] whitespace-nowrap ${menuType === 'cocktails' ? 'text-cyan-400' : 'text-hotel-dark'
+                        }`}>
                         {t.title}
                     </span>
-                    <div className="w-6 h-0.5 bg-hotel-gold mt-0.5 rounded-full opacity-80"></div>
+                    <div className={`w-6 h-0.5 mt-0.5 rounded-full opacity-80 ${menuType === 'cocktails' ? 'bg-cyan-500' : 'bg-hotel-gold'
+                        }`}></div>
                 </div>
                 <div className="ml-auto relative">
                     <button
@@ -157,103 +161,131 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
                 </div>
             </div>
 
-            <div className="relative pt-4 pb-0">
-                {/* Left scroll indicator */}
-                <AnimatePresence>
-                    {showLeftIndicator && (
-                        <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -10 }}
-                            className="absolute left-0 top-6 bottom-4 w-12 bg-gradient-to-r from-white to-transparent z-10 flex items-center justify-start pl-1 pointer-events-none"
-                        >
-                            <ChevronLeft size={20} className="text-hotel-gold" />
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-
-                {/* Right scroll indicator */}
-                <AnimatePresence>
-                    {showRightIndicator && (
-                        <motion.div
-                            initial={{ opacity: 0, x: 10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 10 }}
-                            className="absolute right-0 top-6 bottom-4 w-12 bg-gradient-to-l from-white to-transparent z-10 flex items-center justify-end pr-1 pointer-events-none"
-                        >
-                            <ChevronRight size={20} className="text-hotel-gold" />
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-
-                {/* Scroll hint text */}
-                <AnimatePresence>
-                    {showScrollHint && (
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.3 }}
-                            style={{
-                                backgroundColor: '#2D5A27',
-                                color: '#ffffff',
-                                zIndex: 100
-                            }}
-                            className="absolute top-2 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full shadow-lg whitespace-nowrap uppercase font-bold text-[10px] tracking-widest text-center pointer-events-none"
-                        >
-                            ← Swipe for more →
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-
-                <div
-                    ref={scrollRef}
-                    className="flex overflow-x-auto no-scrollbar px-6 space-x-4 scroll-smooth relative z-20"
-                >
-                    {categories.map((category) => (
-                        <button
-                            key={category.id}
-                            ref={(el) => (buttonRefs.current[category.id] = el)}
-                            onClick={() => onCategoryClick(category.id)}
-                            className={`
-                                flex-shrink-0 w-28 flex flex-col items-center gap-2 pb-2 transition-all duration-300
-                                ${activeCategory === category.id
-                                    ? 'opacity-100'
-                                    : 'opacity-80'
-                                }
-                            `}
-                        >
-                            <div className={`
-                                w-24 h-24 rounded-[2.2rem] overflow-hidden transition-all duration-500 p-1.5
-                                ${activeCategory === category.id
-                                    ? 'shadow-[0_15px_30px_-8px_rgba(0,0,0,0.1)] scale-110 -translate-y-2'
-                                    : 'bg-white shadow-sm opacity-90'
-                                }
-                            `}>
-                                <div className="w-full h-full rounded-[1.8rem] overflow-hidden bg-gray-100">
-                                    <img
-                                        src={category.navImage || category.headerImage || category.items[0]?.image || '/images/default_category.jpg'}
-                                        alt={category.title}
-                                        className="w-full h-full object-cover"
-                                        loading="lazy"
-                                    />
-                                </div>
-                            </div>
-                            <span className={`
-                                text-[11px] font-extrabold text-center leading-tight transition-colors duration-300 px-1 uppercase tracking-tight
-                                ${activeCategory === category.id
-                                    ? 'text-hotel-gold font-black'
-                                    : 'text-hotel-dark'
-                                }
-                            `}>
+            <div className={`relative pt-4 pb-0 ${menuType === 'cocktails' ? 'bg-slate-800' : ''}`}>
+                {/* Conditional rendering: simplified layout for cocktails, scrollable for others */}
+                {menuType === 'cocktails' ? (
+                    // Simplified 2-button layout for cocktails
+                    <div className="flex justify-center gap-4 px-6 pb-4">
+                        {categories.map((category) => (
+                            <button
+                                key={category.id}
+                                onClick={() => onCategoryClick(category.id)}
+                                className={`
+                                    flex-1 py-6 px-4 rounded-2xl transition-all duration-300 font-black uppercase tracking-wider text-sm
+                                    ${activeCategory === category.id
+                                        ? 'bg-cyan-500 text-slate-900 shadow-lg shadow-cyan-500/50 scale-105'
+                                        : 'bg-slate-700 text-cyan-300 hover:bg-slate-600'
+                                    }
+                                `}
+                            >
                                 {(() => {
                                     const langField = `title_${language}`;
                                     return (category[langField]) ? category[langField] : category.title;
                                 })()}
-                            </span>
-                        </button>
-                    ))}
-                </div>
+                            </button>
+                        ))}
+                    </div>
+                ) : (
+                    // Original scrollable layout for food and drinks
+                    <>
+                        {/* Left scroll indicator */}
+                        <AnimatePresence>
+                            {showLeftIndicator && (
+                                <motion.div
+                                    initial={{ opacity: 0, x: -10 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: -10 }}
+                                    className="absolute left-0 top-6 bottom-4 w-12 bg-gradient-to-r from-white to-transparent z-10 flex items-center justify-start pl-1 pointer-events-none"
+                                >
+                                    <ChevronLeft size={20} className="text-hotel-gold" />
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+
+                        {/* Right scroll indicator */}
+                        <AnimatePresence>
+                            {showRightIndicator && (
+                                <motion.div
+                                    initial={{ opacity: 0, x: 10 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: 10 }}
+                                    className="absolute right-0 top-6 bottom-4 w-12 bg-gradient-to-l from-white to-transparent z-10 flex items-center justify-end pr-1 pointer-events-none"
+                                >
+                                    <ChevronRight size={20} className="text-hotel-gold" />
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+
+                        {/* Scroll hint text */}
+                        <AnimatePresence>
+                            {showScrollHint && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 0.3 }}
+                                    style={{
+                                        backgroundColor: '#2D5A27',
+                                        color: '#ffffff',
+                                        zIndex: 100
+                                    }}
+                                    className="absolute top-2 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full shadow-lg whitespace-nowrap uppercase font-bold text-[10px] tracking-widest text-center pointer-events-none"
+                                >
+                                    ← Swipe for more →
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+
+                        <div
+                            ref={scrollRef}
+                            className="flex overflow-x-auto no-scrollbar px-6 space-x-4 scroll-smooth relative z-20"
+                        >
+                            {categories.map((category) => (
+                                <button
+                                    key={category.id}
+                                    ref={(el) => (buttonRefs.current[category.id] = el)}
+                                    onClick={() => onCategoryClick(category.id)}
+                                    className={`
+                                        flex-shrink-0 w-28 flex flex-col items-center gap-2 pb-2 transition-all duration-300
+                                        ${activeCategory === category.id
+                                            ? 'opacity-100'
+                                            : 'opacity-80'
+                                        }
+                                    `}
+                                >
+                                    <div className={`
+                                        w-24 h-24 rounded-[2.2rem] overflow-hidden transition-all duration-500 p-1.5
+                                        ${activeCategory === category.id
+                                            ? 'shadow-[0_15px_30px_-8px_rgba(0,0,0,0.1)] scale-110 -translate-y-2'
+                                            : 'bg-white shadow-sm opacity-90'
+                                        }
+                                    `}>
+                                        <div className="w-full h-full rounded-[1.8rem] overflow-hidden bg-gray-100">
+                                            <img
+                                                src={category.navImage || category.headerImage || category.items[0]?.image || '/images/default_category.jpg'}
+                                                alt={category.title}
+                                                className="w-full h-full object-cover"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                    <span className={`
+                                        text-[11px] font-extrabold text-center leading-tight transition-colors duration-300 px-1 uppercase tracking-tight
+                                        ${activeCategory === category.id
+                                            ? 'text-hotel-gold font-black'
+                                            : 'text-hotel-dark'
+                                        }
+                            `}>
+                                        {(() => {
+                                            const langField = `title_${language}`;
+                                            return (category[langField]) ? category[langField] : category.title;
+                                        })()}
+                                    </span>
+                                </button>
+                            ))}
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );

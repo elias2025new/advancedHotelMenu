@@ -2,7 +2,7 @@ import React, { memo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Info, Plus, Check } from 'lucide-react';
 
-const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
+const FoodCard = memo(({ item, onClick, onAddToCart, language, menuType }) => {
     const getItemField = (field) => {
         const langField = `${field}_${language}`;
         return (item[langField]) ? item[langField] : item[field];
@@ -36,7 +36,10 @@ const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
         <motion.div
             whileTap={{ scale: 0.98 }}
             onClick={() => onClick(item)}
-            className="bg-white rounded-2xl overflow-hidden shadow-sm flex p-2 gap-2 cursor-pointer active:bg-slate-50 transition-colors relative h-full"
+            className={`rounded-2xl overflow-hidden shadow-sm flex p-2 gap-2 cursor-pointer transition-colors relative h-full ${menuType === 'cocktails'
+                ? 'bg-slate-800 border border-slate-700 active:bg-slate-700'
+                : 'bg-white active:bg-slate-50'
+                }`}
         >
             {/* Food Image on Left - Only show if image exists */}
             {item.image && (
@@ -53,15 +56,19 @@ const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
             {/* Content on Right */}
             <div className="flex flex-col justify-between py-0.5 flex-1">
                 <div>
-                    <h3 className="text-lg font-extrabold text-hotel-dark leading-tight mb-1">
+                    <h3 className={`text-lg font-extrabold leading-tight mb-1 ${menuType === 'cocktails' ? 'text-cyan-300' : 'text-hotel-dark'
+                        }`}>
                         {itemName}
                     </h3>
 
                     <div className="mb-2">
-                        <span className="text-hotel-dark text-sm font-bold border-b-2 border-red-600 pb-0.5">
+                        <span className={`text-sm font-bold border-b-2 pb-0.5 ${menuType === 'cocktails' ? 'text-cyan-400 border-cyan-500' : 'text-hotel-dark border-red-600'
+                            }`}>
                             {item.price.includes('/') ? (
                                 <>
-                                    {item.price.split('/')[0]} <span className="text-xs text-slate-400 font-normal">{language === 'am' ? 'ጠርሙስ' : language === 'zh' ? '瓶' : language === 'ar' ? 'زجاجة' : language === 'fr' ? 'Bouteille' : 'Bottle'}</span> / {item.price.split('/')[1]} <span className="text-xs text-hotel-dark font-bold">{language === 'am' ? 'ሾት' : language === 'zh' ? '杯' : language === 'ar' ? 'جرعة' : language === 'fr' ? 'Shot' : 'SHOT'}</span>
+                                    {item.price.split('/')[0]} <span className={`text-xs font-normal ${menuType === 'cocktails' ? 'text-slate-400' : 'text-slate-400'
+                                        }`}>{language === 'am' ? 'ጠርሙስ' : language === 'zh' ? '瓶' : language === 'ar' ? 'زجاجة' : language === 'fr' ? 'Bouteille' : 'Bottle'}</span> / {item.price.split('/')[1]} <span className={`text-xs font-bold ${menuType === 'cocktails' ? 'text-cyan-400' : 'text-hotel-dark'
+                                            }`}>{language === 'am' ? 'ሾት' : language === 'zh' ? '杯' : language === 'ar' ? 'جرعة' : language === 'fr' ? 'Shot' : 'SHOT'}</span>
                                 </>
                             ) : (
                                 <>{item.price} {language === 'am' ? 'ብር' : 'ETB'}</>
@@ -70,7 +77,8 @@ const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
                     </div>
 
                     {itemDescription && (
-                        <div className="text-slate-600 text-[13px] leading-relaxed font-medium">
+                        <div className={`text-[13px] leading-relaxed font-medium ${menuType === 'cocktails' ? 'text-slate-400' : 'text-slate-600'
+                            }`}>
                             {(() => {
                                 const words = itemDescription.split(' ');
                                 if (words.length > 10) {

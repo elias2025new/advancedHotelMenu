@@ -12,10 +12,10 @@ import CartButton from './components/CartButton';
 import CartModal from './components/CartModal';
 import DrinkOptionModal from './components/DrinkOptionModal';
 import FloatingMenuToggle from './components/FloatingMenuToggle';
-import { foodData, drinksData } from './data/menuData';
+import { foodData, drinksData, cocktailData } from './data/menuData';
 
 function App() {
-  const [menuType, setMenuType] = useState('food'); // 'food' or 'drinks'
+  const [menuType, setMenuType] = useState('food'); // 'food', 'drinks', or 'cocktails'
   const [language, setLanguage] = useState('en'); // 'en' or 'am'
   const [currentMenuData, setCurrentMenuData] = useState(foodData);
   const [activeCategory, setActiveCategory] = useState(foodData[0].id);
@@ -32,12 +32,16 @@ function App() {
     drinks: language === 'am' ? 'መጠጥ' :
       language === 'zh' ? '饮料' :
         language === 'ar' ? 'مشروبات' :
-          language === 'fr' ? 'Boissons' : 'Drinks Bar'
+          language === 'fr' ? 'Boissons' : 'Drinks Bar',
+    cocktails: language === 'am' ? 'ኮክቴሎች' :
+      language === 'zh' ? '鸡尾酒' :
+        language === 'ar' ? 'كوكتيلات' :
+          language === 'fr' ? 'Cocktails' : 'Cocktails'
   };
 
   // Update current menu data and active category when menu type changes
   useEffect(() => {
-    const newData = menuType === 'food' ? foodData : drinksData;
+    const newData = menuType === 'food' ? foodData : menuType === 'drinks' ? drinksData : cocktailData;
     setCurrentMenuData(newData);
     setActiveCategory(newData[0].id);
     window.scrollTo(0, 0);
@@ -159,7 +163,10 @@ function App() {
   }, [currentMenuData]);
 
   return (
-    <div className={`min-h-screen bg-slate-50 font-sans text-hotel-dark overflow-x-hidden selection:bg-hotel-gold/30`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen font-sans overflow-x-hidden selection:bg-hotel-gold/30 ${menuType === 'cocktails'
+      ? 'bg-slate-900 text-white'
+      : 'bg-slate-50 text-hotel-dark'
+      }`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <Layout>
         <CategoryNav
           categories={currentMenuData}
@@ -167,6 +174,7 @@ function App() {
           onCategoryClick={handleCategoryClick}
           language={language}
           setLanguage={setLanguage}
+          menuType={menuType}
         />
 
         <div className="pt-[184px]">
@@ -177,24 +185,33 @@ function App() {
 
         <main className="px-4 py-4 flex-grow">
           {/* Menu Type Toggle */}
-          <div className="flex justify-center mb-10 sticky top-[184px] z-30 py-2 gap-4">
+          <div className="flex justify-center mb-10 sticky top-[184px] z-30 py-2 gap-3">
             <button
               onClick={() => setMenuType('food')}
-              className={`px-8 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg ${menuType === 'food'
+              className={`px-6 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg ${menuType === 'food'
                 ? 'bg-hotel-gold text-white transform scale-105'
-                : 'bg-white text-slate-500 hover:text-hotel-gold'
+                : menuType === 'cocktails' ? 'bg-slate-700 text-slate-300 hover:text-cyan-400' : 'bg-white text-slate-500 hover:text-hotel-gold'
                 }`}
             >
               {t.food}
             </button>
             <button
               onClick={() => setMenuType('drinks')}
-              className={`px-8 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg ${menuType === 'drinks'
+              className={`px-6 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg ${menuType === 'drinks'
                 ? 'bg-hotel-gold text-white transform scale-105'
-                : 'bg-white text-slate-500 hover:text-hotel-gold'
+                : menuType === 'cocktails' ? 'bg-slate-700 text-slate-300 hover:text-cyan-400' : 'bg-white text-slate-500 hover:text-hotel-gold'
                 }`}
             >
               {t.drinks}
+            </button>
+            <button
+              onClick={() => setMenuType('cocktails')}
+              className={`px-6 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg ${menuType === 'cocktails'
+                ? 'bg-cyan-500 text-slate-900 transform scale-105'
+                : 'bg-white text-slate-500 hover:text-cyan-500'
+                }`}
+            >
+              {t.cocktails}
             </button>
           </div>
 
@@ -210,11 +227,12 @@ function App() {
               {currentMenuData.map((category) => (
                 <section key={category.id} id={category.id} className="mb-14 text-center scroll-mt-[240px]">
                   <div className="inline-flex flex-col items-center mb-8">
-                    {/* Top Red Line */}
-                    <div className="w-16 h-1 bg-red-600 mb-1"></div>
+                    {/* Top Line */}
+                    <div className={`w-16 h-1 mb-1 ${menuType === 'cocktails' ? 'bg-cyan-500' : 'bg-red-600'}`}></div>
 
                     {/* Main Title */}
-                    <h2 className="text-3xl font-black text-black uppercase tracking-widest leading-none">
+                    <h2 className={`text-3xl font-black uppercase tracking-widest leading-none ${menuType === 'cocktails' ? 'text-cyan-400' : 'text-black'
+                      }`}>
                       {(() => {
                         const langField = `title_${language}`;
                         return (category[langField]) ? category[langField] : category.title;
@@ -225,7 +243,7 @@ function App() {
                     {category.subtitle && (
                       <div className="relative mt-1">
                         <div
-                          className={`px-3 py-0.5 text-xs font-bold uppercase tracking-wider transform -skew-x-12 relative z-10 ${category.subtitleColor ? '' : 'bg-black text-white'
+                          className={`px-3 py-0.5 text-xs font-bold uppercase tracking-wider transform -skew-x-12 relative z-10 ${category.subtitleColor ? '' : menuType === 'cocktails' ? 'bg-slate-700 text-cyan-300' : 'bg-black text-white'
                             }`}
                           style={category.subtitleColor ? { color: category.subtitleColor, backgroundColor: 'transparent', fontSize: '1.25rem', fontWeight: 900 } : {}}
                         >
@@ -236,9 +254,10 @@ function App() {
                             })()}
                           </span>
                         </div>
-                        {/* Red line under subtitle connecting to main - Hide if custom color (Sandwiches) */}
+                        {/* Line under subtitle - Hide if custom color */}
                         {!category.subtitleColor && (
-                          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-red-600 -z-0"></div>
+                          <div className={`absolute top-1/2 left-0 right-0 h-0.5 -z-0 ${menuType === 'cocktails' ? 'bg-cyan-500' : 'bg-red-600'
+                            }`}></div>
                         )}
                       </div>
                     )}
@@ -265,6 +284,7 @@ function App() {
                         onClick={setSelectedItem}
                         onAddToCart={addToCart}
                         language={language}
+                        menuType={menuType}
                       />
                     ))}
                   </div>

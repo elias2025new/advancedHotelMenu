@@ -1370,6 +1370,238 @@ export const drinksData = [
     }
 ];
 
+export const cocktailData = [
+    {
+        id: "club-caribbean",
+        title: "Club Caribbean",
+        title_am: "ክለብ ካሪቢያን",
+        title_zh: "加勒比俱乐部",
+        title_ar: "نادي الكاريبي",
+        title_fr: "Club des Caraïbes",
+        subtitle: "Cocktails",
+        subtitle_am: "ኮክቴሎች",
+        subtitle_zh: "鸡尾酒",
+        subtitle_ar: "كوكتيلات",
+        subtitle_fr: "Cocktails",
+        headerImage: "/images/header_cocktails.png",
+        navImage: "/images/nav_cocktails.png",
+        items: [
+            {
+                name: "Red Lion",
+                name_am: "ቀይ አንበሳ",
+                name_zh: "红狮",
+                name_ar: "الأسد الأحمر",
+                name_fr: "Lion Rouge",
+                price: "1,400.00",
+                description: "Gordon gin, grand Marnier, orange juice and lemon juice.",
+                description_am: "ጎርደን ጂን፣ ግራንድ ማርኒየር፣ የብርቱካን ጭማቂ እና የሎሚ ጭማቂ።",
+                description_zh: "戈登金酒、君度橙酒、橙汁和柠檬汁。",
+                description_ar: "جن جوردون، جراند مارنييه، عصير برتقال وعصير ليمون.",
+                description_fr: "Gin Gordon, Grand Marnier, jus d'orange et jus de citron."
+            },
+            {
+                name: "Cosmopolitan",
+                name_am: "ኮስሞፖሊታን",
+                name_zh: "大都会",
+                name_ar: "كوزموبوليتان",
+                name_fr: "Cosmopolitan",
+                price: "1,100.00",
+                description: "Smirnoff vodka, triple sec, lemon juice & cranberry juice.",
+                description_am: "ስሚርኖፍ ቮድካ፣ ትሪፕል ሴክ፣ የሎሚ ጭማቂ እና የክራንቤሪ ጭማቂ።",
+                description_zh: "斯米诺伏特加、橙味利口酒、柠檬汁和蔓越莓汁。",
+                description_ar: "فودكا سميرنوف، تريبل سيك، عصير ليمون وعصير توت بري.",
+                description_fr: "Vodka Smirnoff, triple sec, jus de citron et jus de canneberge."
+            },
+            {
+                name: "Margarita",
+                name_am: "ማርጋሪታ",
+                name_zh: "玛格丽特",
+                name_ar: "مارغريتا",
+                name_fr: "Margarita",
+                price: "1,560.00",
+                description: "Tequila camino, cointreau & lemon juice.",
+                description_am: "ቴኪላ ካሚኖ፣ ኮይንትሮ እና የሎሚ ጭማቂ።",
+                description_zh: "龙舌兰酒、君度橙酒和柠檬汁。",
+                description_ar: "تيكيلا كامينو، كوانترو وعصير ليمون.",
+                description_fr: "Tequila Camino, Cointreau et jus de citron."
+            },
+            {
+                name: "Sex on The Beach",
+                name_am: "ሴክስ ኦን ዘ ቢች",
+                name_zh: "性感海滩",
+                name_ar: "سكس أون ذا بيتش",
+                name_fr: "Sex on The Beach",
+                price: "1,290.00",
+                description: "Vodka, peach schnapps, orange juice, cranberry juice.",
+                description_am: "ቮድካ፣ የፒች ሽናፕስ፣ የብርቱካን ጭማቂ፣ የክራንቤሪ ጭማቂ።",
+                description_zh: "伏特加、桃子力娇酒、橙汁、蔓越莓汁。",
+                description_ar: "فودكا، شنابس الخوخ، عصير برتقال، عصير توت بري.",
+                description_fr: "Vodka, schnaps de pêche, jus d'orange, jus de canneberge."
+            },
+            {
+                name: "Baileys Cocktail",
+                name_am: "ቤይሊስ ኮክቴል",
+                name_zh: "百利甜酒鸡尾酒",
+                name_ar: "كوكتيل بيليز",
+                name_fr: "Cocktail Baileys",
+                price: "1,180.00",
+                description: "Baileys chocolate, smirnoff vodka.",
+                description_am: "ቤይሊስ ቸኮሌት፣ ስሚርኖፍ ቮድካ።",
+                description_zh: "百利甜酒巧克力、斯米诺伏特加。",
+                description_ar: "بيليز شوكولاتة، فودكا سميرنوف.",
+                description_fr: "Baileys chocolat, vodka Smirnoff."
+            },
+            {
+                name: "Long Island Tea",
+                name_am: "ሎንግ አይላንድ ቲ",
+                name_zh: "长岛冰茶",
+                name_ar: "لونغ آيلاند آيس تي",
+                name_fr: "Long Island Iced Tea",
+                price: "2,100.00",
+                description: "Tequila Camino, Bacardi gold, Gordon gin, absolute vodka, Cointreau, lime juice, splash of coca.",
+                description_am: "ቴኪላ ካሚኖ፣ ባካርዲ ጎልድ፣ ጎርደን ጂን፣ አብሶሉት ቮድካ፣ ኮይንትሮ፣ የሎሚ ጭማቂ፣ ኮካ።",
+                description_zh: "龙舌兰酒、百加得金朗姆酒、戈登金酒、绝对伏特加、君度橙酒、青柠汁、可乐。",
+                description_ar: "تيكيلا كامينو، باكاردي جولد، جن جوردون، فودكا أبسولوت، كوانترو، عصير ليمون، رشة كوكا.",
+                description_fr: "Tequila Camino, Bacardi Gold, Gin Gordon, Vodka Absolut, Cointreau, jus de citron vert, splash de coca."
+            },
+            {
+                name: "Mojito",
+                name_am: "ሞጂቶ",
+                name_zh: "莫吉托",
+                name_ar: "موخيتو",
+                name_fr: "Mojito",
+                price: "1,390.00",
+                description: "Bacardi white, mint springs, lemon hulls, sugar, soda water & crushed ice.",
+                description_am: "ባካርዲ ነጭ፣ ናና፣ የሎሚ ቅርፊት፣ ስኳር፣ ሶዳ ውሃ እና የተፈጨ በረዶ።",
+                description_zh: "百加得白朗姆酒、薄荷叶、柠檬皮、糖、苏打水和碎冰。",
+                description_ar: "باكاردي أبيض، أوراق نعناع، قشر ليمون، سكر، ماء صودا وثلج مجروش.",
+                description_fr: "Bacardi blanc, feuilles de menthe, zeste de citron, sucre, eau gazeuse et glace pilée."
+            }
+        ]
+    },
+    {
+        id: "aperitifs",
+        title: "Aperitifs",
+        title_am: "አፔሪቲፍስ",
+        title_zh: "开胃酒",
+        title_ar: "المقبلات",
+        title_fr: "Apéritifs",
+        subtitle: "Martinis & More",
+        subtitle_am: "ማርቲኒስ እና ሌሎች",
+        subtitle_zh: "马提尼等",
+        subtitle_ar: "مارتيني والمزيد",
+        subtitle_fr: "Martinis et Plus",
+        headerImage: "/images/header_aperitifs.png",
+        navImage: "/images/nav_aperitifs.png",
+        items: [
+            {
+                name: "Negroni",
+                name_am: "ኔግሮኒ",
+                name_zh: "内格罗尼",
+                name_ar: "نيغروني",
+                name_fr: "Negroni",
+                price: "1,290.00",
+                description: "Gordon Gin, Martini Rosso & Campari.",
+                description_am: "ጎርደን ጂን፣ ማርቲኒ ሮሶ እና ካምፓሪ።",
+                description_zh: "戈登金酒、马天尼罗索和金巴利。",
+                description_ar: "جن جوردون، مارتيني روسو وكامباري.",
+                description_fr: "Gin Gordon, Martini Rosso et Campari."
+            },
+            {
+                name: "Perfect Martini",
+                name_am: "ፐርፌክት ማርቲኒ",
+                name_zh: "完美马提尼",
+                name_ar: "مارتيني مثالي",
+                name_fr: "Martini Parfait",
+                price: "1,270.00",
+                description: "Gordon Gin, Extra dry Martini & Olive, lemon juice.",
+                description_am: "ጎርደን ጂን፣ ኤክስትራ ድራይ ማርቲኒ እና ወይራ፣ የሎሚ ጭማቂ።",
+                description_zh: "戈登金酒、特干马天尼、橄榄、柠檬汁。",
+                description_ar: "جن جوردون، مارتيني إكسترا دراي وزيتون، عصير ليمون.",
+                description_fr: "Gin Gordon, Martini Extra Dry et Olive, jus de citron."
+            },
+            {
+                name: "Sweet Martini",
+                name_am: "ጣፋጭ ማርቲኒ",
+                name_zh: "甜马提尼",
+                name_ar: "مارتيني حلو",
+                name_fr: "Martini Doux",
+                price: "1,130.00",
+                description: "Gordon Gin, Martini Bianco & Olive.",
+                description_am: "ጎርደን ጂን፣ ማርቲኒ ቢያንኮ እና ወይራ።",
+                description_zh: "戈登金酒、马天尼白和橄榄。",
+                description_ar: "جن جوردون، مارتيني بيانكو وزيتون.",
+                description_fr: "Gin Gordon, Martini Bianco et Olive."
+            },
+            {
+                name: "BMW Shot",
+                name_am: "ቢኤምደብሊው ሾት",
+                name_zh: "BMW烈酒",
+                name_ar: "شوت بي إم دبليو",
+                name_fr: "Shot BMW",
+                price: "530.00",
+                description: "Baileys, Malibu, J&B.",
+                description_am: "ቤይሊስ፣ ማሊቡ፣ ጄ እና ቢ።",
+                description_zh: "百利甜酒、马里布、J&B威士忌。",
+                description_ar: "بيليز، ماليبو، جي آند بي.",
+                description_fr: "Baileys, Malibu, J&B."
+            },
+            {
+                name: "ABC Shot",
+                name_am: "ኤቢሲ ሾት",
+                name_zh: "ABC烈酒",
+                name_ar: "شوت إيه بي سي",
+                name_fr: "Shot ABC",
+                price: "840.00",
+                description: "Amaretto, baileys, Cognac.",
+                description_am: "አማሬቶ፣ ቤይሊስ፣ ኮኛክ።",
+                description_zh: "杏仁利口酒、百利甜酒、干邑白兰地。",
+                description_ar: "أماريتو، بيليز، كونياك.",
+                description_fr: "Amaretto, Baileys, Cognac."
+            },
+            {
+                name: "B-52 Shot",
+                name_am: "ቢ-52 ሾት",
+                name_zh: "B-52烈酒",
+                name_ar: "شوت بي-52",
+                name_fr: "Shot B-52",
+                price: "530.00",
+                description: "Kahlua, Bailey's, Irish Cream, Grand Marnier.",
+                description_am: "ካህሉዋ፣ ቤይሊስ፣ አይሪሽ ክሬም፣ ግራንድ ማርኒየር።",
+                description_zh: "卡鲁瓦咖啡酒、百利甜酒、爱尔兰奶油、君度橙酒。",
+                description_ar: "كالوا، بيليز، كريمة أيرلندية، جراند مارنييه.",
+                description_fr: "Kahlua, Bailey's, Crème Irlandaise, Grand Marnier."
+            },
+            {
+                name: "Cinderella Mocktail",
+                name_am: "ሲንደሬላ ሞክቴል",
+                name_zh: "灰姑娘无酒精鸡尾酒",
+                name_ar: "موكتيل سندريلا",
+                name_fr: "Mocktail Cendrillon",
+                price: "550.00",
+                description: "Pineapple, Orange, Strawberry Grenadine.",
+                description_am: "አናናስ፣ ብርቱካን፣ እንጀራ ግሬናዲን።",
+                description_zh: "菠萝、橙子、草莓石榴糖浆。",
+                description_ar: "أناناس، برتقال، جرينادين الفراولة.",
+                description_fr: "Ananas, Orange, Grenadine à la Fraise."
+            },
+            {
+                name: "Pink Lady Mocktail",
+                name_am: "ፒንክ ሌዲ ሞክቴል",
+                name_zh: "粉红佳人无酒精鸡尾酒",
+                name_ar: "موكتيل بينك ليدي",
+                name_fr: "Mocktail Pink Lady",
+                price: "570.00",
+                description: "Watermelon, Orange, Ambo Water.",
+                description_am: "ሀብሃብ፣ ብርቱካን፣ አምቦ ውሃ።",
+                description_zh: "西瓜、橙子、安博矿泉水。",
+                description_ar: "بطيخ، برتقال، ماء أمبو.",
+                description_fr: "Pastèque, Orange, Eau d'Ambo."
+            }
+        ]
+    }
+];
+
 // Default export for backward compatibility if needed, but we will use named exports mainly now.
 // Since App.jsx currently uses named import { menuData }... actually wait, the previous code was:
 // export const menuData = [...]
