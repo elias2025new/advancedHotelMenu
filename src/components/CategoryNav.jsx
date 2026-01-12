@@ -2,14 +2,20 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const CategoryNav = ({ categories, activeCategory, onCategoryClick }) => {
+const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, setLanguage }) => {
     const scrollRef = useRef(null);
     const buttonRefs = useRef({});
     const [showLeftIndicator, setShowLeftIndicator] = useState(false);
     const [showRightIndicator, setShowRightIndicator] = useState(true);
     const [showScrollHint, setShowScrollHint] = useState(false);
 
+    const t = {
+        title: language === 'en' ? 'Nexus Hotel Menu' : 'የኔክሰስ ሆቴል ዝርዝር',
+        swipe: language === 'en' ? '← Swipe for more →' : '← ለተጨማሪ ያንሸራትቱ →'
+    };
+
     useEffect(() => {
+        // ... (rest of the component)
         // Show hint after header animation finishes (wait 2.5s)
         const showTimer = setTimeout(() => {
             setShowScrollHint(true);
@@ -76,6 +82,26 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick }) => {
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 max-w-[430px] mx-auto shadow-sm">
+            {/* New Title Bar */}
+            <div className="bg-white px-6 py-2.5 relative flex items-center border-b border-gray-50 min-h-[44px]">
+                <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
+                    <span className="text-hotel-dark font-black uppercase tracking-[0.15em] text-[11px] whitespace-nowrap">
+                        {t.title}
+                    </span>
+                    <div className="w-6 h-0.5 bg-hotel-gold mt-0.5 rounded-full opacity-80"></div>
+                </div>
+                <div className="ml-auto relative z-10">
+                    <select
+                        value={language}
+                        onChange={(e) => setLanguage(e.target.value)}
+                        className="bg-slate-50 text-hotel-dark text-[10px] font-bold uppercase py-1.5 px-2 rounded border border-slate-200 focus:outline-none transition-all cursor-pointer shadow-sm"
+                    >
+                        <option value="en" className="text-black">EN</option>
+                        <option value="am" className="text-black">AMH</option>
+                    </select>
+                </div>
+            </div>
+
             <div className="relative pt-6 pb-4">
                 {/* Left scroll indicator */}
                 <AnimatePresence>
@@ -86,7 +112,7 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick }) => {
                             exit={{ opacity: 0, x: -10 }}
                             className="absolute left-0 top-6 bottom-4 w-12 bg-gradient-to-r from-white to-transparent z-10 flex items-center justify-start pl-1 pointer-events-none"
                         >
-                            <ChevronLeft size={20} className="text-hotel-green" />
+                            <ChevronLeft size={20} className="text-hotel-gold" />
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -100,7 +126,7 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick }) => {
                             exit={{ opacity: 0, x: 10 }}
                             className="absolute right-0 top-6 bottom-4 w-12 bg-gradient-to-l from-white to-transparent z-10 flex items-center justify-end pr-1 pointer-events-none"
                         >
-                            <ChevronRight size={20} className="text-hotel-green" />
+                            <ChevronRight size={20} className="text-hotel-gold" />
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -145,7 +171,7 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick }) => {
                             <div className={`
                                 w-24 h-24 rounded-[2.2rem] overflow-hidden transition-all duration-500 p-1.5
                                 ${activeCategory === category.id
-                                    ? 'bg-hotel-green shadow-[0_15px_30px_-8px_rgba(45,90,39,0.4),_inset_0_2px_4px_rgba(255,255,255,0.2)] scale-110 -translate-y-2'
+                                    ? 'shadow-[0_15px_30px_-8px_rgba(0,0,0,0.1)] scale-110 -translate-y-2'
                                     : 'bg-white shadow-sm opacity-90'
                                 }
                             `}>
@@ -161,11 +187,11 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick }) => {
                             <span className={`
                                 text-[11px] font-extrabold text-center leading-tight transition-colors duration-300 px-1 uppercase tracking-tight
                                 ${activeCategory === category.id
-                                    ? 'text-hotel-green font-black'
+                                    ? 'text-hotel-gold font-black'
                                     : 'text-hotel-dark'
                                 }
                             `}>
-                                {category.title}
+                                {language === 'am' && category.title_am ? category.title_am : category.title}
                             </span>
                         </button>
                     ))}

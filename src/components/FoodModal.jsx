@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
-const FoodModal = React.memo(({ item, onClose }) => {
+const FoodModal = ({ item, onClose, language }) => {
     useEffect(() => {
         if (item) {
             document.body.style.overflow = 'hidden';
@@ -15,6 +15,10 @@ const FoodModal = React.memo(({ item, onClose }) => {
     }, [item]);
 
     if (!item) return null;
+
+    const itemName = language === 'am' && item.name_am ? item.name_am : item.name;
+    const itemDescription = language === 'am' && item.description_am ? item.description_am : item.description;
+    const addLabel = language === 'am' ? "ወደ ቅርጫት ጨምር" : "Add to Cart";
 
     return (
         <AnimatePresence>
@@ -46,7 +50,7 @@ const FoodModal = React.memo(({ item, onClose }) => {
                         <div className="w-full aspect-square overflow-hidden bg-hotel-light">
                             <img
                                 src={item.image}
-                                alt={item.name}
+                                alt={itemName}
                                 className="w-full h-full object-cover"
                             />
                         </div>
@@ -56,14 +60,14 @@ const FoodModal = React.memo(({ item, onClose }) => {
                     <div className="p-6">
                         <div className="mb-4">
                             <h2 className="text-xl font-black text-hotel-dark leading-tight">
-                                {item.name}
+                                {itemName}
                             </h2>
                         </div>
 
-                        {item.description && (
+                        {itemDescription && (
                             <div className="mb-8">
                                 <p className="text-slate-600 text-sm leading-relaxed font-medium">
-                                    {item.description}
+                                    {itemDescription}
                                 </p>
                             </div>
                         )}
@@ -71,7 +75,7 @@ const FoodModal = React.memo(({ item, onClose }) => {
                         <div className="mt-auto space-y-4">
                             <div className="flex justify-between items-center pt-4 border-t border-slate-100">
                                 <span className="text-slate-400 text-[11px] font-medium uppercase tracking-wider">Price</span>
-                                <span className="text-hotel-green text-2xl font-black border-b-2 border-red-600 pb-1">
+                                <span className="text-hotel-gold text-2xl font-black border-b-2 border-red-600 pb-1">
                                     {item.price} <span className="text-sm">ETB</span>
                                 </span>
                             </div>
@@ -83,10 +87,7 @@ const FoodModal = React.memo(({ item, onClose }) => {
                     </div>
                 </motion.div>
             </motion.div>
-        </AnimatePresence>
-    );
-});
-
-FoodModal.displayName = 'FoodModal';
+        </AnimatePresence>);
+};
 
 export default FoodModal;

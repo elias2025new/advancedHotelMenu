@@ -2,7 +2,16 @@ import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Plus, Minus, Trash2, ShoppingBag } from 'lucide-react';
 
-const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart }) => {
+const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart, language }) => {
+    const t = {
+        title: language === 'am' ? 'የእኔ ትዕዛዝ' : 'My Order',
+        empty: language === 'am' ? 'ቅርጫትዎ ባዶ ነው' : 'Your order is empty',
+        total: language === 'am' ? 'ጠቅላላ ዋጋ' : 'Total Amount',
+        clear: language === 'am' ? 'ሰርዝ' : 'Clear',
+        orderMore: language === 'am' ? 'ተጨማሪ እዘዝ' : 'Order More',
+        itemsSelected: language === 'am' ? 'የተመረጡ' : 'Items Selected',
+        itemSelected: language === 'am' ? 'የተመረጠ' : 'Item Selected'
+    };
     useEffect(() => {
         if (isOpen) document.body.style.overflow = 'hidden';
         else document.body.style.overflow = 'unset';
@@ -35,9 +44,9 @@ const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart }) =>
                     {/* Header */}
                     <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-white sticky top-0 z-10">
                         <div>
-                            <h2 className="text-2xl font-black text-hotel-dark uppercase tracking-wide">My Order</h2>
+                            <h2 className="text-2xl font-black text-hotel-dark uppercase tracking-wide">{t.title}</h2>
                             <p className="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">
-                                {items.length} {items.length === 1 ? 'Item' : 'Items'} Selected
+                                {items.length} {items.length === 1 ? t.itemSelected : t.itemsSelected}
                             </p>
                         </div>
                         <button onClick={onClose} className="p-2 bg-slate-50 rounded-full text-hotel-dark">
@@ -52,15 +61,17 @@ const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart }) =>
                                 <div className="bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                                     <ShoppingBag size={24} className="text-slate-300" />
                                 </div>
-                                <p className="text-slate-400 font-bold uppercase tracking-wider text-sm">Your order is empty</p>
+                                <p className="text-slate-400 font-bold uppercase tracking-wider text-sm">{t.empty}</p>
                             </div>
                         ) : (
                             <div className="space-y-6">
                                 {items.map((item, index) => (
                                     <div key={index} className="flex gap-4 items-center">
                                         <div className="flex-grow">
-                                            <h3 className="text-sm font-black text-hotel-dark uppercase leading-tight">{item.name}</h3>
-                                            <p className="text-hotel-green text-xs font-bold mt-1">{item.price} ETB</p>
+                                            <h3 className="text-sm font-black text-hotel-dark uppercase leading-tight">
+                                                {language === 'am' && item.name_am ? item.name_am : item.name}
+                                            </h3>
+                                            <p className="text-hotel-gold text-xs font-bold mt-1">{item.price} ETB</p>
                                         </div>
                                         <div className="flex items-center bg-slate-50 rounded-full p-1 border border-slate-100">
                                             <button
@@ -89,9 +100,9 @@ const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart }) =>
                     {items.length > 0 && (
                         <div className="p-6 bg-slate-50 border-t border-slate-100 mt-auto">
                             <div className="flex justify-between items-end mb-6">
-                                <span className="text-xs text-slate-400 font-black uppercase tracking-widest">Total Amount</span>
+                                <span className="text-xs text-slate-400 font-black uppercase tracking-widest">{t.total}</span>
                                 <div className="text-right">
-                                    <span className="text-2xl font-black text-hotel-green">
+                                    <span className="text-2xl font-black text-hotel-gold">
                                         {total.toLocaleString()}
                                         <span className="text-sm ml-1">ETB</span>
                                     </span>
@@ -103,13 +114,13 @@ const CartModal = ({ isOpen, onClose, items, onUpdateQuantity, onClearCart }) =>
                                     onClick={onClearCart}
                                     className="flex items-center justify-center gap-2 py-3.5 px-4 bg-white border border-slate-200 rounded-2xl text-slate-400 font-bold uppercase tracking-widest text-[10px] hover:bg-red-50 hover:text-red-500 hover:border-red-100 transition-all"
                                 >
-                                    <Trash2 size={14} /> Clear
+                                    <Trash2 size={14} /> {t.clear}
                                 </button>
                                 <button
                                     onClick={onClose}
                                     className="py-3.5 px-4 bg-red-600 text-white rounded-2xl font-black uppercase tracking-widest text-[10px] shadow-lg shadow-red-200"
                                 >
-                                    Order More
+                                    {t.orderMore}
                                 </button>
                             </div>
                         </div>

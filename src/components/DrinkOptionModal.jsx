@@ -2,8 +2,13 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Wine, GlassWater } from 'lucide-react'; // Using Wine for Bottle, GlassWater for Shot as generic icons
 
-const DrinkOptionModal = ({ item, onClose, onConfirm }) => {
+const DrinkOptionModal = ({ item, onClose, onConfirm, language }) => {
     if (!item) return null;
+
+    const itemName = language === 'am' && item.name_am ? item.name_am : item.name;
+    const bottleLabel = language === 'am' ? "ጠርሙስ" : "Bottle";
+    const shotLabel = language === 'am' ? "ሾት" : "Shot";
+    const selectOptionLabel = language === 'am' ? "እባክዎን አማራጭ ይምረጡ" : "Please select an option";
 
     const [bottlePrice, shotPrice] = item.price.split(' / ').map(p => p.trim());
 
@@ -31,35 +36,35 @@ const DrinkOptionModal = ({ item, onClose, onConfirm }) => {
                     </button>
 
                     <h3 className="text-xl font-black text-center text-hotel-dark mb-2">
-                        {item.name}
+                        {itemName}
                     </h3>
                     <p className="text-center text-slate-500 text-sm mb-6">
-                        Please select an option
+                        {selectOptionLabel}
                     </p>
 
                     <div className="grid grid-cols-2 gap-4">
                         {/* Bottle Option */}
                         <button
                             onClick={() => onConfirm('Bottle', bottlePrice)}
-                            className="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-slate-100 hover:border-hotel-gold hover:bg-hotel-gold/5 transition-all group"
+                            className="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-slate-100 hover:border-slate-300 hover:bg-slate-50 transition-all group"
                         >
-                            <div className="w-12 h-12 rounded-full bg-slate-50 text-slate-400 group-hover:bg-hotel-gold group-hover:text-white flex items-center justify-center mb-3 transition-colors">
+                            <div className="w-12 h-12 rounded-full bg-slate-50 text-slate-400 group-hover:bg-hotel-dark group-hover:text-white flex items-center justify-center mb-3 transition-colors">
                                 <Wine size={24} />
                             </div>
-                            <span className="font-bold text-hotel-dark mb-1">Bottle</span>
-                            <span className="text-hotel-green text-sm font-bold">{bottlePrice} ETB</span>
+                            <span className="font-bold text-hotel-dark mb-1">{bottleLabel}</span>
+                            <span className="text-hotel-gold text-sm font-bold">{bottlePrice} ETB</span>
                         </button>
 
                         {/* Shot Option */}
                         <button
                             onClick={() => onConfirm('Shot', shotPrice)}
-                            className="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-slate-100 hover:border-hotel-gold hover:bg-hotel-gold/5 transition-all group"
+                            className="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-slate-100 hover:border-slate-300 hover:bg-slate-50 transition-all group"
                         >
-                            <div className="w-12 h-12 rounded-full bg-slate-50 text-slate-400 group-hover:bg-hotel-gold group-hover:text-white flex items-center justify-center mb-3 transition-colors">
+                            <div className="w-12 h-12 rounded-full bg-slate-50 text-slate-400 group-hover:bg-hotel-dark group-hover:text-white flex items-center justify-center mb-3 transition-colors">
                                 <GlassWater size={24} />
                             </div>
-                            <span className="font-bold text-hotel-dark mb-1">Shot</span>
-                            <span className="text-hotel-green text-sm font-bold">{shotPrice} ETB</span>
+                            <span className="font-bold text-hotel-dark mb-1">{shotLabel}</span>
+                            <span className="text-hotel-gold text-sm font-bold">{shotPrice} ETB</span>
                         </button>
                     </div>
                 </motion.div>

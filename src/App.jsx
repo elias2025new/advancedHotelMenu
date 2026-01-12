@@ -16,12 +16,18 @@ import { foodData, drinksData } from './data/menuData';
 
 function App() {
   const [menuType, setMenuType] = useState('food'); // 'food' or 'drinks'
+  const [language, setLanguage] = useState('en'); // 'en' or 'am'
   const [currentMenuData, setCurrentMenuData] = useState(foodData);
   const [activeCategory, setActiveCategory] = useState(foodData[0].id);
   const [selectedItem, setSelectedItem] = useState(null);
   const [optionItem, setOptionItem] = useState(null); // Item waiting for option selection
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const t = {
+    food: language === 'en' ? 'Food Menu' : 'የምግብ ዝርዝር',
+    drinks: language === 'en' ? 'Drinks Bar' : 'የመጠጥ ባር'
+  };
 
   // Update current menu data and active category when menu type changes
   useEffect(() => {
@@ -153,34 +159,36 @@ function App() {
           categories={currentMenuData}
           activeCategory={activeCategory}
           onCategoryClick={handleCategoryClick}
+          language={language}
+          setLanguage={setLanguage}
         />
 
-        <div className="pt-32">
-          <Header />
+        <div className="pt-[172px]">
+          <Header language={language} />
         </div>
 
-        <ImportantInfo />
+        <ImportantInfo language={language} />
 
         <main className="px-4 py-4 flex-grow">
           {/* Menu Type Toggle */}
-          <div className="flex justify-center mb-10 sticky top-[70px] z-30 py-2 gap-4">
+          <div className="flex justify-center mb-10 sticky top-[172px] z-30 py-2 gap-4">
             <button
               onClick={() => setMenuType('food')}
-              className={`px-8 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg border-2 ${menuType === 'food'
-                ? 'bg-hotel-gold text-white border-hotel-gold transform scale-105'
-                : 'bg-white text-slate-500 border-white hover:text-hotel-gold'
+              className={`px-8 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg ${menuType === 'food'
+                ? 'bg-hotel-gold text-white transform scale-105'
+                : 'bg-white text-slate-500 hover:text-hotel-gold'
                 }`}
             >
-              Food Menu
+              {t.food}
             </button>
             <button
               onClick={() => setMenuType('drinks')}
-              className={`px-8 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg border-2 ${menuType === 'drinks'
-                ? 'bg-hotel-gold text-white border-hotel-gold transform scale-105'
-                : 'bg-white text-slate-500 border-white hover:text-hotel-gold'
+              className={`px-8 py-3 rounded-full text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-lg ${menuType === 'drinks'
+                ? 'bg-hotel-gold text-white transform scale-105'
+                : 'bg-white text-slate-500 hover:text-hotel-gold'
                 }`}
             >
-              Drinks Bar
+              {t.drinks}
             </button>
           </div>
 
@@ -201,7 +209,7 @@ function App() {
 
                     {/* Main Title */}
                     <h2 className="text-3xl font-black text-black uppercase tracking-widest leading-none">
-                      {category.title}
+                      {language === 'am' && category.title_am ? category.title_am : category.title}
                     </h2>
 
                     {/* Subtitle */}
@@ -212,7 +220,9 @@ function App() {
                             }`}
                           style={category.subtitleColor ? { color: category.subtitleColor, backgroundColor: 'transparent', fontSize: '1.25rem', fontWeight: 900 } : {}}
                         >
-                          <span className="block transform skew-x-12">{category.subtitle}</span>
+                          <span className="block transform skew-x-12">
+                            {language === 'am' && category.subtitle_am ? category.subtitle_am : category.subtitle}
+                          </span>
                         </div>
                         {/* Red line under subtitle connecting to main - Hide if custom color (Sandwiches) */}
                         {!category.subtitleColor && (
@@ -239,6 +249,7 @@ function App() {
                         item={item}
                         onClick={setSelectedItem}
                         onAddToCart={addToCart}
+                        language={language}
                       />
                     ))}
                   </div>
@@ -256,12 +267,14 @@ function App() {
         <FoodModal
           item={selectedItem}
           onClose={() => setSelectedItem(null)}
+          language={language}
         />
 
         <DrinkOptionModal
           item={optionItem}
           onClose={() => setOptionItem(null)}
           onConfirm={handleOptionConfirm}
+          language={language}
         />
 
         <ScrollToTop />
@@ -275,6 +288,7 @@ function App() {
           items={cartItems}
           onUpdateQuantity={updateQuantity}
           onClearCart={clearCart}
+          language={language}
         />
 
         <FloatingMenuToggle

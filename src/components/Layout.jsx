@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         - shadow-xl to give it a "contained" look on larger screens
         - rounded-[3rem] to match the high-end feel in the mockup
       */}
-            <div className="w-full max-w-[430px] bg-white min-h-[90vh] shadow-[0_20px_50px_rgba(0,0,0,0.05)] relative flex flex-col rounded-[3rem] overflow-hidden border border-gray-100">
+            <div className="w-full max-w-[430px] bg-white min-h-[90vh] shadow-[0_20px_50px_rgba(0,0,0,0.05)] relative flex flex-col rounded-xl overflow-hidden border border-gray-100">
                 {children}
                 <Analytics />
             </div>

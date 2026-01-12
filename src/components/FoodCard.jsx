@@ -2,7 +2,12 @@ import React, { memo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Info, Plus, Check } from 'lucide-react';
 
-const FoodCard = memo(({ item, onClick, onAddToCart }) => {
+const FoodCard = memo(({ item, onClick, onAddToCart, language }) => {
+    const itemName = language === 'am' && item.name_am ? item.name_am : item.name;
+    const itemDescription = language === 'am' && item.description_am ? item.description_am : item.description;
+    const addLabel = language === 'am' ? "ጨምር" : "Add";
+    const addedLabel = language === 'am' ? "ተጨምሯል" : "Added";
+
     const [isAdded, setIsAdded] = useState(false);
 
     const handleAdd = (e) => {
@@ -16,14 +21,14 @@ const FoodCard = memo(({ item, onClick, onAddToCart }) => {
         <motion.div
             whileTap={{ scale: 0.98 }}
             onClick={() => onClick(item)}
-            className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex p-2 gap-2 cursor-pointer active:bg-slate-50 transition-colors relative h-full"
+            className="bg-white rounded-2xl overflow-hidden shadow-sm flex p-2 gap-2 cursor-pointer active:bg-slate-50 transition-colors relative h-full"
         >
             {/* Food Image on Left - Only show if image exists */}
             {item.image && (
                 <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-hotel-light">
                     <img
                         src={item.image}
-                        alt={item.name}
+                        alt={itemName}
                         className="w-full h-full object-cover"
                         loading="lazy"
                     />
@@ -34,11 +39,11 @@ const FoodCard = memo(({ item, onClick, onAddToCart }) => {
             <div className="flex flex-col justify-between py-0.5 flex-1">
                 <div>
                     <h3 className="text-lg font-extrabold text-hotel-dark leading-tight mb-1">
-                        {item.name}
+                        {itemName}
                     </h3>
 
                     <div className="mb-2">
-                        <span className="text-hotel-green text-sm font-bold border-b-2 border-red-600 pb-0.5">
+                        <span className="text-hotel-gold text-sm font-bold border-b-2 border-red-600 pb-0.5">
                             {item.price.includes('/') ? (
                                 <>
                                     {item.price.split('/')[0]} <span className="text-xs text-slate-400 font-normal">Bottle</span> / {item.price.split('/')[1]} <span className="text-xs text-hotel-gold font-bold">SHOT</span>
@@ -49,10 +54,10 @@ const FoodCard = memo(({ item, onClick, onAddToCart }) => {
                         </span>
                     </div>
 
-                    {item.description && (
+                    {itemDescription && (
                         <div className="text-slate-600 text-[13px] leading-relaxed font-medium">
                             {(() => {
-                                const words = item.description.split(' ');
+                                const words = itemDescription.split(' ');
                                 if (words.length > 10) {
                                     return (
                                         <>
@@ -60,7 +65,7 @@ const FoodCard = memo(({ item, onClick, onAddToCart }) => {
                                         </>
                                     );
                                 }
-                                return item.description;
+                                return itemDescription;
                             })()}
                         </div>
                     )}
@@ -68,7 +73,7 @@ const FoodCard = memo(({ item, onClick, onAddToCart }) => {
 
                 <div className="mt-2 flex justify-between items-end">
                     {item.description && item.description.split(' ').length > 10 ? (
-                        <div className="text-hotel-green font-bold text-xs uppercase tracking-wide">
+                        <div className="text-hotel-gold font-bold text-xs uppercase tracking-wide">
                             See more
                         </div>
                     ) : (
@@ -80,9 +85,9 @@ const FoodCard = memo(({ item, onClick, onAddToCart }) => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={handleAdd}
-                        className={`px-3 py-1 rounded-lg flex items-center gap-1 border transition-all shadow-sm ${isAdded
-                                ? 'bg-green-600 text-white border-green-600'
-                                : 'bg-hotel-gold/10 text-hotel-gold border-hotel-gold/20 hover:bg-hotel-gold hover:text-white'
+                        className={`px-3 py-1 rounded-lg flex items-center gap-1 transition-all shadow-sm ${isAdded
+                            ? 'bg-green-600 text-white'
+                            : 'bg-hotel-gold/10 text-hotel-gold hover:bg-hotel-gold hover:text-white'
                             }`}
                     >
                         <AnimatePresence mode="wait" initial={false}>
