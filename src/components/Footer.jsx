@@ -1,5 +1,5 @@
 import React from 'react';
-import { Send, Globe, Phone } from 'lucide-react';
+import { Send, Globe, Phone, MapPin } from 'lucide-react';
 
 const Footer = ({ language }) => {
     const t = {
@@ -36,7 +36,7 @@ const Footer = ({ language }) => {
                         {t.contactUs}
                     </h3>
 
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-4">
                         {/* Phone Number Area */}
                         <div className="flex items-center justify-center gap-4 bg-white py-4 px-6 rounded-2xl shadow-sm border border-slate-100 group hover:border-hotel-gold transition-colors">
                             <div className="bg-hotel-gold/10 p-2.5 rounded-xl text-hotel-gold group-hover:bg-hotel-gold group-hover:text-white transition-all">
@@ -44,9 +44,22 @@ const Footer = ({ language }) => {
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-[10px] font-black uppercase tracking-tighter text-slate-400 leading-none mb-1">Call for support</span>
-                                <a href="tel:+251116670101" className="text-lg font-black text-hotel-dark tracking-tight hover:text-hotel-gold transition-colors">
-                                    +251 116 670 101
+                                <a href="tel:+251116670067" className="text-lg font-black text-hotel-dark tracking-tight hover:text-hotel-gold transition-colors">
+                                    +251 116 670 067
                                 </a>
+                            </div>
+                        </div>
+
+                        {/* Location Area */}
+                        <div className="flex items-center justify-center gap-4 bg-white py-4 px-6 rounded-2xl shadow-sm border border-slate-100 group hover:border-hotel-gold transition-colors">
+                            <div className="bg-hotel-gold/10 p-2.5 rounded-xl text-hotel-gold group-hover:bg-hotel-gold group-hover:text-white transition-all">
+                                <MapPin size={20} strokeWidth={2.5} />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black uppercase tracking-tighter text-slate-400 leading-none mb-1">Location</span>
+                                <span className="text-sm font-black text-hotel-dark tracking-tight">
+                                    Gerji Mebrathaile Street
+                                </span>
                             </div>
                         </div>
 
@@ -67,7 +80,7 @@ const Footer = ({ language }) => {
                                 <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">TikTok</span>
                             </a>
 
-                            <a href="https://swissinnnexus.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
+                            <a href="https://www.nexusaddis.net/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
                                 <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
                                     <Globe size={24} strokeWidth={2} />
                                 </div>
