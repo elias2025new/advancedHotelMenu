@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Utensils, Wine } from 'lucide-react';
 
-const FloatingMenuToggle = ({ currentMenu, onToggle }) => {
+const FloatingMenuToggle = ({ currentMenu, onToggle, language }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -23,8 +23,35 @@ const FloatingMenuToggle = ({ currentMenu, onToggle }) => {
     }, []);
 
     const isFood = currentMenu === 'food';
-    const targetMenu = isFood ? 'Drinks' : 'Food';
     const Icon = isFood ? Wine : Utensils;
+
+    const labels = {
+        food: {
+            en: 'Food',
+            am: 'ምግብ',
+            zh: '食物',
+            ar: 'طعام',
+            fr: 'Nourriture'
+        },
+        drinks: {
+            en: 'Drinks',
+            am: 'መጠጥ',
+            zh: '饮料',
+            ar: 'مشروبات',
+            fr: 'Boissons'
+        },
+        goto: {
+            en: 'Go to',
+            am: 'ወደ',
+            zh: '前往',
+            ar: 'الذهاب إلى',
+            fr: 'Aller à'
+        }
+    };
+
+    const targetKey = isFood ? 'drinks' : 'food';
+    const targetLabel = labels[targetKey][language] || labels[targetKey]['en'];
+    const goToLabel = labels.goto[language] || labels.goto['en'];
 
     return (
         <AnimatePresence>
@@ -36,15 +63,15 @@ const FloatingMenuToggle = ({ currentMenu, onToggle }) => {
                     transition={{ duration: 0.2 }}
                     onClick={onToggle}
                     className="fixed bottom-6 left-6 z-[100] bg-hotel-dark text-white px-4 py-2 rounded-full shadow-xl hover:shadow-2xl hover:bg-black transition-all duration-300 flex items-center gap-2 border border-white/10 group"
-                    aria-label={`Switch to ${targetMenu} Menu`}
+                    aria-label={`Switch to ${targetLabel} Menu`}
                 >
                     <Icon size={18} className="text-hotel-gold group-hover:rotate-12 transition-transform" />
                     <span className="text-xs font-black uppercase tracking-widest hidden sm:block">
-                        Go to {targetMenu}
+                        {goToLabel} {targetLabel}
                     </span>
                     {/* Mobile only icon/text simplified */}
                     <span className="text-xs font-black uppercase tracking-widest sm:hidden">
-                        {targetMenu}
+                        {targetLabel}
                     </span>
                 </motion.button>
             )}

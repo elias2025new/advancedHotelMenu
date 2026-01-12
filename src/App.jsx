@@ -310,6 +310,7 @@ function App() {
         <FloatingMenuToggle
           currentMenu={menuType}
           onToggle={() => setMenuType(prev => prev === 'food' ? 'drinks' : 'food')}
+          language={language}
         />
       </Layout>
     </div>
