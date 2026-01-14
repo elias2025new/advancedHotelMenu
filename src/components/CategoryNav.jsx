@@ -99,17 +99,17 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
     return (
         <div className="fixed top-0 left-0 right-0 z-50 border-b max-w-[430px] mx-auto shadow-sm bg-white border-gray-100">
             {/* Title Bar */}
-            <div className="px-6 py-2 relative flex items-center border-b min-h-[48px] bg-slate-100 border-gray-50">
+            <div className="px-6 py-2 relative flex items-center border-b min-h-[48px] bg-[#800000] border-red-900/20">
                 <div className="absolute left-[42%] -translate-x-1/2 flex flex-col items-center pointer-events-none">
-                    <span className="font-black uppercase tracking-[0.15em] text-[13px] whitespace-nowrap text-hotel-dark">
+                    <span className="font-black uppercase tracking-[0.15em] text-[13px] whitespace-nowrap text-white">
                         {t.title}
                     </span>
-                    <div className="w-6 h-0.5 mt-0.5 rounded-full opacity-80 bg-hotel-gold"></div>
+                    <div className="w-6 h-0.5 mt-0.5 rounded-full opacity-80 bg-white/30"></div>
                 </div>
                 <div className="ml-auto relative">
                     <button
                         onClick={() => setIsLangOpen(!isLangOpen)}
-                        className="flex items-center gap-1.5 bg-slate-50 text-hotel-dark text-[10px] font-black uppercase py-1.5 px-2.5 rounded-full border border-slate-200 hover:bg-slate-100 transition-all cursor-pointer shadow-sm active:scale-95 z-20"
+                        className="flex items-center gap-1.5 bg-black/60 text-white text-[10px] font-black uppercase py-1.5 px-2.5 rounded-full border border-white/10 hover:bg-black/80 backdrop-blur-sm transition-all cursor-pointer shadow-sm active:scale-95 z-20"
                     >
                         <span className="text-sm leading-none">{currentLang.flag}</span>
                         <span>{currentLang.code}</span>

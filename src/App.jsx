@@ -185,27 +185,27 @@ function App() {
           <div className="flex justify-center mb-10 sticky top-[184px] z-30 py-2 gap-3">
             <button
               onClick={() => setMenuType('food')}
-              className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-lg border border-gray-200 ${menuType === 'food'
-                ? 'bg-hotel-gold text-white transform scale-105 border-transparent'
-                : 'bg-white text-slate-500 hover:text-hotel-gold'
+              className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-lg border ${menuType === 'food'
+                ? 'bg-[#800000] text-white transform scale-105 border-transparent'
+                : 'bg-white text-slate-500 border-gray-200 hover:text-[#800000]'
                 }`}
             >
               {t.food}
             </button>
             <button
               onClick={() => setMenuType('drinks')}
-              className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-lg border border-gray-200 ${menuType === 'drinks'
-                ? 'bg-hotel-gold text-white transform scale-105 border-transparent'
-                : 'bg-white text-slate-500 hover:text-hotel-gold'
+              className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-lg border ${menuType === 'drinks'
+                ? 'bg-[#800000] text-white transform scale-105 border-transparent'
+                : 'bg-white text-slate-500 border-gray-200 hover:text-[#800000]'
                 }`}
             >
               {t.drinks}
             </button>
             <button
               onClick={() => setMenuType('cocktails')}
-              className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-lg border border-gray-200 ${menuType === 'cocktails'
-                ? 'bg-hotel-gold text-white transform scale-105 border-transparent'
-                : 'bg-white text-slate-500 hover:text-hotel-gold'
+              className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-lg border ${menuType === 'cocktails'
+                ? 'bg-[#800000] text-white transform scale-105 border-transparent'
+                : 'bg-white text-slate-500 border-gray-200 hover:text-[#800000]'
                 }`}
             >
               {t.cocktails}
@@ -222,7 +222,7 @@ function App() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               {currentMenuData.map((category) => (
-                <section key={category.id} id={category.id} className="mb-14 text-center scroll-mt-[240px]">
+                <section key={category.id} id={category.id} className="mb-8 text-center scroll-mt-[240px]">
                   <div className="inline-flex flex-col items-center mb-8">
                     {/* Top Line */}
                     <div className="w-16 h-1 mb-1 bg-red-600"></div>
@@ -285,7 +285,7 @@ function App() {
                   </div>
 
                   {/* Divider Line between sections */}
-                  <div className="mt-12 mb-6 border-b-2 border-slate-100 opacity-60 rounded-full mx-4"></div>
+                  <div className="mt-8 mb-4 border-b-2 border-slate-100 opacity-60 rounded-full mx-4"></div>
                 </section>
               ))}
             </motion.div>

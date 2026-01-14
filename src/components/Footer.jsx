@@ -1,5 +1,5 @@
 import React from 'react';
-import { Send, Globe, Phone, MapPin, Instagram } from 'lucide-react';
+import { Send, Globe, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 
 const Footer = ({ language }) => {
     const t = {
@@ -20,85 +20,83 @@ const Footer = ({ language }) => {
     };
 
     return (
-        <footer className="px-6 py-12 bg-white border-t border-gray-100 mt-10">
+        <footer className="px-6 py-8 bg-[#800000] border-t border-red-900/20 mt-2">
             <div className="max-w-md mx-auto">
-                {/* Description */}
-                <div className="text-center mb-10">
-                    <div className="w-12 h-1 bg-hotel-gold mx-auto mb-6 rounded-full opacity-50"></div>
-                    <p className="text-slate-600 text-sm leading-relaxed font-medium italic">
-                        "{t.description}"
-                    </p>
-                </div>
-
-                {/* Social & Contact Box */}
-                <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm">
-                    <h3 className="text-center text-hotel-dark font-black uppercase tracking-widest text-xs mb-8 opacity-60">
+                {/* Contact Box */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-[2.5rem] p-6 border border-white/10 shadow-xl">
+                    <h3 className="text-center text-white font-black uppercase tracking-widest text-[10px] mb-6 opacity-60">
                         {t.contactUs}
                     </h3>
 
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-3">
                         {/* Phone Number Area */}
-                        <div className="flex items-center justify-center gap-4 bg-white py-4 px-6 rounded-2xl shadow-sm border border-slate-100 group hover:border-hotel-gold transition-colors">
-                            <div className="bg-hotel-gold/10 p-2.5 rounded-xl text-hotel-gold group-hover:bg-hotel-gold group-hover:text-white transition-all">
-                                <Phone size={20} strokeWidth={2.5} />
+                        <div className="flex items-center gap-4 bg-white/10 py-4 px-6 rounded-2xl border border-white/10 group hover:bg-white/20 transition-all">
+                            <div className="bg-white/20 p-2.5 rounded-xl text-white group-hover:scale-110 transition-transform">
+                                <Phone size={18} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] font-black uppercase tracking-tighter text-slate-400 leading-none mb-1">Call for support</span>
-                                <a href="tel:+251116670067" className="text-lg font-black text-hotel-dark tracking-tight hover:text-hotel-gold transition-colors">
+                                <span className="text-[9px] font-black uppercase tracking-tighter text-white/50 leading-none mb-1">Call for support</span>
+                                <a href="tel:+251116670067" className="text-base font-black text-white tracking-tight">
                                     +251 116 670 067
                                 </a>
                             </div>
                         </div>
 
-                        {/* Location Area */}
-                        <div className="flex items-center justify-center gap-4 bg-white py-4 px-6 rounded-2xl shadow-sm border border-slate-100 group hover:border-hotel-gold transition-colors">
-                            <div className="bg-hotel-gold/10 p-2.5 rounded-xl text-hotel-gold group-hover:bg-hotel-gold group-hover:text-white transition-all">
-                                <MapPin size={20} strokeWidth={2.5} />
+                        {/* Website Area */}
+                        <div className="flex items-center gap-4 bg-white/10 py-4 px-6 rounded-2xl border border-white/10 group hover:bg-white/20 transition-all">
+                            <div className="bg-white/20 p-2.5 rounded-xl text-white group-hover:scale-110 transition-transform">
+                                <Globe size={18} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] font-black uppercase tracking-tighter text-slate-400 leading-none mb-1">Location</span>
-                                <span className="text-sm font-black text-hotel-dark tracking-tight">
+                                <span className="text-[9px] font-black uppercase tracking-tighter text-white/50 leading-none mb-1">Website</span>
+                                <a href="https://www.nexusaddis.net/" target="_blank" rel="noopener noreferrer" className="text-base font-black text-white tracking-tight lowercase">
+                                    nexusaddis.net
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Location Area */}
+                        <div className="flex items-center gap-4 bg-white/10 py-4 px-6 rounded-2xl border border-white/10 group hover:bg-white/20 transition-all">
+                            <div className="bg-white/20 p-2.5 rounded-xl text-white group-hover:scale-110 transition-transform">
+                                <MapPin size={18} strokeWidth={2.5} />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[9px] font-black uppercase tracking-tighter text-white/50 leading-none mb-1">Location</span>
+                                <span className="text-sm font-black text-white tracking-tight">
                                     Gerji Mebrathaile Street
                                 </span>
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-4 gap-2 sm:gap-4">
-                            <a href="https://t.me/swissinn" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-3 sm:p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
-                                <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
-                                    <Send size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
-                                </div>
-                                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">Telegram</span>
-                            </a>
+                        <div className="flex flex-col items-center mt-4">
+                            <h3 className="text-white/40 font-black uppercase tracking-[0.3em] text-[11px] mb-6">
+                                Follow Us
+                            </h3>
+                            <div className="flex gap-4">
+                                <a href="https://www.facebook.com/swissinnnexus" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#1877F2] rounded-[1.25rem] flex items-center justify-center hover:scale-110 transition-all shadow-lg border border-white/5">
+                                    <Facebook size={24} className="text-white" strokeWidth={2} />
+                                </a>
 
-                            <a href="https://www.instagram.com/swissinnnexus/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-3 sm:p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
-                                <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
-                                    <Instagram size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
-                                </div>
-                                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">Instagram</span>
-                            </a>
+                                <a href="https://www.instagram.com/swissinnnexus/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] rounded-[1.25rem] flex items-center justify-center hover:scale-110 transition-all shadow-lg border border-white/5">
+                                    <Instagram size={24} className="text-white" strokeWidth={2} />
+                                </a>
 
-                            <a href="https://www.tiktok.com/@swiss_inn_nexus_hotel" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-3 sm:p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
-                                <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
-                                    <svg width="20" height="20" className="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <a href="https://www.tiktok.com/@swiss_inn_nexus_hotel" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-black rounded-[1.25rem] flex items-center justify-center hover:scale-110 transition-all shadow-lg border border-white/5">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                                         <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
                                     </svg>
-                                </div>
-                                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">TikTok</span>
-                            </a>
+                                </a>
 
-                            <a href="https://www.nexusaddis.net/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2 bg-white p-3 sm:p-4 rounded-2xl shadow-sm border border-slate-100 hover:border-hotel-gold transition-all group">
-                                <div className="text-slate-400 group-hover:text-hotel-gold transition-colors">
-                                    <Globe size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
-                                </div>
-                                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">Website</span>
-                            </a>
+                                <a href="https://t.me/swissinn" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#26A5E4] rounded-[1.25rem] flex items-center justify-center hover:scale-110 transition-all shadow-lg border border-white/5">
+                                    <Send size={24} className="text-white -ml-0.5" strokeWidth={2} />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-12 text-center">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-300">
+                <div className="mt-6 text-center">
+                    <p className="text-[9px] font-black uppercase tracking-[0.2em] text-white/30">
                         © {new Date().getFullYear()} SWISS INN Nexus Hotel
                     </p>
                 </div>
