@@ -60,7 +60,7 @@ const Header = ({ language }) => {
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.5 }}
-                className="text-slate-500 text-sm mt-1"
+                className="text-slate-500 text-sm font-bold uppercase tracking-wider mt-1"
             >
                 {subtext}
             </motion.p>

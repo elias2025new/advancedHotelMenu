@@ -96,15 +96,43 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, language, se
         };
     }, []);
 
+    const menuSubtext = {
+        food: {
+            en: "Alacarte menu",
+            am: "አላካርቴ ሜኑ",
+            zh: "单点菜单",
+            ar: "قائمة طعام انتقائية",
+            fr: "Menu à la carte"
+        },
+        drinks: {
+            en: "Beverage menu",
+            am: "መጠጥ ሜኑ",
+            zh: "饮料菜单",
+            ar: "قائمة المشروبات",
+            fr: "Menu de boissons"
+        },
+        cocktails: {
+            en: "cocktail drinks menu",
+            am: "ኮክቴል መጠጥ ሜኑ",
+            zh: "鸡尾酒单",
+            ar: "قائمة الكوكتيلات",
+            fr: "Menu de cocktails"
+        }
+    }[menuType]?.[language] || "";
+
     return (
         <div className="fixed top-0 left-0 right-0 z-50 border-b max-w-[430px] mx-auto shadow-sm bg-white border-gray-100">
-            {/* Title Bar */}
-            <div className="px-6 py-2 relative flex items-center border-b min-h-[48px] bg-[#800000] border-red-900/20">
-                <div className="absolute left-[42%] -translate-x-1/2 flex flex-col items-center pointer-events-none">
-                    <span className="font-black uppercase tracking-[0.15em] text-[13px] whitespace-nowrap text-white">
+            {/* Title Bar - Left aligned for a cleaner look */}
+            <div className="px-6 py-1.5 relative flex items-center border-b min-h-[54px] bg-[#800000] border-red-900/20">
+                <div className="flex flex-col pointer-events-none">
+                    <span className="font-black uppercase tracking-[0.12em] text-[12px] whitespace-nowrap text-white leading-tight">
                         {t.title}
                     </span>
-                    <div className="w-6 h-0.5 mt-0.5 rounded-full opacity-80 bg-white/30"></div>
+                    {menuSubtext && (
+                        <span className="text-white/80 font-semibold italic text-[10px] uppercase tracking-wide leading-tight mt-0.5">
+                            {menuSubtext}
+                        </span>
+                    )}
                 </div>
                 <div className="ml-auto relative">
                     <button

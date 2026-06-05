@@ -245,9 +245,9 @@ function App() {
                         >
                           <span className="block transform skew-x-12">
                             {(() => {
-                              const langField = `subtitle_${language}`;
-                              return (category[langField]) ? category[langField] : category.subtitle;
-                            })()}
+                               const langField = `subtitle_${language}`;
+                               return (category[langField]) ? category[langField] : category.subtitle;
+                             })()}
                           </span>
                         </div>
                         {/* Line under subtitle - Hide if custom color */}
@@ -288,6 +288,30 @@ function App() {
                   <div className="mt-8 mb-4 border-b-2 border-slate-100 opacity-60 rounded-full mx-4"></div>
                 </section>
               ))}
+
+              {menuType === 'food' && (
+                <div className="mt-12 px-6 py-10 bg-white border-2 border-dashed border-hotel-gold/30 rounded-[2.5rem] text-center max-w-2xl mx-auto mb-16 shadow-2xl relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-hotel-gold/40 rounded-tl-[2.5rem]"></div>
+                  <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-hotel-gold/40 rounded-tr-[2.5rem]"></div>
+                  <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-hotel-gold/40 rounded-bl-[2.5rem]"></div>
+                  <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-hotel-gold/40 rounded-br-[2.5rem]"></div>
+
+                  <h3 className="text-2xl font-black uppercase tracking-[0.25em] text-[#800000] mb-6 flex items-center justify-center gap-4">
+                    <span className="w-10 h-[2px] bg-[#800000]/30 rounded-full"></span>
+                    TOPPINGS
+                    <span className="w-10 h-[2px] bg-[#800000]/30 rounded-full"></span>
+                  </h3>
+                  
+                  <p className="text-sm font-semibold text-slate-800 leading-relaxed max-w-lg mx-auto mb-8 px-4">
+                    Eggs, chicken, beef, avocado cheese, ham, sausage, fries, seafood, olives, gherkins, sundried tomatoes, bacon, sweet corn & etc.
+                  </p>
+
+                  <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#800000] text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-2xl shadow-xl border border-white/10">
+                    <span className="px-2 py-0.5 bg-white/20 rounded-md text-[9px]">NB:</span>
+                    <span>For any needs of extra topping have to pay additional <span className="text-hotel-gold drop-shadow-sm px-1">200.00 birr</span> for each 50g</span>
+                  </div>
+                </div>
+              )}
             </motion.div>
           </AnimatePresence>
         </main>

@@ -16,7 +16,7 @@ export const foodData = [
         items: [
             {
                 name: "Scrambled Eggs", name_am: "እስክራምብል እንቁላል", name_zh: "炒蛋", name_ar: "بيض مخفوق", name_fr: "Œufs brouillés",
-                price: "380.00",
+                price: "420.00",
                 description: "scrambled eggs with tomato, onion, cheese, olive, pepper and toast bread.",
                 description_am: "በቲማቲም፣ በቀይ ሽንኩርት፣ በቺዝ፣ በወይራ፣ በፔፐር እና በቶስት ዳቦ የተዘጋጀ እስክራምብል እንቁላል",
                 description_zh: "番茄、洋葱、奶酪、橄榄、辣椒和吐司面包炒蛋。",
@@ -25,7 +25,7 @@ export const foodData = [
             },
             {
                 name: "Fried Eggs", name_am: "የተጠበሰ እንቁላል", name_zh: "煎蛋", name_ar: "بيض مقلي", name_fr: "Œufs au plat",
-                price: "400.00",
+                price: "540.00",
                 description: "Shallow fried eggs sunny side up or turn over or both side, served with toast bread.",
                 description_am: "በቀጭኑ የተጠበሰ እንቁላል ከቶስት ዳቦ ጋር የቀረበ",
                 description_zh: "浅煎蛋（单面煎、翻面或双面煎），搭配吐司面包。",
@@ -34,7 +34,7 @@ export const foodData = [
             },
             {
                 name: "French Toast", name_am: "የፈረንሳይ ቶስት", name_zh: "法式吐司", name_ar: "توست فرنسي", name_fr: "Pain perdu",
-                price: "320.00",
+                price: "470.00",
                 description: "Egg coated slice toast bread served with pan cake syrup.",
                 description_am: "በእንቁላል የተቀባ የቶስት ዳቦ ከፓንኬክ ሲረፕ ጋር",
                 description_zh: "裹蛋液的切片吐司，搭配煎饼糖浆。",
@@ -43,7 +43,7 @@ export const foodData = [
             },
             {
                 name: "Spanish Omelet", name_am: "የስፔን ኦሜሌት", name_zh: "西班牙欧姆蛋", name_ar: "أومليت إسباني", name_fr: "Omelette espagnole",
-                price: "390.00",
+                price: "500.00",
                 description: "Fried eggs tomato, onion, mushroom, potatoes, beef ham, cheese, black olives, pepper, spinach and toast bread.",
                 description_am: "የተጠበሰ እንቁላል፣ ቲማቲም፣ ሽንኩርት፣ ድንች፣ በሬ ስጋ፣ ቺዝ፣ ወይራ እና ቶስት ዳቦ",
                 description_zh: "包含番茄、洋葱、蘑菇、土豆、牛肉火腿、奶酪、黑橄榄、辣椒、菠菜和吐司面包的煎蛋。",
@@ -52,7 +52,7 @@ export const foodData = [
             },
             {
                 name: "Omelet with your Liking", name_am: "ኦሜሌት እንደ ምርጫዎት", name_zh: "口味自选欧姆蛋", name_ar: "أومليت حسب اختيارك", name_fr: "Omelette selon votre goût",
-                price: "540.00",
+                price: "600.00",
                 description: "Eggs tomato, onion mushroom, beef ham, cheese black olives, pepper, toast bread, chicken ham, potatoes, sweet corn and toast bread.",
                 description_am: "እንቁላል፣ ቲማቲም፣ ሽንኩርት፣ ሚሽሩም፣ የስጋ ውጤቶች፣ ቺዝ፣ እና የተለያዩ ቅመሞች ከቶስት ዳቦ ጋር",
                 description_zh: "包含番茄、洋葱、蘑菇、牛肉火腿、奶酪、黑橄榄、辣椒、吐司面包、鸡肉火腿、土豆和甜玉米。",
@@ -61,7 +61,7 @@ export const foodData = [
             },
             {
                 name: "Eggs Benedict", name_am: "ብሩክ ኢንግሊሽ እንቁላል", name_zh: "班尼迪克蛋", name_ar: "بيض بينيديكت", name_fr: "Œufs Bénédicte",
-                price: "340.00",
+                price: "440.00",
                 description: "Poached eggs with Hollandaise & toast bread.",
                 description_am: "የተቀቀለ እንቁላል ከሆላንዳይዝ ሶስ እና ቶስት ዳቦ ጋር",
                 description_zh: "搭配荷兰酱和吐司面包的水煮蛋。",
@@ -70,7 +70,7 @@ export const foodData = [
             },
             {
                 name: "Pan Cake", name_am: "ፓን ኬክ", name_zh: "煎饼", name_ar: "بانكيك", name_fr: "Pancake",
-                price: "300.00",
+                price: "350.00",
                 description: "Plain pan cakes drizzle with strawberry coils & golden syrup.",
                 description_am: "ተራ ፓን ኬክ ከስትሮውበሪ እና ጎልደን ሲረፕ ጋር",
                 description_zh: "淋上草莓酱和黄金糖浆的原味煎饼。",
@@ -79,7 +79,7 @@ export const foodData = [
             },
             {
                 name: "Scramble Eggs & Meat", name_am: "እስክራምብል እንቁላል ከስጋ ጋር", name_zh: "肉类炒蛋", name_ar: "بيض مخفوق مع لحم", name_fr: "Œufs brouillés à la viande",
-                price: "790.00",
+                price: "800.00",
                 description: "Eggs, beef, tomato, onion, chili, breads, Injera and local butter.",
                 description_am: "እንቁላል፣ የበሬ ስጋ፣ ቲማቲም፣ ሽንኩርት፣ ቃሪያ፣ ዳቦ፣ እንጀራ እና የሀገር ባህል ቅቤ",
                 description_zh: "鸡蛋、牛肉、番茄、洋葱、辣椒、面包、英吉拉饼和当地黄油。",
@@ -88,7 +88,7 @@ export const foodData = [
             },
             {
                 name: "Porridge", name_am: "ገንፎ", name_zh: "粥", name_ar: "عصيدة", name_fr: "Porridge",
-                price: "480.00",
+                price: "515.00",
                 description: "Simmered oats with milk.",
                 description_am: "በወተት የተዘጋጀ አጃ",
                 description_zh: "牛奶炖燕麦。",
@@ -97,7 +97,7 @@ export const foodData = [
             },
             {
                 name: "Egg Sandwich", name_am: "የእንቁላል ሳንድዊች", name_zh: "鸡蛋三明治", name_ar: "ساندوتش بيض", name_fr: "Sandwich à l'œuf",
-                price: "380.00",
+                price: "420.00",
                 description: "Fried Eggs, tomato, chili, bread and onion.",
                 description_am: "የተጠበሰ እንቁላል፣ ቲማቲም፣ ቃሪያ፣ ዳቦ እና ሽንኩርት",
                 description_zh: "煎蛋、番茄、辣椒、面包和洋葱。",
@@ -123,7 +123,7 @@ export const foodData = [
         items: [
             {
                 name: "Special Foul Madams", name_am: "ስፔሻል ፉል", name_zh: "特别富尔", name_ar: "فول مدمس خاص", name_fr: "Foul Madams Spécial",
-                price: "920.00",
+                price: "1,040.00",
                 description: "Light blended black eye beans, tomato, chili green, onion, scramble eggs, yoghurt, Local butter, garlic, salt pepper & toast bread.",
                 description_am: "የተፈጨ ባቄላ፣ ቲማቲም፣ ቃሪያ፣ ሽንኩርት፣ እንቁላል፣ እርጎ፣ የሀገር ባህል ቅቤ እና ቶስት ዳቦ",
                 description_zh: "轻微混合的黑眼豆、番茄、青辣椒、洋葱、炒蛋、酸奶、当地黄油、大蒜、盐胡椒和吐司面包。",
@@ -131,7 +131,7 @@ export const foodData = [
                 description_fr: "Haricots cornilles légèrement mixés, tomate, piment vert, oignon, œufs brouillés, yaourt, beurre local, ail, sel, poivre et pain grillé."
             },
             {
-                name: "Foul madams fasting", name_am: "የጾም ፉል", name_zh: "斋戒富尔", name_ar: "فول مدمس صيام", name_fr: "Foul Madams de jeûne",
+                name: "Fasting Foul Madams", name_am: "የጾም ፉል", name_zh: "斋戒富尔", name_ar: "فول مدمس صيام", name_fr: "Foul Madams de jeûne",
                 price: "700.00",
                 description: "Light blended black eye beans, tomato, chili green, onion, olive oil, garlic salt pepper & toast bread.",
                 description_am: "የተፈጨ ባቄላ፣ ቲማቲም፣ ቃሪያ፣ ሽንኩርት፣ የወይራ ዘይት እና ቶስት ዳቦ",
@@ -141,7 +141,7 @@ export const foodData = [
             },
             {
                 name: "Chechebsa", name_am: "ጨጨብሳ", name_zh: "切切布萨", name_ar: "تشيتشيبسا", name_fr: "Chechebsa",
-                price: "380.00",
+                price: "520.00",
                 description: "Bits of traditional chapatti mixed with traditional hot sauce & local butter.",
                 description_am: "የሀገር ባህል ቂጣ በቅቤ እና በሚጥሚጣ ተለውሶ",
                 description_zh: "传统的干杯碎片混入传统的拉辣酱和当地黄油。",
@@ -159,7 +159,7 @@ export const foodData = [
             },
             {
                 name: "Quanta /Tibs Firfir", name_am: "ቋንጣ / ጥብስ ፍርፍር", name_zh: "宽塔提布斯菲尔菲尔", name_ar: "كوانتا تيبس فرفر", name_fr: "Quanta / Tibs Firfir",
-                price: "980.00",
+                price: "1,160.00",
                 description: "Dry cooked strips of beef mixed with traditional stew & injera",
                 description_am: "የበሬ ቋንጣ ከእንጀራ ፍርፍር ጋር",
                 description_zh: "干熟牛肉条混入传统的炖菜和英吉拉饼。",
@@ -168,7 +168,7 @@ export const foodData = [
             },
             {
                 name: "Fasting Firfir", name_am: "የጾም ፍርፍር", name_zh: "斋戒菲尔菲尔", name_ar: "فرفر صيام", name_fr: "Firfir de jeûne",
-                price: "530.00",
+                price: "600.00",
                 description: "Mixed injera with traditional fasting stew serve with injera & bread",
                 description_am: "የጾም ፍርፍር ከእንጀራ እና ከዳቦ ጋር",
                 description_zh: "将英吉拉饼混入传统的斋戒炖菜，搭配英吉拉饼和面包。",
@@ -194,7 +194,7 @@ export const foodData = [
         items: [
             {
                 name: "Tomato Mixed Salad", name_am: "ቲማቲም ሰላጣ", name_zh: "番茄混合沙拉", name_ar: "سلطة طماطم مشكلة", name_fr: "Salade de Tomates Mixte",
-                price: "390.00",
+                price: "520.00",
                 description: "Tomatoes, onion, green chili, olive oil, lettuce, basil and balsamic vinegar.",
                 description_am: "ቲማቲም፣ ሽንኩርት፣ ቃሪያ፣ የወይራ ዘይት፣ ሰላጣ፣ በሪል እና በባሊሳሚክ ቪኒገር የተዘጋጀ",
                 description_zh: "番茄、洋葱、青辣椒、橄榄油、生菜、罗勒和香脂醋。",
@@ -203,7 +203,7 @@ export const foodData = [
             },
             {
                 name: "Avocado Salad", name_am: "አቮካዶ ሰላጣ", name_zh: "牛油果沙拉", name_ar: "سلطة أفوكادو", name_fr: "Salade d'Avocat",
-                price: "420.00",
+                price: "740.00",
                 description: "Tomatoes, avocado, onion, green chili, olive oil, lettuce, basil and vinegar",
                 description_am: "አቮካዶ፣ ቲማቲም፣ ሽንኩርት፣ ቃሪያ፣ የወይራ ዘይት፣ ሰላጣ፣ በሪል እና ቪኒገር",
                 description_zh: "番茄、牛油果、洋葱、青辣椒、橄榄油、生菜、罗勒和醋。",
@@ -212,7 +212,7 @@ export const foodData = [
             },
             {
                 name: "Nexus Special Salad", name_am: "ኔክሰስ ስፔሻል ሰላጣ", name_zh: "Nexus 特色沙拉", name_ar: "سلطة نكسس الخاصة", name_fr: "Salade Spéciale Nexus",
-                price: "920.00",
+                price: "1,200.00",
                 description: "Chicken, avocado, onion, tomatoes, olive oil, cucumber lettuce, sweet pepper and black olives",
                 description_am: "ዶሮ፣ አቮካዶ፣ ሽንኩርት፣ ቲማቲም፣ የወይራ ዘይት፣ ዱባ፣ ሰላጣ፣ ቃሪያ እና ጥቁር ወይራ",
                 description_zh: "鸡肉、牛油果、洋葱、番茄、橄榄油、黄瓜生菜、甜椒和黑橄榄。",
@@ -221,7 +221,7 @@ export const foodData = [
             },
             {
                 name: "Salmon Avocado Timbal", name_am: "ሳልሞን አቮካዶ", name_zh: "三文鱼牛油果塔", name_ar: "تيمبال السلمون والأفوكادو", name_fr: "Timbal de Saumon et Avocat",
-                price: "2,500.00",
+                price: "2,840.00",
                 description: "Avocado, Norwegian smoked salmon, onion, tomato, lettuce, pointer_events_none, pepper, olive oil and basil toast",
                 description_am: "አቮካዶ፣ ኖርዌጅያን ስሞክ ሳልሞን፣ ሽንኩርት፣ ቲማቲም፣ ሰላጣ፣ ፔፐር፣ የወይራ ዘይት እና በሪል ቶስት",
                 description_zh: "牛油果、挪威烟熏三文鱼、洋葱、番茄、生菜、胡椒、橄榄油和罗勒吐司。",
@@ -230,7 +230,7 @@ export const foodData = [
             },
             {
                 name: "Fruity Garden Salad", name_am: "የፍራፍሬ ሰላጣ", name_zh: "果味田园沙拉", name_ar: "سلطة فواكه الحديقة", name_fr: "Salade de Jardin Fruitée",
-                price: "450.00",
+                price: "490.00",
                 description: "Papaya, mango, lettuce, onion, tomato, avocado, green chili venerate",
                 description_am: "ፓፓያ፣ ማንጎ፣ ሰላጣ፣ ሽንኩርት፣ ቲማቲም፣ አቮካዶ እና ቃሪያ",
                 description_zh: "木瓜、芒果、生菜、洋葱、番茄、牛油果、青辣椒油醋汁。",
@@ -239,7 +239,7 @@ export const foodData = [
             },
             {
                 name: "Salad Nicosia", name_am: "ሰላጣ ኒኮሲያ", name_zh: "尼斯沙拉", name_ar: "سلطة نيسواز", name_fr: "Salade Niçoise",
-                price: "1,060.00",
+                price: "1,300.00",
                 description: "Tuna chunk, boiled potatoes, French beans, tomatoes. black olives, lemon and hard boiled eggs.",
                 description_am: "ትዩና፣ የተቀቀለ ድንች፣ ፎሶሊያ፣ ቲማቲም፣ ጥቁር ወይራ፣ ሎሚ እና የተቀቀለ እንቁላል",
                 description_zh: "金枪鱼块、煮土豆、四季豆、番茄、黑橄榄、柠檬和硬煮蛋。",
@@ -248,7 +248,7 @@ export const foodData = [
             },
             {
                 name: "Capres Salad", name_am: "ሰላጣ ካፕሬስ", name_zh: "卡普里沙拉", name_ar: "سلطة كابريزي", name_fr: "Salade Caprese",
-                price: "500.00",
+                price: "660.00",
                 description: "Slice of fresh tomatoes, mozzarella cheese, oregano, lettuce, balsamic reduction, eggplant and baby marrow.",
                 description_am: "ቲማቲም፣ ሞዛሬላ ቺዝ፣ ኦሬጋኖ፣ ሰላጣ፣ ደንብጃን እና በቤቢ ማሮ",
                 description_zh: "新鲜番茄片、莫扎里拉奶酪、牛至、生菜、香脂醋还原汁、茄子和西葫芦。",
@@ -257,7 +257,7 @@ export const foodData = [
             },
             {
                 name: "Greek Salad", name_am: "የግሪክ ሰላጣ", name_zh: "希腊沙拉", name_ar: "سلطة يونانية", name_fr: "Salade Grecque",
-                price: "570.00",
+                price: "720.00",
                 description: "Cucumber, black olives, feta cheese, tomatoes, onions, sweet pepper oregano and olive oil.",
                 description_am: "ዱባ፣ ጥቁር ወይራ፣ ፌታ ቺዝ፣ ቲማቲም፣ ሽንኩርት፣ ቃሪያ፣ ኦሬጋኖ እና የወይራ ዘይት",
                 description_zh: "黄瓜、黑橄榄、菲达奶酪、番茄、洋葱、甜椒、牛至和橄榄油。",
@@ -266,7 +266,7 @@ export const foodData = [
             },
             {
                 name: "Soup Minestrone", name_am: "ሾርባ ሚኒስትሮን", name_zh: "杂菜汤", name_ar: "حساء مينستروني", name_fr: "Minestrone",
-                price: "320.00",
+                price: "410.00",
                 description: "Mirepoix, Black lentil, peas, tomato, potatoes, veg stock and pasta short",
                 description_am: "ጥቁር ምስር፣ አተር፣ ቲማቲም፣ ድንች፣ አትክልት እና ፓስታ",
                 description_zh: "调味底菜、黑扁豆、豌豆、番茄、土豆、蔬菜汤和短面。",
@@ -275,7 +275,7 @@ export const foodData = [
             },
             {
                 name: "Chicken Corn Chowder", name_am: "የዶሮ ሾርባ", name_zh: "鸡肉玉米浓汤", name_ar: "شوربة الذرة بالدجاج", name_fr: "Chowder de Poulet et Maïs",
-                price: "490.00",
+                price: "640.00",
                 description: "Broile chicken cubs, chicken stock, mirepoix, white wine, fresh cream, bread crouton, butter, flour (roux)",
                 description_am: "የዶሮ ስጋ፣ የዶሮ መረቅ፣ ክሬም፣ የዳቦ ቁርጥራጭ፣ ቅቤ እና ዱቄት",
                 description_zh: "烤鸡丁、鸡汤、调味底菜、白葡萄酒、鲜奶油、面包丁、黄油、面粉（面糊）。",
@@ -293,7 +293,7 @@ export const foodData = [
             },
             {
                 name: "Ethiopian Pepper pot soup", name_am: "የሀገር ባህል ሾርባ", name_zh: "埃塞俄比亚胡椒锅汤", name_ar: "شوربة الفلفل الإثيوبية", name_fr: "Soupe Pepper Pot Éthiopienne",
-                price: "460.00",
+                price: "580.00",
                 description: "Mirepoix, tomatoes, tomato paste, veg stock",
                 description_am: "ቲማቲም፣ ቲማቲም ፓስት እና የአትክልት መረቅ (በሀገር ባህል ቅመም የተዘጋጀ)",
                 description_zh: "调味底菜、番茄、番茄酱、蔬菜汤。",
@@ -302,7 +302,7 @@ export const foodData = [
             },
             {
                 name: "Barley Soup", name_am: "የገብስ ሾርባ", name_zh: "大麦汤", name_ar: "شوربة الشعير", name_fr: "Soupe d'Orge",
-                price: "460.00",
+                price: "480.00",
                 description: "Swiss inn barley soup with vegetable & beef",
                 description_am: "የስዊዝ ኢን የገብስ ሾርባ ከአትክልት እና ከበሬ ስጋ ጋር",
                 description_zh: "Swiss Inn 大麦汤，含蔬菜和牛肉。",
@@ -311,7 +311,7 @@ export const foodData = [
             },
             {
                 name: "Hot & Sour Soup", name_am: "ሆት ኤንድ ሳወር ሾርባ", name_zh: "酸辣汤", name_ar: "شوربة حامض وحلو", name_fr: "Soupe Aigre-Piquante",
-                price: "580.00",
+                price: "660.00",
                 description: "Seasonal Vegetable, Chilly, ginger, garlic Vegetable Mirpout",
                 description_am: "የወቅቱ አትክልቶች፣ ቃሪያ፣ ዝንጅብል እና ነጭ ሽንኩርት",
                 description_zh: "时令蔬菜、辣椒、生姜、大蒜、蔬菜调味汁。",
@@ -320,7 +320,7 @@ export const foodData = [
             },
             {
                 name: "Mediterranean Soup", name_am: "ሜዲቴራኒያን ሾርባ", name_zh: "地中海汤", name_ar: "حساء البحر المتوسط", name_fr: "Soupe Méditerranéenne",
-                price: "410.00",
+                price: "430.00",
                 description: "Seasonal Vegetable, vegetable Mirpout, Oil, Salt",
                 description_am: "የወቅቱ አትክልቶች፣ ዘይት እና ጨው",
                 description_zh: "时令蔬菜、蔬菜调味汁、油、盐。",
@@ -345,26 +345,8 @@ export const foodData = [
         navImage: "/images/nav_from_italy.png",
         items: [
             {
-                name: "Spaghetti", name_am: "ስፓጌቲ", name_zh: "意面", name_ar: "سباغيتي", name_fr: "Spaghetti",
-                price: "490.00",
-                description: "With choice of (Bolognaise, Carbonara, Aurora, Meat ball OR napolitana source).",
-                description_am: "እንደ ምርጫዎ (በቦሎኛ፣ በካርቦናራ፣ በአውሮራ፣ በሚት ቦል ወይም በናፖሊታና ሶስ) የቀረበ",
-                description_zh: "可选（博洛尼亚酱、培根蛋奶酱、曙光酱、肉丸酱或那不勒斯酱）。",
-                description_ar: "مع اختيارك من (بولونيز، كاربونارا، أورورا، كرات لحم أو صوص نابوليتانا).",
-                description_fr: "Avec un choix de (Bolognaise, Carbonara, Aurora, Meat ball ou sauce napolitana)."
-            },
-            {
-                name: "Tagliatelle", name_am: "ታግሊያቴሌ", name_zh: "宽面", name_ar: "تاجلياتيل", name_fr: "Tagliatelle",
-                price: "490.00",
-                description: "Home-made fresh pasta with choice of (Bolognaise, Carbonara, Aurora, Meat ball OR napolitana source).",
-                description_am: "በቤት ውስጥ የተዘጋጀ ፓስታ እንደ ምርጫዎ (በቦሎኛ፣ በካርቦናራ፣ በአውሮራ፣ በሚት ቦል ወይም በናፖሊታና ሶስ) የቀረበ",
-                description_zh: "自制新鲜意面，可选（博洛尼亚酱、培根蛋奶酱、曙光酱、肉丸酱或那不勒斯酱）。",
-                description_ar: "باستا طازجة محلية الصنع مع اختيارك من (بولونيز، كاربونارا، أورورا، كرات لحم أو صوص نابوليتانا).",
-                description_fr: "Pâtes fraîches maison avec choix de (Bolognaise, Carbonara, Aurora, Meat ball ou sauce napolitana)."
-            },
-            {
                 name: "Meat Lasagna", name_am: "የስጋ ላዛኛ", name_zh: "肉酱千层面", name_ar: "لازانيا باللحم", name_fr: "Lasagne à la viande",
-                price: "560.00",
+                price: "1,520.00",
                 description: "Home-made fresh pasta sheet layer with bolognaise and bechamel sauce baked with cheese.",
                 description_am: "በቤት ውስጥ የተዘጋጀ የላዛኛ ሉህ፣ በስጋ እና በቤሻሜል ሶስ እና በቺዝ የተጋገረ",
                 description_zh: "自制新鲜面片，层层铺上肉酱和白酱，撒上奶酪烘烤而成。",
@@ -372,17 +354,8 @@ export const foodData = [
                 description_fr: "Fouilles de pâtes fraîches maison avec sauce bolognaise et béchamel cuites au fromage."
             },
             {
-                name: "Ravioli", name_am: "ራቪዮሊ", name_zh: "意大利饺子", name_ar: "رافيولي", name_fr: "Ravioli",
-                price: "520.00",
-                description: "Choice of beef OR seasonal Veg with Aurora OR creamy mushroom sauce",
-                description_am: "የበሬ ስጋ ወይም የአትክልት ራቪዮሊ በአውሮራ ወይም በክሬሚ ሚሽሩም ሶስ",
-                description_zh: "可选牛肉或时令蔬菜，搭配曙光酱或奶油蘑菇酱。",
-                description_ar: "اختيار من اللحم البقري أو خضار موسمية مع صوص أورورا أو صوص المشروم الكريمي.",
-                description_fr: "Choix de bœuf ou de légumes de saison avec sauce Aurora ou sauce crémeuse aux champignons."
-            },
-            {
                 name: "Pasta bolognaise", name_am: "ፓስታ ቦሎኔዝ", name_zh: "肉酱意面", name_ar: "باستا بولونيز", name_fr: "Pâtes bolognaise",
-                price: "770.00",
+                price: "800.00",
                 description: "Your test choose of pasta (fusilli, penne, spaghetti, farfalle) meat & bechamel sauce and cheese.",
                 description_am: "የእርስዎ ምርጫ ፓስታ (ፉሲሊ፣ ፔን፣ ስፓጌቲ፣ ፋርፋሌ) ከስጋ እና ቤሻሜል ሶስ እና አይብ ጋር።",
                 description_zh: "您选择的意面（螺旋面、通心粉、意大利面、蝴蝶面）配肉酱、白酱和奶酪。",
@@ -391,7 +364,7 @@ export const foodData = [
             },
             {
                 name: "Pasta Napolitana", name_am: "ፓስታ ናፖሊታና", name_zh: "那不勒斯意面", name_ar: "باستا نابوليتانا", name_fr: "Pâtes Napolitana",
-                price: "700.00",
+                price: "750.00",
                 description: "Your test choose of pasta (fusilli, penne, spaghetti, rigatoni, farfalle) with tomato concise sauce.",
                 description_am: "የእርስዎ ምርጫ ፓስታ (ፉሲሊ፣ ፔን፣ ስፓጌቲ፣ ሪጋቶኒ፣ ፋርፋሌ) ከቲማቲም ሶስ ጋር።",
                 description_zh: "您选择的意面（螺旋面、通心粉、意大利面、粗管面、蝴蝶面）配浓缩番茄酱。",
@@ -400,7 +373,7 @@ export const foodData = [
             },
             {
                 name: "Carbonara", name_am: "ካርቦናራ", name_zh: "培根蛋奶面", name_ar: "كاربونارا", name_fr: "Carbonara",
-                price: "730.00",
+                price: "800.00",
                 description: "Your test choose of pasta (fusilli, penne, spaghetti, rigatoni, farfalle) with white cream, leeks and ham sauce.",
                 description_am: "የእርስዎ ምርጫ ፓስታ (ፉሲሊ፣ ፔን፣ ስፓጌቲ፣ ሪጋቶኒ፣ ፋርፋሌ) ከነጭ ክሬም፣ ሊክስ እና ሃም ሶስ ጋር።",
                 description_zh: "您选择的意面（螺旋面、通心粉、意大利面、粗管面、蝴蝶面）配白奶油、韭菜和火腿酱。",
@@ -409,7 +382,7 @@ export const foodData = [
             },
             {
                 name: "All Frado", name_am: "አል ፍራዶ", name_zh: "阿尔弗雷多", name_ar: "أل فرادو", name_fr: "Alfredo",
-                price: "1,060.00",
+                price: "1,250.00",
                 description: "Your test choose of pasta (fusilli, penne, spaghetti, rigatoni, farfalle) with white cream leeks mushroom and chicken sauce.",
                 description_am: "የእርስዎ ምርጫ ፓስታ (ፉሲሊ፣ ፔን፣ ስፓጌቲ፣ ሪጋቶኒ፣ ፋርፋሌ) ከነጭ ክሬም፣ ሊክስ፣ እንጉዳይ እና የዶሮ ሶስ ጋር።",
                 description_zh: "您选择的意面（螺旋面、通心粉、意大利面、粗管面、蝴蝶面）配白奶油、韭菜、蘑菇和鸡肉酱。",
@@ -418,7 +391,7 @@ export const foodData = [
             },
             {
                 name: "Pasta Arrabiata", name_am: "ፓስታ አረብያታ", name_zh: "香辣番茄意面", name_ar: "باستا أرابياتا", name_fr: "Pâtes Arrabiata",
-                price: "600.00",
+                price: "700.00",
                 description: "Your choice of pasta with spicy tomato basil and pesto sauce.",
                 description_am: "የእርስዎ ምርጫ ፓስታ ከቅመም ቲማቲም ባሲል እና ፔስቶ ሶስ ጋር።",
                 description_zh: "您选择的意面配辣番茄罗勒和香蒜酱。",
@@ -436,7 +409,7 @@ export const foodData = [
             },
             {
                 name: "Tuna Pasta", name_am: "የቲዩና ፓስታ", name_zh: "金枪鱼意面", name_ar: "باستا التونة", name_fr: "Pâtes au thon",
-                price: "1,010.00",
+                price: "1,230.00",
                 description: "Your test choose of pasta (fusilli, penne, spaghetti, rigatoni, farfalle) with tuna & tomato concise sauce.",
                 description_am: "የእርስዎ ምርጫ ፓስታ (ፉሲሊ፣ ፔን፣ ስፓጌቲ፣ ሪጋቶኒ፣ ፋርፋሌ) ከቲዩና እና ከቲማቲም ሶስ ጋር።",
                 description_zh: "您选择的意面（螺旋面、通心粉、意大利面、粗管面、蝴蝶面）配金枪鱼和浓缩番茄酱。",
@@ -445,11 +418,11 @@ export const foodData = [
             },
             {
                 name: "Salmon Cream", name_am: "የሳልሞን ፓስታ", name_zh: "三文鱼奶油意面", name_ar: "باستا السلمون بالكريمة", name_fr: "Pâtes à la crème de saumon",
-                price: "1,380.00",
+                price: "1,530.00",
                 description: "Your test choose of pasta (fusilli, penne, spaghetti, rigatoni, farfalle) with salmon cream sauce.",
                 description_am: "የእርስዎ ምርጫ ፓስታ (ፉሲሊ፣ ፔን፣ ስፓጌቲ፣ ሪጋቶኒ፣ ፋርፋሌ) ከሳልሞን ክሬም ሶስ ጋር።",
                 description_zh: "您选择的意面（螺旋面、通心粉、意大利面、粗管面、蝴蝶面）配三文鱼奶油酱。",
-                description_ar: "اختيارك من الباستا (فوسيلي، بيني، سباغيتي، ريغاتوني، فارفالي) مع صلصة الكريمة والسلمون.",
+                description_ar: "اختيارك من الباستا (فوسيلي፣ بيني፣ سباغيتي፣ ريغاتوني፣ فارفალი) مع صلصة الكريمة والسلمون.",
                 description_fr: "Votre choix de pâtes (fusilli, penne, spaghetti, rigatoni, farfalle) avec sauce à la crème de saumon."
             }
         ]
@@ -470,7 +443,7 @@ export const foodData = [
         items: [
             {
                 name: "Grilled Chicken Breast", name_am: "የተጠበሰ ዶሮ ስጋ", name_zh: "烤鸡胸肉", name_ar: "صدر دجاج مشوي", name_fr: "Poitrine de poulet grillée",
-                price: "1,070.00",
+                price: "1,220.00",
                 description: "Potato mesh streamed vegetables grilled and tomatoes and mushroom sauce.",
                 description_am: "የተፈጨ ድንች፣ በእንፋሎት የበሰለ አትክልት፣ የተጠበሰ ቲማቲም እና እንጉዳይ ሶስ።",
                 description_zh: "土豆泥、蒸蔬菜、烤番茄和蘑菇酱。",
@@ -479,7 +452,7 @@ export const foodData = [
             },
             {
                 name: "Half Boneless Chicken", name_am: "ግማሽ ዶሮ", name_zh: "半只去骨鸡", name_ar: "نصف دجاجة بدون عظم", name_fr: "Demi-poulet désossé",
-                price: "1,200.00",
+                price: "2,000.00",
                 description: "Vegetables potato mash grilled tomatoes and brown gravy sauce.",
                 description_am: "አትክልት፣ የተፈጨ ድንች፣ የተጠበሰ ቲማቲም እና ብራውን ግሬቪ ሶስ።",
                 description_zh: "蔬菜、土豆泥、烤番茄和棕色肉汁。",
@@ -488,7 +461,7 @@ export const foodData = [
             },
             {
                 name: "Chicken Cordon Bleu", name_am: "ዶሮ ኮርደን ብሉ", name_zh: "鸡肉蓝带", name_ar: "دجاج كوردون بلو", name_fr: "Cordon Bleu de Poulet",
-                price: "1,420.00",
+                price: "1,500.00",
                 description: "Breaded chicken escalope stuffed with cheese & mushroom, Garlic butter, French fries and vegetables,",
                 description_am: "በቺዝ እና እንጉዳይ የተሞላ የዶሮ ስጋ፣ በዳቦ ፍርፋሪ የተጠበሰ፣ ነጭ ሽንኩርት ቅቤ፣ ጥብስ እና አትክልት።",
                 description_zh: "裹面包屑的鸡肉片，内馅有奶酪和蘑菇，配蒜蓉黄油、炸薯条和蔬菜。",
@@ -497,7 +470,7 @@ export const foodData = [
             },
             {
                 name: "Grilled Salmon Steak", name_am: "የተጠበሰ ሳልሞን", name_zh: "烤三文鱼排", name_ar: "ستيك سلمون مشوي", name_fr: "Steak de Saumon Grillé",
-                price: "4,160.00",
+                price: "4,600.00",
                 description: "Tomato, lemon half, rice, steamed vegetables and herb butter sauce.",
                 description_am: "ቲማቲም፣ ግማሽ ሎሚ፣ ሩዝ፣ በእንፋሎት የበሰለ አትክልት እና የእፅዋት ቅቤ ሶስ።",
                 description_zh: "番茄、半个柠檬、米饭、蒸蔬菜和香草黄油酱。",
@@ -506,25 +479,17 @@ export const foodData = [
             },
             {
                 name: "Herb Coated Nile Perch Fillet", name_am: "የተጠበሰ አሳ", name_zh: "香草涂层尼罗河鲈鱼柳", name_ar: "فيليه سمك النيل المغطى بالأعشاب", name_fr: "Filet de Perche du Nil Enrobé d'Herbes",
-                price: "1,040.00",
+                price: "1,260.00",
                 description: "Nile perch served with a creamy mustard herb sauce, boiled potato and a timbale of spinach",
                 description_am: "የአባይ በረከሳ አሳ በክሬሚ ሰናፍጭ የእፅዋት ሶስ፣ የተቀቀለ ድንች እና ስፒናች ቲምባል ጋር።",
                 description_zh: "尼罗河鲈鱼配奶油芥末香草酱、煮土豆和菠菜塔。",
                 description_ar: "سمك بياض النيل يقدم مع صلصة الخردل الكريمية بالأعشاب، بطاطس مسلوقة وقالب سبانخ.",
                 description_fr: "Perche du Nil servie avec une sauce crémeuse à la moutarde et aux herbes, pomme de terre bouillie et timbale d'épinards."
             },
-            {
-                name: "Beef Fillet In Gorgonzola Sauce", name_am: "የበሬ ስጋ", name_zh: "戈尔根朱勒酱牛柳", name_ar: "فيليه لحم بقري بصلصة جورجونزولا", name_fr: "Filet de Bœuf à la Sauce Gorgonzola",
-                price: "900.00",
-                description: "Grilled marinated beef fillet with gorgonzola creaming served with glazed vegetable.",
-                description_am: "የተጠበሰ የበሬ ስጋ በጎርጎንዞላ ክሬም ሶስ እና በግላዝድ አትክልት።",
-                description_zh: "烤腌制牛柳配戈尔根朱勒奶油酱，佐以釉面蔬菜。",
-                description_ar: "فيليه لحم بقري متبل ومشوي مع كريمة جورجونزولا يقدم مع خضروات مدهونة.",
-                description_fr: "Filet de bœuf mariné grillé avec crème de gorgonzola servi avec des légumes glacés."
-            },
+
             {
                 name: "Mixed Grilles", name_am: "የተደባለቁ ጥብሶች", name_zh: "混合烧烤", name_ar: "مشاوي مشكلة", name_fr: "Grillades Mixtes",
-                price: "1,930.00",
+                price: "2,150.00",
                 description: "Marinated grilled beef steak, chicken steak, lamb chops. sautéedmushroom with potato mush, brown & lemon garlic sauce.",
                 description_am: "የተጠበሰ የበሬ ስቴክ፣ የዶሮ ስቴክ፣ የበግ ቾፕስ። የተጠበሰ እንጉዳይ ከተፈጨ ድንች፣ ብራውን እና የሎሚ ነጭ ሽንኩርት ሶስ ጋር።",
                 description_zh: "腌制烤牛排、鸡排、羊排。炒蘑菇配土豆泥、棕色和柠檬蒜蓉酱。",
@@ -533,7 +498,7 @@ export const foodData = [
             },
             {
                 name: "Grilled Beef Mini Steak", name_am: "ሚኒ ስቴክ", name_zh: "烤迷你牛排", name_ar: "ميني ستيك لحم بقري مشوي", name_fr: "Mini Steak de Bœuf Grillé",
-                price: "1,490.00",
+                price: "1,950.00",
                 description: "Three pcs beef steak with potato mash & vegetables, brown gravy sauce.",
                 description_am: "ሶስት ቁርጥራጭ የበሬ ስቴክ ከተፈጨ ድንች እና አትክልት፣ ብራውን ግሬቪ ሶስ ጋር።",
                 description_zh: "三块牛排配土豆泥和蔬菜，棕色肉汁。",
@@ -559,7 +524,7 @@ export const foodData = [
         items: [
             {
                 name: "Vegetable Bowl", name_am: "የአትክልት ቦውል", name_zh: "蔬菜碗", name_ar: "وعاء الخضار", name_fr: "Bol de légumes",
-                price: "470.00",
+                price: "850.00",
                 description: "Saute in Asian style vegetable, avocado, steamed rice, broccoli & soft-boiled eggs.",
                 description_am: "በኤዥያ የአሰራር ዘዴ የተጠበሰ አትክልቶች፣ አቮካዶ፣ ሩዝ፣ ብሮኮሊ እና የተቀቀለ እንቁላል",
                 description_zh: "亚洲风味炒蔬菜、牛油果、蒸米饭、西兰花和溏心蛋。",
@@ -568,7 +533,7 @@ export const foodData = [
             },
             {
                 name: "Beef Bowl", name_am: "የበሬ ቦውል", name_zh: "牛肉碗", name_ar: "وعاء لحم بقري", name_fr: "Bol de bœuf",
-                price: "560.00",
+                price: "1,590.00",
                 description: "Medallion of marinated beef, sauted vegetable in Asian style serve with steamed rice & boiled egg.",
                 description_am: "በተለያየ ቅመም የታሸ የበሬ ስጋ በኤዥያ የአሰራር ዘዴ ከተጠበሰ አትክልት፣ ሩዝ እና የተቀቀለ እንቁላል ጋር",
                 description_zh: "腌制牛肉块、亚洲风味炒蔬菜，搭配蒸米饭和煮鸡蛋。",
@@ -577,7 +542,7 @@ export const foodData = [
             },
             {
                 name: "Chicken Bowl", name_am: "የዶሮ ቦውል", name_zh: "鸡肉碗", name_ar: "وعاء دجاج", name_fr: "Bol de poulet",
-                price: "530.00",
+                price: "1,300.00",
                 description: "cubes of chicken, Asian vegetable, steamed rice served with boiled eggs",
                 description_am: "የዶሮ ስጋ ቁርጥራጭ፣ የኤዥያ አትክልቶች፣ ሩዝ እና የተቀቀለ እንቁላል",
                 description_zh: "鸡肉块、亚洲蔬菜、蒸米饭，搭配煮鸡蛋。",
@@ -585,17 +550,8 @@ export const foodData = [
                 description_fr: "Cubes de poulet, légumes asiatiques, riz à la vapeur servis avec des œufs durs."
             },
             {
-                name: "Fish Fillet Bowl", name_am: "የአሳ ፊሌ ቦውል", name_zh: "鱼排碗", name_ar: "وعاء فيليه السمك", name_fr: "Bol de filet de poisson",
-                price: "630.00",
-                description: "Nile perch meddling, Asian style vegetable steaming rice served with boiled egg.",
-                description_am: "የአባይ በረከሳ አሳ፣ በኤዥያ የአሰራር ዘዴ የተጠበሰ አትክልት፣ ሩዝ እና የተቀቀለ እንቁላል",
-                description_zh: "尼罗河鲈鱼、亚洲风味炒蔬菜，搭配蒸米饭和煮鸡蛋。",
-                description_ar: "ستيك سمك بياض النيل، خضار على الطريقة الآسيوية، أرز مطهو على البخار يقدم مع بيض مسلوق.",
-                description_fr: "Perche du Nil, légumes à l'asiatique, riz à la vapeur servis avec un œuf dur."
-            },
-            {
                 name: "Dal Tarka", name_am: "ዳል ታርካ", name_zh: "哒哒达尔", name_ar: "دال تاركا", name_fr: "Dal Tarka",
-                price: "900.00",
+                price: "1,200.00",
                 description: "Well simmered dal mixed with Indian spice serve with rice & chapatti.",
                 description_am: "በህንድ ቅመም ተለውሶ በደንብ የበሰለ ዳል ከሩዝ እና ቻፓቲ ጋር የቀረበ",
                 description_zh: "慢火熬制的达尔豆，配印度香料，佐以米饭和薄饼。",
@@ -604,7 +560,7 @@ export const foodData = [
             },
             {
                 name: "Fish Goulash", name_am: "የአሳ ጉላሽ", name_zh: "鱼肉古拉什", name_ar: "جولاش السمك", name_fr: "Goulash de poisson",
-                price: "1,100.00",
+                price: "1,300.00",
                 description: "Fried fish stew tomato sauce.",
                 description_am: "የተጠበሰ የአሳ ወጥ በቲማቲም ሶስ",
                 description_zh: "番茄酱炖炸鱼。",
@@ -619,6 +575,69 @@ export const foodData = [
                 description_zh: "泰式腌制牛肉串，搭配蔬菜和面条。",
                 description_ar: "كباب لحم تايلاندي متبل يقدم مع الخضار والنودلز.",
                 description_fr: "Kebab de bœuf thaïlandais mariné servi avec légumes et nouilles."
+            },
+            {
+                name: "Chicken Tikka Masala", name_am: "ቺከን ቲካ ማሳላ", name_zh: "鸡肉蒂卡马萨拉", name_ar: "دجاج تيكا ماسالا", name_fr: "Poulet Tikka Masala",
+                price: "1,600.00",
+                description: "Indian style BBQ chicken, coriander, turmeric, cream, rice & chapatti.",
+                description_am: "የህንድ አይነት የባርቢኪው ዶሮ፣ ኮሪያንደር፣ ቱርሜሪክ፣ ክሬም፣ ሩዝ እና ቻፓቲ",
+                description_zh: "印度风味烤鸡、香菜、姜黄、奶油，配米饭和薄饼。",
+                description_ar: "دجاج مشوي على الطريقة الهندية، كزبرة، كركم، كريمة، أرز وتشاباتي.",
+                description_fr: "Poulet BBQ à l'indienne, coriandre, curcuma, crème, riz et chapatti."
+            },
+            {
+                name: "Stir-Fried Chicken", name_am: "የተጠበሰ ዶሮ ቁርጥራጭ", name_zh: "炒鸡肉", name_ar: "دجاج مقلي مع الخضار", name_fr: "Poulet sauté",
+                price: "1,260.00",
+                description: "Shallow fry marinated chicken strips with shredded cuts of vegetable stew with steamed rice.",
+                description_am: "በቅመም የታሸ የዶሮ ቁርጥራጭ ከተቆረጡ አትክልቶች ወጥ ጋር ከሩዝ ጋር የቀረበ",
+                description_zh: "浅炸腌制鸡肉条，配切丝蔬菜炖菜和蒸米饭。",
+                description_ar: "شرائح دجاج متبلة مقلية مع يخنة خضار مقطعة مع أرز مطهو على البخار.",
+                description_fr: "Lanières de poulet mariné frites à la poêle avec une yixnة de légumes émincés et du riz à la vapeur."
+            },
+            {
+                name: "Stir-Fried Beef", name_am: "የተጠበሰ የበሬ ቁርጥራጭ", name_zh: "炒牛肉", name_ar: "لحم بقري مقلي مع الخضار", name_fr: "Bœuf sauté",
+                price: "1,330.00",
+                description: "Shallow fry marinated beef strips with shredded cuts of vegetable stew with steamed rice.",
+                description_am: "በቅመም የታሸ የበሬ ስጋ ቁርጥራጭ ከተቆረጡ አትክልቶች ወጥ ጋር ከሩዝ ጋር የቀረበ",
+                description_zh: "浅炸腌制牛肉条，配切丝蔬菜炖菜和蒸米饭。",
+                description_ar: "شرائح لحم بقري متبلة مقلية مع يخنة خضار مقطعة مع أرز مطهو على البخار.",
+                description_fr: "Lanières de bœuf mariné frites à la poêle avec une yixnة de légumes émincés et du riz à la vapeur."
+            },
+            {
+                name: "Mutton Masala", name_am: "የጎሽ ወጥ ማሳላ", name_zh: "羊肉马萨拉", name_ar: "ماسالا لحم الضأن", name_fr: "Masala de mouton",
+                price: "1,470.00",
+                description: "Indian spicy lamb stew, rice, plain yoghurt and chapatti.",
+                description_am: "የህንድ ቅመም ያለው የጎሽ ወጥ፣ ሩዝ፣ ተራ እርጎ እና ቻፓቲ",
+                description_zh: "印度辣羊肉炖菜，配米饭、原味酸奶和薄饼。",
+                description_ar: "يخنة لحم ضأن هندية حارة، أرز، زبادي سادة وتشاباتي.",
+                description_fr: "Ragoût d'agneau épicé à l'indienne, riz, yaourt nature et chapatti."
+            },
+            {
+                name: "Salmon Bowl", name_am: "የሳልሞን ቦውል", name_zh: "三文鱼碗", name_ar: "وعاء السلمون", name_fr: "Bol de saumon",
+                price: "4,200.00",
+                description: "Grilled salmon, creamy tagliatelle, lemon half, vegetables and broccoli.",
+                description_am: "የተጠበሰ ሳልሞን፣ ክሬሚ ታግሊያቴሌ፣ ግማሽ ሎሚ፣ አትክልቶች እና ብሮኮሊ",
+                description_zh: "烤三文鱼、奶油宽面、半个柠檬、蔬菜和西兰花。",
+                description_ar: "سلمون مشوي، تاجلياتيلي كريمية، نصف ليمونة، خضروات وبروكلي.",
+                description_fr: "Saumon grillé, tagliatelles crémeuses, demi-citron, légumes et brocoli."
+            },
+            {
+                name: "Beef Teriyaki", name_am: "ቢፍ ቴሪያኪ", name_zh: "牛肉照烧", name_ar: "لحم بقري تيرياكي", name_fr: "Bœuf Teriyaki",
+                price: "1,520.00",
+                description: "Marinated beef medallion, soy, mirin, sesame oil, ginger, garlic, brown sugar with rice and homemade noodles.",
+                description_am: "በቅመም የታሸ የበሬ ስጋ፣ ሶያ፣ ሚሪን፣ ሰሰም ዘይት፣ ዝንጅብል፣ ነጭ ሽንኩርት፣ ቡኒ ስኳር ከሩዝ እና ቤት ውስጥ ከተሠሩ ኑድሎች ጋር",
+                description_zh: "腌制牛肉块、酱油、味醂、芝麻油、姜、蒜、红糖，配米饭和自制面条。",
+                description_ar: "قرص لحم بقري متبل، صويا، ميرين، زيت سمسم، زنجبيل، ثوم، سكر بني مع أرز ونودلز محلية الصنع.",
+                description_fr: "Médaillon de bœuf mariné, soja, mirin, huile de sésame, gingembre, ail, sucre brun avec riz et nouilles maison."
+            },
+            {
+                name: "Vegetable Biryani", name_am: "የአትክልት ቢሪያኒ", name_zh: "蔬菜香饭", name_ar: "برياني خضار", name_fr: "Biryani de légumes",
+                price: "620.00",
+                description: "Indian curry masala spices vegetable stew with well cooked rice & chapatti.",
+                description_am: "የህንድ ካሪ ማሳላ ቅመሞች ያለው የአትክልት ወጥ ከደንብ ያበሰለ ሩዝ እና ቻፓቲ ጋር",
+                description_zh: "印度咖喱马萨拉香料蔬菜炖菜，配精心烹制的米饭和薄饼。",
+                description_ar: "يخنة خضار بتوابل الكاري الهندية مع أرز مطهو جيداً وتشاباتي.",
+                description_fr: "Ragoût de légumes aux épices de curry masala indien avec du riz bien cuit et du chapatti."
             }
         ]
     },
@@ -638,7 +657,7 @@ export const foodData = [
         items: [
             {
                 name: "Ethiopian Style Tibs", name_am: "የበሬ ስጋ ጥብስ", name_zh: "埃塞俄比亚风味蹄子", name_ar: "تيبس على الطريقة الإثيوبية", name_fr: "Tibs à l'éthiopienne",
-                price: "870.00",
+                price: "1,500.00",
                 description: "Beef cubs, onion, green chili, tomato cubs, local cooking butter, awaze and garlic oil; served with injera.",
                 description_am: "የበሬ ስጋ ቁርጥራጭ፣ ሽንኩርት፣ ቃሪያ፣ ቲማቲም፣ የሀገር ውስጥ ቅቤ፣ አዋዜ እና የነጭ ሽንኩርት ዘይት፤ ከእንጀራ ጋር የቀረበ",
                 description_zh: "牛肉块、洋葱、青椒、番茄块、当地熟黄油、阿瓦泽酱和蒜油；配英吉拉食用。",
@@ -647,7 +666,7 @@ export const foodData = [
             },
             {
                 name: "Beg Tibs", name_am: "የበግ ስጋ ጥብስ", name_zh: "羊肉蹄子", name_ar: "تيبس لحم الغنم", name_fr: "Beg Tibs",
-                price: "900.00",
+                price: "1,470.00",
                 description: "Lamb pieces, onion, green chili, tomato, awaze and local cooking butter; served with injera.",
                 description_am: "የበግ ስጋ ቁርጥራጭ፣ ሽንኩርት፣ ቃሪያ፣ ቲማቲም፣ አዋዜ እና የሀገር ውስጥ ቅቤ፤ ከእንጀራ ጋር የቀረበ",
                 description_zh: "羊肉块、洋葱、青椒、番茄、阿瓦泽酱和当地熟黄油；配英吉拉食用。",
@@ -656,7 +675,7 @@ export const foodData = [
             },
             {
                 name: "Assa Dulet", name_am: "የአሳ ዱለት", name_zh: "鱼肉杜莱特", name_ar: "دولت السمك", name_fr: "Assa Dulet",
-                price: "980.00",
+                price: "1,250.00",
                 description: "Fine dice (minced) Nile perch Green chili, tomato cubs, local cooking butter, Awaze and garlic oil; served with injera.",
                 description_am: "በጥሩ ሁኔታ የተከተፈ የአባይ በረከሳ አሳ፣ ቃሪያ፣ ቲማቲም፣ የሀገር ውስጥ ቅቤ፣ አዋዜ እና የነጭ ሽንኩርት ዘይት፤ ከእንጀራ ጋር የቀረበ",
                 description_zh: "细细切碎的尼罗河鲈鱼、青椒、番茄块、当地熟黄油、阿瓦泽酱和蒜油；配英吉拉食用。",
@@ -665,7 +684,7 @@ export const foodData = [
             },
             {
                 name: "Tegabino Shiro", name_am: "ተጋቢኖ ሽሮ", name_zh: "特加比诺什罗", name_ar: "تيجابينو شيرو", name_fr: "Tegabino Shiro",
-                price: "540.00",
+                price: "620.00",
                 description: "Well-cooked shiro wot served with injera.",
                 description_am: "በደንብ የበሰለ የሽሮ ወጥ ከእንጀራ ጋር የቀረበ",
                 description_zh: "精心烹制的什罗沃特（豆糊），配英吉拉食用。",
@@ -674,7 +693,7 @@ export const foodData = [
             },
             {
                 name: "Bozena Shiro", name_am: "ቦዘና ሽሮ", name_zh: "博泽纳什罗", name_ar: "بوزينا شيرو", name_fr: "Bozena Shiro",
-                price: "740.00",
+                price: "910.00",
                 description: "Well-cooked shiro wot Beef; key; served with injera.",
                 description_am: "በደንብ የበሰለ የበሬ ስጋ የሽሮ ወጥ፤ ቀይ፤ ከእንጀራ ጋር የቀረበ",
                 description_zh: "加入牛肉精心烹制的什罗沃特；配英吉拉食用。",
@@ -683,7 +702,7 @@ export const foodData = [
             },
             {
                 name: "Doro Wot", name_am: "የዶሮ ወጥ", name_zh: "多罗沃特", name_ar: "دورو ووت", name_fr: "Doro Wot",
-                price: "1,200.00",
+                price: "1,450.00",
                 description: "Local chicken stew, whole boiled eggs, with injera.",
                 description_am: "የሀገር ውስጥ የዶሮ ወጥ፣ ሙሉ የተቀቀሉ እንቁላሎች፣ ከእንጀራ ጋር",
                 description_zh: "当地鸡肉炖菜，含全熟水煮蛋，配英吉拉食用。",
@@ -692,7 +711,7 @@ export const foodData = [
             },
             {
                 name: "National Selection Non-Fasting", name_am: "የስጋ በየአይነቱ", name_zh: "民族精选（非斋戒）", name_ar: "تشكيلة وطنية (لغير الصائمين)", name_fr: "Sélection Nationale (Non-Maigre)",
-                price: "1,700.00",
+                price: "2,040.00",
                 description: "Siga wot, tibs doro wot and bozena shiro; served with jinera",
                 description_am: "የስጋ ወጥ፣ ጥብስ፣ የዶሮ ወጥ እና ቦዘና ሽሮ፤ ከእንጀራ ጋር የቀረበ",
                 description_zh: "包含肉沃特、蹄子、多罗沃特和博泽纳什罗；配英吉拉食用。",
@@ -701,7 +720,7 @@ export const foodData = [
             },
             {
                 name: "National Selection Fasting", name_am: "የጾም በየአይነቱ", name_zh: "民族精选（斋戒）", name_ar: "تشكيلة وطنية (للصائمين)", name_fr: "Sélection Nationale (Maigre)",
-                price: "800.00",
+                price: "1,080.00",
                 description: "Misir wot, gomon wot, shiro wot, with mixed salad or suf fitfit; served with injera.",
                 description_am: "የምስር ወጥ፣ የጎመን ወጥ፣ የሽሮ ወጥ፣ ከሰላጣ ወይም ከሱፍ ፍትፍት ጋር፤ ከእንጀራ ጋር የቀረበ",
                 description_zh: "包含小扁豆沃特、甘蓝沃特、什罗沃特，搭配混合沙拉或向日葵籽合口菜；配英吉拉食用。",
@@ -728,7 +747,7 @@ export const foodData = [
         items: [
             {
                 name: "Club Sandwich", name_am: "ክለብ ሳንድዊች", name_zh: "俱乐部三明治", name_ar: "كلوب ساندوتش", name_fr: "Club Sandwich",
-                price: "1,000.00",
+                price: "1,100.00",
                 description: "Beef ham, chicken, fried eggs, tomatoes, lettuce, mayonnaise and white toast.",
                 description_am: "የበሬ ሃም፣ ዶሮ፣ የተጠበሰ እንቁላል፣ ቲማቲም፣ ሰላጣ፣ ማዮኔዝ እና ነጭ ቶስት።",
                 description_zh: "牛肉火腿、鸡肉、煎蛋、番茄、生菜、蛋黄酱和白吐司。",
@@ -737,7 +756,7 @@ export const foodData = [
             },
             {
                 name: "Tuna Sandwich", name_am: "ትዩና ሳንድዊች", name_zh: "金枪鱼三明治", name_ar: "ساندوتش تونة", name_fr: "Sandwich au thon",
-                price: "790.00",
+                price: "1,000.00",
                 description: "Tuna chunk, onion, tomato, green chili lettuce brown toast",
                 description_am: "የቲዩና ቁራጭ፣ ሽንኩርት፣ ቲማቲም፣ ቃሪያ፣ ሰላጣ እና ብራውን ቶስት",
                 description_zh: "金枪鱼块、洋葱、番茄、青椒、生菜和褐麦吐司。",
@@ -746,7 +765,7 @@ export const foodData = [
             },
             {
                 name: "Vegetable Sandwich", name_am: "የአትክልት ሳንድዊች", name_zh: "蔬菜三明治", name_ar: "ساندوتش خضار", name_fr: "Sandwich aux légumes",
-                price: "440.00",
+                price: "500.00",
                 description: "Grilled vegetables, tomato onion, oregano, avocado and steak bread.",
                 description_am: "የተጠበሱ አትክልቶች፣ ቲማቲም፣ ሽንኩርት፣ ኦሬጋኖ፣ አቮካዶ እና ስቴክ ዳቦ።",
                 description_zh: "烤蔬菜、番茄、洋葱、牛至、牛油果和牛排面包。",
@@ -755,7 +774,7 @@ export const foodData = [
             },
             {
                 name: "Special Beef Burger", name_am: "ስፔሻል ቢፍ በርገር", name_zh: "特色牛肉汉堡", name_ar: "برجر لحم بقري مميز", name_fr: "Burger au Bœuf Spécial",
-                price: "1,030.00",
+                price: "1,530.00",
                 description: "Light spice beef burger, onion, tomato, lettuce, bread bun, cheese and fried egg",
                 description_am: "ቀለል ያለ ቅመም ያለው የበሬ በርገር፣ ሽንኩርት፣ ቲማቲም፣ ሰላጣ፣ ዳቦ፣ አይብ እና የተጠበሰ እንቁላል",
                 description_zh: "微辣牛肉汉堡、洋葱、番茄、生菜、汉堡坯、奶酪和煎蛋。",
@@ -773,7 +792,7 @@ export const foodData = [
             },
             {
                 name: "Chicken Sandwich", name_am: "የዶሮ ሳንድዊች", name_zh: "鸡肉三明治", name_ar: "ساندوتش دجاج", name_fr: "Sandwich au poulet",
-                price: "910.00",
+                price: "1,050.00",
                 description: "Tomato, onion, chicken, fried eggs and steak bread.",
                 description_am: "ቲማቲም፣ ሽንኩርት፣ ዶሮ፣ የተጠበሰ እንቁላል እና ስቴክ ዳቦ።",
                 description_zh: "番茄、洋葱、鸡肉、煎蛋和牛排面包。",
@@ -782,7 +801,7 @@ export const foodData = [
             },
             {
                 name: "Beef Steak Sandwich", name_am: "ቢፍ ስቴክ ሳንድዊች", name_zh: "牛排三明治", name_ar: "ساندوتش ستيك لحم بقري", name_fr: "Sandwich au steak de bœuf",
-                price: "820.00",
+                price: "1,400.00",
                 description: "Tomatoes, onion, beef steak and cheese.",
                 description_am: "ቲማቲም፣ ሽንኩርት፣ የበሬ ስቴክ እና አይብ።",
                 description_zh: "番茄、洋葱、牛排和奶酪。",
@@ -791,7 +810,7 @@ export const foodData = [
             },
             {
                 name: "Chicken Quesadilla", name_am: "ዶሮ ኬሳዲላ", name_zh: "鸡肉墨西哥薄饼", name_ar: "كيساديلا دجاج", name_fr: "Quesadilla au poulet",
-                price: "1,200.00",
+                price: "1,300.00",
                 description: "Chicken, veg, chili, Cheese Sweet corn and panini",
                 description_am: "ዶሮ፣ አትክልት፣ ቃሪያ፣ አይብ፣ በቆሎ እና ፓኒኒ ዳቦ",
                 description_zh: "鸡肉、蔬菜、辣椒、奶酪、甜玉米和帕尼尼。",
@@ -800,7 +819,7 @@ export const foodData = [
             },
             {
                 name: "Chicken Shawarma Wraps", name_am: "የዶሮ ሻዋርማ", name_zh: "鸡肉沙瓦玛卷饼", name_ar: "لفائف شاورما دجاج", name_fr: "Wraps de Shawarma au poulet",
-                price: "940.00",
+                price: "1,200.00",
                 description: "Tomato sweet pepper, chicken stir fry BBQ Sauce tortilla and tahini sauce.",
                 description_am: "ቲማቲም፣ ቃሪያ፣ የተጠበሰ ዶሮ፣ ቢቢኪው ሶስ፣ ቶርቲላ እና ታሂኒ ሶስ።",
                 description_zh: "番茄、甜辣椒、炒鸡肉、烧烤酱、饼皮和芝麻酱。",
@@ -809,7 +828,7 @@ export const foodData = [
             },
             {
                 name: "Steak, Cheese Sandwich", name_am: "ስቴክ ቺዝ ሳንድዊች", name_zh: "牛排起司三明治", name_ar: "ساندوتش ستيك بالجبنة", name_fr: "Sandwich au Steak et Fromage",
-                price: "1,230.00",
+                price: "1,400.00",
                 description: "Sautéed beef fillet, mushroom, onion cheese, olive filled with brown",
                 description_am: "የተጠበሰ የበሬ ስጋ፣ እንጉዳይ፣ ሽንኩርት፣ አይብ፣ የወይራ ፍሬ እና ብራውን ዳቦ",
                 description_zh: "炒牛里脊肉、蘑菇、洋葱、奶酪、橄榄，搭配褐麦面包。",
@@ -818,12 +837,21 @@ export const foodData = [
             },
             {
                 name: "Mini Burger", name_am: "ሚኒ በርገር", name_zh: "迷你汉堡", name_ar: "ميني برجر", name_fr: "Mini Burger",
-                price: "750.00",
+                price: "1,100.00",
                 description: "2 Pcs Mini burger, bread bun, onion, tomato, lettuce, cheese, fries",
                 description_am: "2 ሚኒ በርገሮች፣ ዳቦ፣ ሽንኩርት፣ ቲማቲም፣ ሰላጣ፣ አይብ፣ ድንች ጥብስ",
                 description_zh: "两个迷你汉堡、汉堡坯、洋葱、番茄、生菜、奶酪、炸薯条。",
                 description_ar: "قطعتين ميني برجر، خبز، بصل، طماطم، خس، جبنة، بطاطس مقلية.",
                 description_fr: "2 Mini burgers, pain burger, oignon, tomate, laitue, fromage, frites."
+            },
+            {
+                name: "Big Brown Sandwich", name_am: "ትልቅ ብራውን ሳንድዊች", name_zh: "大褐麦三明治", name_ar: "ساندوتش بني كبير", name_fr: "Grand sandwich complet",
+                price: "1,600.00",
+                description: "Big brown sandwich served with fries and fresh vegetables.",
+                description_am: "ትልቅ ብራውን ሳንድዊች ከድንች ጥብስ እና አትክልት ጋር የቀረበ",
+                description_zh: "大褐麦三明治，配炸薯条和新鲜蔬菜。",
+                description_ar: "ساندوتش بني كبير يقدم مع بطاطس مقلية وخضروات طازجة.",
+                description_fr: "Grand sandwich complet servi avec frites et légumes frais."
             }
         ]
     },
@@ -843,7 +871,7 @@ export const foodData = [
         items: [
             {
                 name: "Swiss Inn Special Pizza", name_am: "ስዊዝ ኢን ስፔሻል ፒዛ", name_zh: "Swiss Inn 特色比萨", name_ar: "بيتزا سويس إن الخاصة", name_fr: "Pizza Spéciale Swiss Inn",
-                price: "1,680.00",
+                price: "2,430.00",
                 description: "Pizza dough, mozzarella cheese, tomato sauces, chicken strips, black olives, green chili, Garlic oil, boiled eggs, beef and tuna.",
                 description_am: "የፒዛ ሊጥ፣ ሞዛሬላ አይብ፣ ቲማቲም ሶስ፣ የዶሮ ስጋ፣ ጥቁር የወይራ ፍሬ፣ ቃሪያ፣ የነጭ ሽንኩርት ዘይት፣ የተቀቀለ እንቁላል፣ የበሬ ስጋ እና ቲዩና።",
                 description_zh: "比萨面团、马苏里拉奶酪、番茄酱、鸡肉条、黑橄榄、青椒、大蒜油、煮鸡蛋、牛肉和金枪鱼。",
@@ -852,7 +880,7 @@ export const foodData = [
             },
             {
                 name: "Pizza Margarita", name_am: "ፒዛ ማርጋሪታ", name_zh: "玛格丽特比萨", name_ar: "بيتزا مارغريتا", name_fr: "Pizza Margarita",
-                price: "850.00",
+                price: "930.00",
                 description: "Pizza dough, mozzarella cheese, tomato sauce, oregano and garlic oil.",
                 description_am: "የፒዛ ሊጥ፣ ሞዛሬላ አይብ፣ ቲማቲም ሶስ፣ ኦሬጋኖ እና የነጭ ሽንኩርት ዘይት።",
                 description_zh: "比萨面团、马苏里拉奶酪、番茄酱、牛至和大蒜油。",
@@ -861,7 +889,7 @@ export const foodData = [
             },
             {
                 name: "Vegetable (Non-Fasting) Pizza", name_am: "የአትክልት ፒዛ", name_zh: "蔬菜比萨（非斋戒）", name_ar: "بيتزا الخضار (لغير الصائمين)", name_fr: "Pizza aux légumes (Non-Maigre)",
-                price: "790.00",
+                price: "800.00",
                 description: "Pizza dough, mozzarella cheese, tomato sauce and stir fried cubs vegetable.",
                 description_am: "የፒዛ ሊጥ፣ ሞዛሬላ አይብ፣ ቲማቲም ሶስ እና የተጠበሰ አትክልት።",
                 description_zh: "比萨面团、马苏里拉奶酪、番茄酱和炒蔬菜丁。",
@@ -870,49 +898,24 @@ export const foodData = [
             },
             {
                 name: "Meat Lover", name_am: "ሚት ላቨር ፒዛ", name_zh: "肉类爱好者比萨", name_ar: "بيتزا محبي اللحوم", name_fr: "Pizza Amateurs de Viande",
-                price: "1,900.00",
+                price: "1,980.00",
                 description: "Pizza dough, mozzarella cheese, tomato sauce, meat ball, tibs and beef sausage.",
                 description_am: "የፒዛ ሊጥ፣ ሞዛሬላ አይብ፣ ቲማቲም ሶስ፣ ሚት ቦል፣ ጥብስ እና የበሬ ሶሴጅ።",
                 description_zh: "比萨面团、马苏里拉奶酪、番茄酱、肉丸、蹄子（烤肉）和牛肉香肠。",
                 description_ar: "عجينة البيتزا، جبنة موزاريلا، صلصة طماطم، كرات لحم، تيبس وسجق بقري.",
                 description_fr: "Pâte à pizza, mozzarella, sauce tomate, boulettes de viande, tibs et saucisse de bœuf."
             },
-            {
-                name: "Pizza Marinara", name_am: "ፒዛ ማሪናራ", name_zh: "玛丽娜拉比萨", name_ar: "بيتزا مارينارا", name_fr: "Pizza Marinara",
-                price: "2,480.00",
-                description: "Pizza dough, mozzarella cheese, tomato sauce, thee kind sea foods, garlic and oil.",
-                description_am: "የፒዛ ሊጥ፣ ሞዛሬላ አይብ፣ ቲማቲም ሶስ፣ ሶስት አይነት የባህር ምግቦች፣ ነጭ ሽንኩርት እና ዘይት።",
-                description_zh: "比萨面团、马苏里拉奶酪、番茄酱、三种海鲜、大蒜和油。",
-                description_ar: "عجينة البيتزا، جبنة موزاريلا، صلصة طماطم، ثلاثة أنواع من المأكولات البحرية، ثوم وزيت.",
-                description_fr: "Pâte à pizza, mozzarella, sauce tomate, trois types de fruits de mer, ail et huile."
-            },
+
             {
                 name: "Tuna Pizza", name_am: "የቲዩና ፒዛ", name_zh: "金枪鱼比萨", name_ar: "بيتزا التونة", name_fr: "Pizza au Thon",
-                price: "1,160.00",
+                price: "1,420.00",
                 description: "Pizza dough, mozzarella cheese, tomato sauce, tuna chunks, oregano, garlic and oil.",
                 description_am: "የፒዛ ሊጥ፣ ሞዛሬላ አይብ፣ ቲማቲም ሶስ፣ የቲዩና ቁራጭ፣ ኦሬጋኖ፣ ነጭ ሽንኩርት እና ዘይት።",
                 description_zh: "比萨面团、马苏里拉奶酪、番茄酱、金枪鱼块、牛至、大蒜和油。",
                 description_ar: "عجينة البيتزا، جبنة موزاريلا، صلصة طماطم، قطع تونة، أوريغانو، ثوم وزيت.",
                 description_fr: "Pâte à pizza, mozzarella, sauce tomate, morceaux de thon, origan, ail et huile."
             },
-            {
-                name: "Fasting Vegetables Pizza", name_am: "የጾም አትክልት ፒዛ", name_zh: "斋戒蔬菜比萨", name_ar: "بيتزا الخضار للصائمين", name_fr: "Pizza aux légumes (Maigre)",
-                price: "600.00",
-                description: "Pizza dough, tomato sauce, stir fried cubs vegetable, garlic oil, spinach and oregano.",
-                description_am: "የፒዛ ሊጥ፣ ቲማቲም ሶስ፣ የተጠበሰ አትክልት፣ የነጭ ሽንኩርት ዘይት፣ ስፒናች እና ኦሬጋኖ።",
-                description_zh: "比萨面团、番茄酱、炒蔬菜丁、大蒜油、菠菜和牛至。",
-                description_ar: "عجينة البيتزا، صلصة طماطم، خضروات مقلية، زيت ثوم، سبانخ وأوريغانو.",
-                description_fr: "Pâte à pizza, sauce tomate, dés de légumes sautés, huile d'ail, épinards et origan."
-            },
-            {
-                name: "Pizza Hawaian", name_am: "የሃዋይ ፒዛ", name_zh: "夏威夷比萨", name_ar: "بيتزا هاواي", name_fr: "Pizza Hawaïenne",
-                price: "1,270.00",
-                description: "Pizza dough, mozzarella, tomato sauce, chicken black olives, pineapple slice, garlic oil, oregano and sweet corn.",
-                description_am: "የፒዛ ሊጥ፣ ሞዛሬላ፣ ቲማቲም ሶስ፣ ዶሮ፣ ጥቁር የወይራ ፍሬ፣ አናናስ፣ የነጭ ሽንኩርት ዘይት፣ ኦሬጋኖ እና በቆሎ።",
-                description_zh: "比萨面团、马苏里拉奶酪、番茄酱、鸡肉、黑橄榄、菠萝片、大蒜油、牛至和甜玉米。",
-                description_ar: "عجينة البيتزا، موزاريلا، صلصة طماطم، دجاج، زيتون أسود، شرائح أناناس، زيت ثوم، أوريغانو وذرة حلوة.",
-                description_fr: "Pâte à pizza, mozzarella, sauce tomate, poulet, olives noires, tranches d'ananas, huile d'ail, origan et maïs doux."
-            },
+
             {
                 name: "Chicken Pizza", name_am: "የዶሮ ፒዛ", name_zh: "鸡肉比萨", name_ar: "بيتزا دجاج", name_fr: "Pizza au Poulet",
                 price: "1,300.00",
@@ -940,7 +943,7 @@ export const foodData = [
         items: [
             {
                 name: "Vegetarian Board", name_am: "የጾም የጋራ ሰህን", name_zh: "素食拼盘", name_ar: "لوح نباتي", name_fr: "Planche Végétarienne",
-                price: "1,400.00",
+                price: "2,360.00",
                 description: "Vegetable spring rolls, lentil samosa, French fries, vegetable wraps. vegetable tempura, guacamole, vegetable skewer and chili sauce.",
                 description_am: "የአትክልት ስፕሪንግ ሮል፣ የምስር ሳምቡሳ፣ ድንች ጥብስ፣ የአትክልት ራፕስ፣ የአትክልት ቴምፑራ፣ ጓካሞል፣ የአትክልት ሺሽካባብ እና ቃሪያ ሶስ።",
                 description_zh: "素春卷、扁豆萨摩萨（炸三角）、炸薯条、蔬菜卷、蔬菜天妇罗、牛油果酱、蔬菜串和辣椒酱。",
@@ -949,22 +952,14 @@ export const foodData = [
             },
             {
                 name: "Meat Board", name_am: "የስጋ የጋራ ሰህን", name_zh: "肉类拼盘", name_ar: "لوح اللحوم", name_fr: "Planche de Viandes",
-                price: "3,200.00",
+                price: "3,700.00",
                 description: "Meat samosa, meat mini burger, beef skewer, chicken stay, tibs, glazed chicken wings, fish & chips, BBQ sauce & chili sauce.",
                 description_am: "የስጋ ሳምቡሳ፣ የስጋ ሚኒ በርገር፣ የበሬ ሺሽካባብ፣ የዶሮ ስቴይ፣ ጥብስ፣ የዶሮ ክንፍ፣ አሳ እና ቺፕስ፣ ቢቢኪው ሶስ እና ቃሪያ ሶስ።",
                 description_zh: "肉类萨摩萨、肉类迷你汉堡、牛肉串、沙爹鸡肉、蹄子（烤肉）、釉面鸡翅、炸鱼薯条、烧烤酱和辣椒酱。",
                 description_ar: "سمبوسة باللحم، ميني برجر باللحم، سيخ لحم بقري، ساتاي دجاج، تيبس، أجنحة دجاج مدهونة، سمك وبطاطس، صوص باربيكيو وصوص حار.",
                 description_fr: "Samoussa à la viande, mini burger à la viande, brochette de bœuf, satay de poulet, tibs, ailes de poulet glacées, fish & chips, sauce BBQ et sauce pimentée."
             },
-            {
-                name: "Special Sharing Board", name_am: "ስፔሻል የጋራ ሰህን", name_zh: "特色共享拼盘", name_ar: "لوح مشاركة خاص", name_fr: "Planche Spéciale à Partager",
-                price: "2,600.00",
-                description: "Grilled beef skewer, chicken skewer, fish & chips, lentil samsosa, sauce, tartar, chili sauce, Vegetable spring rolls, chicken wing. Meat stuffed chapatti and fruit skewer.",
-                description_am: "የተጠበሰ የበሬ ሺሽካባብ፣ የዶሮ ሺሽካባብ፣ አሳ እና ቺፕስ፣ የምስር ሳምቡሳ፣ ታርታር ሶስ፣ ቃሪያ ሶስ፣ የአትክልት ስፕሪንግ ሮል፣ የዶሮ ክንፍ፣ በስጋ የተሞላ ቻፓቲ እና የፍራፍሬ ሺሽካባብ።",
-                description_zh: "烤牛肉串、鸡肉串、炸鱼薯条、扁豆萨摩萨、酱汁、塔塔酱、辣椒酱、素春卷、鸡翅、肉馅薄饼和水果串。",
-                description_ar: "سيخ لحم بقري مشوي، سيخ دجاج، سمك وبطاطس، سمبوسة عدس، صوص، تارتار، صوص حار، سبرينغ رولز خضار، أجنحة دجاج، تشاباتي محشو باللحم وسيخ فواكه.",
-                description_fr: "Brochette de bœuf grillé, brochette de poulet, fish & chips, samoussa aux lentilles, sauce, tartare, sauce pimentée, nems aux légumes, ailes de poulet, chapatti farci à la viande et brochette de fruits."
-            }
+
         ]
     },
     {
@@ -978,7 +973,7 @@ export const foodData = [
         items: [
             {
                 name: "Vegetable Spring Rolls", name_am: "የአትክልት ስፕሪንግ ሮል", name_zh: "素春卷", name_ar: "سبرينغ رولز خضار", name_fr: "Nems aux légumes",
-                price: "350.00",
+                price: "680.00",
                 description: "4 Pcs vegetable spring rolls, French fries, ketch up",
                 description_am: "4 የአትክልት ስፕሪንግ ሮሎች፣ ድንች ጥብስ፣ ኬትቻፕ",
                 description_zh: "4个素春卷、炸薯条、番茄酱。",
@@ -987,7 +982,7 @@ export const foodData = [
             },
             {
                 name: "Glazed BBQ Chicken Wings", name_am: "የዶሮ ክንፍ", name_zh: "釉面烧烤鸡翅", name_ar: "أجنحة دجاج مدهونة بالباربيكيو", name_fr: "Ailes de Poulet Glacées au BBQ",
-                price: "970.00",
+                price: "1,300.00",
                 description: "Honey glazed, chicken wing, BBQ sauce served with French fries",
                 description_am: "በማር የታሸ የዶሮ ክንፍ፣ ቢቢኪው ሶስ ከድንች ጥብስ ጋር",
                 description_zh: "蜂蜜釉面鸡翅，烧烤酱，配合炸薯条食用。",
@@ -996,7 +991,7 @@ export const foodData = [
             },
             {
                 name: "Fish & Chips", name_am: "አሳ እና ቺፕስ", name_zh: "炸鱼薯条", name_ar: "سمك وبطاطس", name_fr: "Fish & Chips",
-                price: "1,010.00",
+                price: "1,380.00",
                 description: "Fried dough Nile perch with French fries, lemon half served with tart sauce",
                 description_am: "የተጠበሰ የአባይ በረከሳ አሳ ከድንች ጥብስ እና ግማሽ ሎሚ ጋር፤ ከታርታር ሶስ ጋር የቀረበ",
                 description_zh: "面糊炸尼罗河鲈鱼、炸薯条、半个柠檬，配塔塔酱。",
@@ -1013,13 +1008,22 @@ export const foodData = [
                 description_fr: "Bœuf, oignon, ail, huile pimentée, pain tortilla."
             },
             {
-                name: "Samosa", name_am: "ሳምቡሳ", name_zh: "萨摩萨（炸三角）", name_ar: "سمبوسة", name_fr: "Samoussa",
-                price: "400.00",
-                description: "4PCS Lentil/ Meat, fries, tomato ketch up. Lentil Samosa 340.00, Meat Samosa 400.00",
-                description_am: "4 የምስር ወይም የስጋ ሳምቡሳ፣ ድንች ጥብስ፣ ኬትቻፕ። የምስር ሳምቡሳ 340.00፣ የስጋ ሳምቡሳ 400.00",
-                description_zh: "4个小扁豆/肉类萨摩萨、炸薯条、番茄酱。扁豆萨摩萨 340.00，肉类萨摩萨 400.00。",
-                description_ar: "4 قطع عدس/لحم، بطاطس مقلية، كتشب طماطم. سمبوسة عدس 340.00، سمبوسة لحم 400.00.",
-                description_fr: "4 Samoussas lentilles/viande, frites, ketchup. Samoussa aux lentilles 340,00, Samoussa à la viande 400,00."
+                name: "Meat Samosa", name_am: "የስጋ ሳምቡሳ", name_zh: "肉类萨摩萨", name_ar: "سمبوسة باللحم", name_fr: "Samoussa à la viande",
+                price: "720.00",
+                description: "4PCS Meat Samosa, fries, tomato ketch up.",
+                description_am: "4 የስጋ ሳምቡሳ፣ ድንች ጥብስ፣ ኬትቻፕ።",
+                description_zh: "4个肉类萨摩萨、炸薯条、番茄酱。",
+                description_ar: "4 قطع سمبوسة لحم، بطاطس مقلية، كتشب طماطم.",
+                description_fr: "4 Samoussas à la viande, frites, ketchup."
+            },
+            {
+                name: "Lentil Samosa", name_am: "የምስር ሳምቡሳ", name_zh: "扁豆萨摩萨", name_ar: "سمبوسة بالعدس", name_fr: "Samoussa aux lentilles",
+                price: "680.00",
+                description: "4PCS Lentil Samosa, fries, tomato ketch up.",
+                description_am: "4 የምስር ሳምቡሳ፣ ድንች ጥብስ፣ ኬትቻፕ።",
+                description_zh: "4个扁豆萨摩萨、炸薯条、番茄酱。",
+                description_ar: "4 قطع سمبوسة عدس، بطاطس مقلية، كتشب طماطم.",
+                description_fr: "4 Samoussas aux lentilles, frites, ketchup."
             }
         ]
     },
@@ -1038,10 +1042,10 @@ export const foodData = [
         headerImage: "/images/nav_side_dishes.png",
         navImage: "/images/nav_side_dishes.png",
         items: [
-            { name: "Mushroom Risotto", name_am: "ሚሽሩም ሪሶቶ", name_zh: "蘑菇烩饭", name_ar: "ريزوتو الفطر", name_fr: "Risotto aux champignons", price: "410.00" },
+            { name: "Mushroom Risotto", name_am: "ሚሽሩም ሪሶቶ", name_zh: "蘑菇烩饭", name_ar: "ريزوتو الفطر", name_fr: "Risotto aux champignons", price: "480.00" },
             { name: "Spinach Butter", name_am: "ስፒናች በቅቤ", name_zh: "黄油菠菜", name_ar: "سبانخ بالزبدة", name_fr: "Épinards au beurre", price: "190.00" },
             { name: "Seasonal Vegetables", name_am: "የወቅቱ አትክልቶች", name_zh: "时令蔬菜", name_ar: "خضروات موسمية", name_fr: "Légumes de saison", price: "240.00" },
-            { name: "French Fries", name_am: "ቺፕስ", name_zh: "炸薯条", name_ar: "بطاطس مقلية", name_fr: "Frites", price: "320.00" },
+            { name: "French Fries", name_am: "ቺፕስ", name_zh: "炸薯条", name_ar: "بطاطس مقلية", name_fr: "Frites", price: "415.00" },
             { name: "Plain Rice", name_am: "ሩዝ", name_zh: "白米饭", name_ar: "أرز سادة", name_fr: "Riz nature", price: "290.00" },
             { name: "Chapatti", name_am: "ቻፓቲ", name_zh: "恰巴提（薄饼）", name_ar: "تشاباتي", name_fr: "Chapatti", price: "200.00" }
         ]
@@ -1167,8 +1171,8 @@ export const drinksData = [
         headerImage: "/images/header_gin.png",
         items: [
             { name: "Bombay Sapphire 1000ml", name_am: "ቦምቤይ ሳፋየር 1000ሚሊ", name_zh: "孟买蓝宝石金酒 1000ml", name_ar: "بومباي سافاير 1000 مل", name_fr: "Gin Bombay Sapphire 1000ml", price: "12,580 / 330" },
-            { name: "Gordon Gin 1000ml", name_am: "ጎርደንስ ጂን 1000ሚሊ", name_zh: "哥顿金酒 1000ml", name_ar: "جوردون جين 1000 مل", name_fr: "Gin Gordon 1000ml", price: "13,750 / 360" },
-            { name: "Gordon Gin 500ml", name_am: "ጎርደንስ ጂን 500ሚሊ", name_zh: "哥顿金酒 500ml", name_ar: "جوردون جين 500 مل", name_fr: "Gin Gordon 500ml", price: "7,000 / 360" },
+            { name: "Gordon Gin 1000ml", name_am: "ጎርደንስ ጂን 1000ሚሊ", name_zh: "哥顿金酒 1000ml", name_ar: "جوردون جين 1000 مل", name_fr: "Gin Gordon 1000ml", price: "17,000 / 450" },
+            { name: "Gordon Gin 500ml", name_am: "ጎርደንስ ጂን 500ሚሊ", name_zh: "哥顿金酒 500ml", name_ar: "جوردون جين 500 مل", name_fr: "Gin Gordon 500ml", price: "7,000 / 450" },
             { name: "Tanqueray Gin 1000ml", name_am: "ታንኩሬይ ጂን 1000ሚሊ", name_zh: "添加利金酒 1000ml", name_ar: "تانكيراي جين 1000 مل", name_fr: "Gin Tanqueray 1000ml", price: "16,640 / 440" },
             { name: "Hendricks Gin 1000ml", name_am: "ሄንድሪክስ ጂን 1000ሚሊ", name_zh: "亨利爵士金酒 1000ml", name_ar: "هيندريكس جين 1000 مل", name_fr: "Gin Hendricks 1000ml", price: "21,350 / 560" }
         ]
