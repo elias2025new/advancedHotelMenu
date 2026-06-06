@@ -561,7 +561,7 @@ export const foodData = [
             },
             {
                 name: "Thai Beef Noodle", name_am: "ታይ ቢፍ ኑድል", name_zh: "泰式牛肉面", name_ar: "نودلز اللحم التايلاندي", name_fr: "Nouilles de bœuf thaïlandaises",
-                price: "780.00",
+                price: "980.00",
                 description: "Marinated Thai beef kabab served with vegetables & noodles.",
                 description_am: "በታይላንድ ቅመም የታሸ የበሬ ስጋ ከአትክልት እና ኑድል ጋር የቀረበ",
                 description_zh: "泰式腌制牛肉串，搭配蔬菜和面条。",
