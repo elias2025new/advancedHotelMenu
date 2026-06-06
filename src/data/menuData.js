@@ -148,15 +148,7 @@ export const foodData = [
                 description_ar: "قطع من الشباتي التقليدي ممزوجة بالصلصة الحارة التقليدية والزبدة المحلية.",
                 description_fr: "Morceaux de chapatti traditionnel mélangés avec une sauce piquante traditionnelle et du beurre local."
             },
-            {
-                name: "Tibs Firfir", name_am: "ጥብስ ፍርፍር", name_zh: "提布斯菲尔菲尔", name_ar: "تيبس فرفر", name_fr: "Tibs Firfir",
-                price: "980.00",
-                description: "Fillet strips of beef mixed with traditional stew & injera.",
-                description_am: "የበሬ ስጋ ጥብስ ከእንጀራ ፍርፍር ጋር",
-                description_zh: "牛肉片混入传统的炖菜和英吉拉饼。",
-                description_ar: "شرائح لحم بقري ممزوجة باليخنة التقليدية والإينجيرا.",
-                description_fr: "Lanières de filet de bœuf mélangées avec un ragoût traditionnel et de l'injera."
-            },
+
             {
                 name: "Quanta /Tibs Firfir", name_am: "ቋንጣ / ጥብስ ፍርፍር", name_zh: "宽塔提布斯菲尔菲尔", name_ar: "كوانتا تيبس فرفر", name_fr: "Quanta / Tibs Firfir",
                 price: "1,160.00",
@@ -783,7 +775,7 @@ export const foodData = [
             },
             {
                 name: "Chees Burger", name_am: "ቺዝ በርገር", name_zh: "芝士汉堡", name_ar: "تشيز برجر", name_fr: "Cheeseburger",
-                price: "860.00",
+                price: "1,400.00",
                 description: "beef burger, chees, lettuce, onion, tomato, bread bun",
                 description_am: "የበሬ በርገር፣ አይብ፣ ሰላጣ፣ ሽንኩርት፣ ቲማቲም፣ ዳቦ",
                 description_zh: "牛肉汉堡、奶酪、生菜、洋葱、番茄、汉堡坯。",
@@ -918,7 +910,7 @@ export const foodData = [
 
             {
                 name: "Chicken Pizza", name_am: "የዶሮ ፒዛ", name_zh: "鸡肉比萨", name_ar: "بيتزا دجاج", name_fr: "Pizza au Poulet",
-                price: "1,300.00",
+                price: "1,500.00",
                 description: "Pizza Dough, Tomato sauce, Mozzarella Cheese chicken garlic oil ,oregano,",
                 description_am: "የፒዛ ሊጥ፣ ቲማቲም ሶስ፣ ሞዛሬላ አይብ፣ ዶሮ፣ የነጭ ሽንኩርት ዘይት፣ ኦሬጋኖ",
                 description_zh: "比萨面团、番茄酱、马苏里拉奶酪、鸡肉、大蒜油、牛至。",
@@ -1046,7 +1038,6 @@ export const foodData = [
             { name: "Spinach Butter", name_am: "ስፒናች በቅቤ", name_zh: "黄油菠菜", name_ar: "سبانخ بالزبدة", name_fr: "Épinards au beurre", price: "190.00" },
             { name: "Seasonal Vegetables", name_am: "የወቅቱ አትክልቶች", name_zh: "时令蔬菜", name_ar: "خضروات موسمية", name_fr: "Légumes de saison", price: "240.00" },
             { name: "French Fries", name_am: "ቺፕስ", name_zh: "炸薯条", name_ar: "بطاطس مقلية", name_fr: "Frites", price: "415.00" },
-            { name: "Plain Rice", name_am: "ሩዝ", name_zh: "白米饭", name_ar: "أرز سادة", name_fr: "Riz nature", price: "290.00" },
             { name: "Chapatti", name_am: "ቻፓቲ", name_zh: "恰巴提（薄饼）", name_ar: "تشاباتي", name_fr: "Chapatti", price: "200.00" }
         ]
     },
